@@ -7,7 +7,7 @@ avatar: https://pic.cnblogs.com/avatar/1580106/20200412012402.png
 
 url: https://zzl-Alexander.github.io/
 description: 路漫漫其修远兮，吾将上下而求索
-cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+cdn: #https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
 pjax: 1
 # 1开启
 mathjax: 0
