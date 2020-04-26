@@ -48,6 +48,7 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/QQ20200415-1.jpg
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
   - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
@@ -59,9 +60,9 @@ bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: _Alexander, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
-  - {url: https://space.bilibili.com/410053664, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
-  - {url: /, title: hojun的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+  - {url: /theme-sakura/, title: _Alexander, desc: 本站 hexo 主题, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/sakura.md.png}
+  - {url: https://space.bilibili.com/410053664, title: Bilibili, desc: 博主的b站视频, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/bilibili.jpg}
+  - {url: /, title: hojun的万事屋, desc: 技术服务, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/wangshiwu.jpg}
 
 
 
