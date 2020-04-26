@@ -3,11 +3,11 @@ prefixName: zzl
 siteName: _Alexander
 # favicon and site master avatar
 favicon: /images/favicon.ico
-avatar: https://pic.cnblogs.com/avatar/1580106/20200412012402.png
+avatar: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/%E4%B8%80%E5%AF%B9%E9%BB%91%E7%99%BD%E8%89%B2%E5%B0%8F%E7%8C%AB%E5%8F%AF%E7%88%B1%E5%9B%BE%E7%89%87_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg
 
 url: https://zzl-Alexander.github.io/
 description: 路漫漫其修远兮，吾将上下而求索
-cdn: #https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+cdn: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0
 pjax: 1
 # 1开启
 mathjax: 0
