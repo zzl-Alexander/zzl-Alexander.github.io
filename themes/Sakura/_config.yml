@@ -1,6 +1,6 @@
 # site name
-prefixName: zzl
-siteName: _Alexander
+prefixName: 食全
+siteName: 食美
 # favicon and site master avatar
 favicon: /images/favicon.ico
 avatar: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/%E4%B8%80%E5%AF%B9%E9%BB%91%E7%99%BD%E8%89%B2%E5%B0%8F%E7%8C%AB%E5%8F%AF%E7%88%B1%E5%9B%BE%E7%89%87_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg
@@ -12,7 +12,7 @@ pjax: 1
 # 1开启
 mathjax: 0
 
-notice: _Alexander摸鱼中...
+notice: 食全食美开发中...
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
@@ -67,7 +67,7 @@ startdash:
 
 
 # your site build time or founded date
-siteBuildingTime: 26/04/2020
+siteBuildingTime: 2020/05/10
 
 #social  url, img PC端配置
 social:
