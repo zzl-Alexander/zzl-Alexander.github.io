@@ -38,9 +38,9 @@ bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: _Alexander, desc: 本站 hexo 主题, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/30.jpg}
-  - {url: https://space.bilibili.com/410053664, title: 食全食美APP, desc: 点击观看, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@2.0/CDN/jpg/QQ20200510-2.jpg}
-  - {url: /, title: _Alexander的万事屋, desc: 技术服务, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/27.jpg}
+  - {url: https://zzl-alexander.github.io/2020/04/26/APP/, title: 食全食美APP, desc: 点击观看, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/30.jpg}
+  - {url: https://zzl-alexander.github.io/2020/04/26/APP/, title: 食全食美APP, desc: 点击观看, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@2.0/CDN/jpg/QQ20200510-2.jpg}
+  - {url: https://zzl-alexander.github.io/2020/04/26/APP/, title: 食全食美APP, desc: 点击观看, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/27.jpg}
 
 
 
@@ -49,7 +49,7 @@ siteBuildingTime: 2020/05/10
 
 #social  url, img PC端配置
 social:
-  github: {url: http://github.com/zzl-Alexander, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png}
+  github: {url: https://zzl-Alexander.github.io/, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png}
   #sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
   #wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
   #zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}
