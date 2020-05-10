@@ -3,10 +3,10 @@ prefixName: 食全
 siteName: 食美
 # favicon and site master avatar
 favicon: /images/favicon.ico
-avatar: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/%E4%B8%80%E5%AF%B9%E9%BB%91%E7%99%BD%E8%89%B2%E5%B0%8F%E7%8C%AB%E5%8F%AF%E7%88%B1%E5%9B%BE%E7%89%87_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg
+avatar: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@2.0/CDN/jpg/QQ20200510-2.jpg
 
 url: https://zzl-Alexander.github.io/
-description: 食全食美-一个让你欲罢不能的美食APP
+description: 食全食美————一个让你欲罢不能的美食APP
 #cdn: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0
 pjax: 1
 # 1开启
@@ -17,29 +17,7 @@ lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progre
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
-  归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
-    技术: {path: /categories/技术/, fa: fa-code }, 
-    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
-    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
-    随想: {path: /categories/随想/, fa: fa-commenting-o },
-    转载: {path: /categories/转载/, fa: fa-book }
-  } }
-  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
-    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
-    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
-    歌单: {path: /music/, fa: fa-headphones },
-    图集: {path: /tags/图集/, fa: fa-photo }
-  } }
-  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-  友人帐: { path: /links/, fa: fa-link faa-shake }
-  赞赏: { path: /donate/, fa: fa-heart faa-pulse }
-  关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
-    我？: {path: /about/, fa: fa-meetup}, 
-    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
-    Lab: {path: /lab/, fa: fa-cogs },
-  } }
-  客户端: { path: /client/, fa: fa-android faa-vertical }
-  RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+  
 
 
 # Home page sort type: -1: newer first，1: older first.
@@ -48,21 +26,20 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/QQ20200415-1.jpg
-  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
-  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
-  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
-  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
-  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(7).jpg.webp
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/111.jpg
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/QQ20200510-3.jpg
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/QQ20200510-4.jpg
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/30.jpg
+  - https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/QQ20200510-5.jpg
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dot
 
 # startdash url, title, desc img
 startdash: 
-  - {url: /theme-sakura/, title: _Alexander, desc: 本站 hexo 主题, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/sakura.md.png}
-  - {url: https://space.bilibili.com/410053664, title: Bilibili, desc: 博主的b站视频, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/bilibili.jpg}
-  - {url: /, title: _Alexander的万事屋, desc: 技术服务, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/wangshiwu.jpg}
+  - {url: /theme-sakura/, title: _Alexander, desc: 本站 hexo 主题, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/30.jpg}
+  - {url: https://space.bilibili.com/410053664, title: 食全食美APP, desc: 点击观看, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@2.0/CDN/jpg/QQ20200510-2.jpg}
+  - {url: /, title: _Alexander的万事屋, desc: 技术服务, img: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@3.0/CDN/jpg/27.jpg}
 
 
 
