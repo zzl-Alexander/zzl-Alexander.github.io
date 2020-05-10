@@ -6,7 +6,7 @@ favicon: /images/favicon.ico
 avatar: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0/CDN/jpg/%E4%B8%80%E5%AF%B9%E9%BB%91%E7%99%BD%E8%89%B2%E5%B0%8F%E7%8C%AB%E5%8F%AF%E7%88%B1%E5%9B%BE%E7%89%87_%E5%BD%BC%E5%B2%B8%E5%9B%BE%E7%BD%91.jpg
 
 url: https://zzl-Alexander.github.io/
-description: 路漫漫其修远兮，吾将上下而求索
+description: 食全食美-一个让你欲罢不能的美食APP
 #cdn: https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN@1.0
 pjax: 1
 # 1开启
@@ -88,7 +88,7 @@ msocial:
 donate:
   #paypal: https://www.paypal.me/hojuncn
   alipay: https://images.cnblogs.com/cnblogs_com/zzl-dreamfly/1636411/o_2001200928176E4F6194996BC13DAB164461F071E36F.jpg
-  #wechat: https://images.cnblogs.com/cnblogs_com/zzl-dreamfly/1636411/o_200120091900FADAFD93BB431CA300C95D29BB459468.jpg
+  wechat: https://images.cnblogs.com/cnblogs_com/zzl-dreamfly/1636411/o_200120091900FADAFD93BB431CA300C95D29BB459468.jpg
   #wechatSQ: /img/custom/donate/WeChanSQ.jpg
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
