@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-30 00:00" pubdate>
-        Saturday, January 30th 2021, 12:00 am
+      <time datetime="2021-01-30 18:00" pubdate>
+        Saturday, January 30th 2021, 6:00 pm
       </time>
     </span>
   
@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      289 字
+      341 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      4
        分钟
     </span>
   
@@ -247,7 +247,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：Saturday, January 30th 2021, 2:50 pm
+                  本文最后更新于：Saturday, January 30th 2021, 8:03 pm
                 
               </p>
             
@@ -261,9 +261,13 @@
 <li>注释 ! 如 ! Comment</li>
 <li>分隔符^，表示除了字母、数字或者 _ - . % 之外的任何字符。如 <a target="_blank" rel="noopener" href="http://example.com^/">http://example.com^</a> ，<a href="http://example.com/">http://example.com/</a> 和<a href="http://example.com:8000/">http://example.com:8000/</a> 均满足条件，而 <a target="_blank" rel="noopener" href="http://example.com.ar/">http://example.com.ar/</a> 不满足条件<br><a name="MxSse"></a><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2>在v2ray中的PAC中，在填写手动规则里填写<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">i.stack.imgur.com<br>|https://i.stack.imgur.com/<br></code></pre></td></tr></table></figure>
 点击保存设置并从GFW List更新<br />浏览Pac文件 发现多了下面两行内容<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;i.stack.imgur.com&quot;</span>,<br><span class="hljs-string">&quot;|https:\/\/i.stack.imgur.com\/&quot;</span>,<br></code></pre></td></tr></table></figure>
-
-</li>
+如果不知道怎么写</li>
 </ul>
+<p>直接把url的网址比较独特的一段粘贴来就行，因为支持通配符</p>
+<p>比如下面的</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.example</span><span class="hljs-selector-class">.com</span><br></code></pre></td></tr></table></figure>
+<p>就相当于匹配了</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">*<span class="hljs-selector-class">.example</span><span class="hljs-selector-class">.com</span>*<br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>
@@ -293,6 +297,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/01/30/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python--Matlibplot入门练习1</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
