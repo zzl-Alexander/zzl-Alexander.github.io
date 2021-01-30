@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="Alexander">
   <meta name="keywords" content="">
-  <title>Hello World - Alexander</title>
+  <title>PAC自定义规则 - Alexander</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -176,7 +176,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="PAC自定义规则">
               
             </span>
 
@@ -191,8 +191,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-23 16:02" pubdate>
-        Saturday, January 23rd 2021, 4:02 pm
+      <time datetime="2021-01-30 00:00" pubdate>
+        Saturday, January 30th 2021, 12:00 am
       </time>
     </span>
   
@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      289 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -243,30 +243,47 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">PAC自定义规则</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：Saturday, January 23rd 2021, 10:46 pm
+                  本文最后更新于：Saturday, January 30th 2021, 2:50 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+              <h1 id="PAC自定义规则"><a href="#PAC自定义规则" class="headerlink" title="PAC自定义规则"></a>PAC自定义规则</h1><p>某些特定网站需要在全局模式下访问，来回切换很麻烦<br />在PAC文件中加入要访问的网站的url<br><a name="B6CaY"></a></p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><ul>
+<li>通配符支持，如 <em>.example.com/</em> 实际书写时可省略 如 .example.com/ 意即 <code>*.example.com/*</code></li>
+<li>正则表达式支持，以\开始和结束， 如 [\w]+://example.com<br />例外规则 @@，如 @@<em>.example.com/</em> 满足@@后规则的地址不使用代理</li>
+<li>匹配地址开始和结尾 |，如 |<a target="_blank" rel="noopener" href="http://example.com、example.com|/">http://example.com、example.com|</a> 分别表示以 <a href="http://example.com/">http://example.com</a> 开始和以 example.com 结束的地址</li>
+<li>|| 标记，如 ||example.com 则 <a href="http://example.com/">http://example.com</a> 、<a href="https://example.com/">https://example.com</a> 、<a href="ftp://example.com/">ftp://example.com</a> 等地址均满足条件，只用于匹配地址开头</li>
+<li>注释 ! 如 ! Comment</li>
+<li>分隔符^，表示除了字母、数字或者 _ - . % 之外的任何字符。如 <a target="_blank" rel="noopener" href="http://example.com^/">http://example.com^</a> ，<a href="http://example.com/">http://example.com/</a> 和<a href="http://example.com:8000/">http://example.com:8000/</a> 均满足条件，而 <a target="_blank" rel="noopener" href="http://example.com.ar/">http://example.com.ar/</a> 不满足条件<br><a name="MxSse"></a><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2>在v2ray中的PAC中，在填写手动规则里填写<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">i.stack.imgur.com<br>|https://i.stack.imgur.com/<br></code></pre></td></tr></table></figure>
+点击保存设置并从GFW List更新<br />浏览Pac文件 发现多了下面两行内容<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;i.stack.imgur.com&quot;</span>,<br><span class="hljs-string">&quot;|https:\/\/i.stack.imgur.com\/&quot;</span>,<br></code></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+                    
+                  </div>
                 
               </div>
               
@@ -277,18 +294,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/30/PAC%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PAC自定义规则</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/07/30/%E5%9B%BE%E8%AE%BA/">
-                        <span class="hidden-mobile">测试使用</span>
+                      <a href="/2021/01/23/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -476,6 +487,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
