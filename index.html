@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="小舟从此逝，江海寄余生">
@@ -307,10 +307,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-01-30 20:05:00 / 修改时间：20:27:59" itemprop="dateCreated datePublished" datetime="2021-01-30T20:05:00+08:00">2021-01-30</time>
+      <time title="创建时间：2021-01-30 20:05:00" itemprop="dateCreated datePublished" datetime="2021-01-30T20:05:00+08:00">2021-01-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-07 16:15:06" itemprop="dateModified" datetime="2021-03-07T16:15:06+08:00">2021-03-07</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -333,207 +339,14 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="np-linspace"><a href="#np-linspace" class="headerlink" title="np.linspace()"></a>np.linspace()</h2><p>numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)</p>
 <h3 id="endpoint"><a href="#endpoint" class="headerlink" title="endpoint"></a>endpoint</h3><p>endpoint表示生成的数组是否包含stop</p>
-<p>endpoint=True</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;np.linspace(1,100,num&#x3D;10,endpoint&#x3D;True)</span><br><span class="line">print(x)</span><br><span class="line">结果：[  1.  12.  23.  34.  45.  56.  67.  78.  89. 100.]</span><br></pre></td></tr></table></figure>
-<p>endpoint=False</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;np.linspace(1,100,num&#x3D;10,endpoint&#x3D;False)</span><br><span class="line">print(x)</span><br><span class="line">结果：[ 1.  10.9 20.8 30.7 40.6 50.5 60.4 70.3 80.2 90.1]</span><br></pre></td></tr></table></figure>
-<h3 id="retstep"><a href="#retstep" class="headerlink" title="retstep"></a>retstep</h3><p>相当于公差</p>
-<p>retstep=True</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;np.linspace(1,100,num&#x3D;10,retstep&#x3D;True)</span><br><span class="line">print(x)</span><br><span class="line">结果：(array([  1.,  12.,  23.,  34.,  45.,  56.,  67.,  78.,  89., 100.]), 11.0)</span><br></pre></td></tr></table></figure>
-<h3 id="dtype"><a href="#dtype" class="headerlink" title="dtype"></a>dtype</h3><p>结果的输出类型 有np.int   np.bool……..</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x&#x3D;np.linspace(1,100,num&#x3D;10,dtype&#x3D;np.int)</span><br><span class="line">print(x)</span><br><span class="line">结果：[  1  12  23  34  45  56  67  78  89 100]</span><br></pre></td></tr></table></figure>
-<h2 id="plt-plot"><a href="#plt-plot" class="headerlink" title="plt.plot()"></a>plt.plot()</h2><p>plt.plot(x,y,format_string,**kwargs)</p>
-<blockquote>
-<p><strong>x</strong>:X轴上的数据，一般为列表或numpy中的数组，可选（只绘制一条曲线时，可省略，把y轴数据的索引值作为x取值）；</p>
-<p><strong>y</strong>:Y轴上的数据，一般为列表或numpy中的数组；</p>
-<p><strong>format_string</strong>:控制绘制曲线的格式字符串，可选；</p>
-<p><strong><em>\</em>kwargs</strong>:第二组或者更多的（x,y,format_string），可以绘制多条曲线，当我们绘制多条曲线时，各条曲线的x不能省略。</p>
-</blockquote>
-<h3 id="同时绘制多条曲线"><a href="#同时绘制多条曲线" class="headerlink" title="同时绘制多条曲线"></a>同时绘制多条曲线</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line">a &#x3D; np.arange(10)</span><br><span class="line">plt.plot(a,a*1.5,a,a*2.5,a,a*3.5,a,a**2)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/zzl_Alexander/my-image/raw/master/img/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01A.png" alt="image.png"></p>
-<h3 id="曲线格式"><a href="#曲线格式" class="headerlink" title="曲线格式"></a>曲线格式</h3><p>format_string控制绘制曲线的格式字符串，由颜色字符，风格字符，和标记字符组成。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt &#x3D; &#39;[marker][line][color]&#39;</span><br></pre></td></tr></table></figure>
-<p>color:控制颜色，color = ‘g’;</p>
-<p>linestyle:控制线条风格，linestyle = ‘dashed’;</p>
-<p>marker:标记的风格，marker = ‘o’;</p>
-<p>markerfacecolor:标记的颜色；</p>
-<p>markersize;标记的大小;</p>
-<p><strong>Markers</strong></p>
-<table>
-<thead>
-<tr>
-<th>character</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;.&#39;</code></td>
-<td>point marker</td>
-</tr>
-<tr>
-<td><code>&#39;,&#39;</code></td>
-<td>pixel marker</td>
-</tr>
-<tr>
-<td><code>&#39;o&#39;</code></td>
-<td>circle marker</td>
-</tr>
-<tr>
-<td><code>&#39;v&#39;</code></td>
-<td>triangle_down marker</td>
-</tr>
-<tr>
-<td><code>&#39;^&#39;</code></td>
-<td>triangle_up marker</td>
-</tr>
-<tr>
-<td><code>&#39;&lt;&#39;</code></td>
-<td>triangle_left marker</td>
-</tr>
-<tr>
-<td><code>&#39;&gt;&#39;</code></td>
-<td>triangle_right marker</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th><code>&#39;1&#39;</code></th>
-<th>tri_down marker</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;2&#39;</code></td>
-<td>tri_up marker</td>
-</tr>
-<tr>
-<td><code>&#39;3&#39;</code></td>
-<td>tri_left marker</td>
-</tr>
-<tr>
-<td><code>&#39;4&#39;</code></td>
-<td>tri_right marker</td>
-</tr>
-<tr>
-<td><code>&#39;s&#39;</code></td>
-<td>square marker</td>
-</tr>
-<tr>
-<td><code>&#39;p&#39;</code></td>
-<td>pentagon marker</td>
-</tr>
-<tr>
-<td><code>&#39;*&#39;</code></td>
-<td>star marker</td>
-</tr>
-<tr>
-<td><code>&#39;h&#39;</code></td>
-<td>hexagon1 marker</td>
-</tr>
-<tr>
-<td><code>&#39;H&#39;</code></td>
-<td>hexagon2 marker</td>
-</tr>
-<tr>
-<td><code>&#39;+&#39;</code></td>
-<td>plus marker</td>
-</tr>
-<tr>
-<td><code>&#39;x&#39;</code></td>
-<td>x marker</td>
-</tr>
-<tr>
-<td><code>&#39;D&#39;</code></td>
-<td>diamond marker</td>
-</tr>
-<tr>
-<td><code>&#39;d&#39;</code></td>
-<td>thin_diamond marker</td>
-</tr>
-<tr>
-<td>`’</td>
-<td>‘`</td>
-</tr>
-<tr>
-<td><code>&#39;_&#39;</code></td>
-<td>hline marker</td>
-</tr>
-</tbody></table>
-<p><strong>Line Styles</strong></p>
-<table>
-<thead>
-<tr>
-<th>character</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;-&#39;</code></td>
-<td>solid line style</td>
-</tr>
-<tr>
-<td><code>&#39;--&#39;</code></td>
-<td>dashed line style</td>
-</tr>
-<tr>
-<td><code>&#39;-.&#39;</code></td>
-<td>dash-dot line style</td>
-</tr>
-<tr>
-<td><code>&#39;:&#39;</code></td>
-<td>dotted line style</td>
-</tr>
-</tbody></table>
-<p>**<br>**</p>
-<p><strong>Colors</strong></p>
-<table>
-<thead>
-<tr>
-<th>character</th>
-<th>color</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&#39;b&#39;</code></td>
-<td>blue</td>
-</tr>
-<tr>
-<td><code>&#39;g&#39;</code></td>
-<td>green</td>
-</tr>
-<tr>
-<td><code>&#39;r&#39;</code></td>
-<td>red</td>
-</tr>
-<tr>
-<td><code>&#39;c&#39;</code></td>
-<td>cyan</td>
-</tr>
-<tr>
-<td><code>&#39;m&#39;</code></td>
-<td>magenta</td>
-</tr>
-<tr>
-<td><code>&#39;y&#39;</code></td>
-<td>yellow</td>
-</tr>
-<tr>
-<td><code>&#39;k&#39;</code></td>
-<td>black</td>
-</tr>
-<tr>
-<td><code>&#39;w&#39;</code></td>
-<td>white</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line">a &#x3D; np.arange(10)</span><br><span class="line">plt.plot(a,a*1.5,&#39;go-&#39;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/zzl_Alexander/my-image/raw/master/img/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01B.png" alt="image.png"></p>
-<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">a &#x3D; [1, 2, 3, 4] </span><br><span class="line">b &#x3D; [5, 6, 7, 8]</span><br><span class="line"></span><br><span class="line">plt.plot(a, b, &#39;r--&#39;, label &#x3D; &#39;aa&#39;)</span><br><span class="line">plt.xlabel(&#39;this is x&#39;)</span><br><span class="line">plt.ylabel(&#39;this is y&#39;)</span><br><span class="line">plt.title(&#39;this is a demo&#39;)</span><br><span class="line">plt.legend() # 将图例显示出来</span><br><span class="line"></span><br><span class="line">plt.plot()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/zzl_Alexander/my-image/raw/master/img/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01C.png" alt="image.png"></p>
-<h2 id="plt-scatter"><a href="#plt-scatter" class="headerlink" title="plt.scatter()"></a>plt.scatter()</h2><p>散点图</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">a &#x3D; [1, 2, 3, 4]</span><br><span class="line">b &#x3D; [5, 6, 7, 8]</span><br><span class="line"></span><br><span class="line">plt.scatter(a, b, c&#x3D;&#39;r&#39;, marker&#x3D;&#39;v&#39;)</span><br><span class="line"></span><br><span class="line">plt.legend(&#39;x&#39;) # 将图例显示出来</span><br><span class="line"></span><br><span class="line">plt.plot()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/zzl_Alexander/my-image/raw/master/img/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01D.png" alt="image.png"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/30/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
