@@ -262,6 +262,23 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo切换到next主题出现的问题</title>
+    <url>/2021/03/08/hexo%E5%88%87%E6%8D%A2%E5%88%B0next%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a>下载新的主题<br />修改博客根目录下_config.yml配置文件中的theme属性，将其设置为新的主题名称，例如next</p>
+<p>修改为next之后<br />hexo clean<br />hexo g -d<br /><br><br />但是部署之后发现<br />页面只显示了下面的东西</p>
+<a id="more"></a>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% extends &#x27;_layout.swig&#x27; %&#125; &#123;% import &#x27;_macro/post.swig&#x27; as post_template %&#125; &#123;% import &#x27;_macro/sidebar.swig&#x27; as sidebar_template %&#125; &#123;% block title %&#125;&#123;&#123; config.title &#125;&#125;&#123;% if theme.index_with_subtitle and config.subtitle %&#125; - &#123;&#123;config.subtitle &#125;&#125;&#123;% endif %&#125;&#123;% endblock %&#125; &#123;% block page_class %&#125; &#123;% if is_home() %&#125;page-home&#123;% endif -%&#125; &#123;% endblock %&#125; &#123;% block content %&#125;</span><br><span class="line">&#123;% <span class="keyword">for</span> post in page.posts %&#125; &#123;&#123; post_template.render(post, <span class="literal">true</span>) &#125;&#125; &#123;% endfor %&#125;</span><br><span class="line">&#123;% include &#x27;_partials/pagination.swig&#x27; %&#125; &#123;% endblock %&#125; &#123;% block sidebar %&#125; &#123;&#123; sidebar_template.render(false) &#125;&#125; &#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>原因是hexo在5.0之后把swig给删除了需要自己手动安装<br /><code> npm i hexo-renderer-swig</code><br />还是不行的话，就下载这个版本的next主题<br /><a href="https://github.com/next-theme/hexo-theme-next/releases/tag/v8.0.0">https://github.com/next-theme/hexo-theme-next/releases/tag/v8.0.0</a><br />安装之后再次部署即可</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>xx</title>
     <url>/2021/01/30/xx/</url>
     <content><![CDATA[<h3 id="jfafhuaf"><a href="#jfafhuaf" class="headerlink" title="jfafhuaf"></a>jfafhuaf</h3>]]></content>
