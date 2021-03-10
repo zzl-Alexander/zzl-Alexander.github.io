@@ -365,7 +365,7 @@
 <p>正确性检验</p>
 <p>完备性检验：每个数据类必须有一个产生者（C）和至少一个使用者（U），每个功能则必须有产生或使用（U或C）数据类型。</p>
 <p>一致性检验：每个数据类型必有且仅有一个产生者（C）。</p>
-<p>无冗余性检验：指 U／C矩阵中不允许有空行和空列。<br><img src="https://user-images.githubusercontent.com/58632081/110617941-31e26280-81d1-11eb-9b98-aa6c84aefbb6.png" alt="image"></p>
+<p>无冗余性检验：指 U／C矩阵中不允许有空行和空列。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/CDN/jpg/20210310184451.png" alt="image"></p>
 ]]></content>
       <categories>
         <category>系统分析与设计</category>
