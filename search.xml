@@ -299,6 +299,48 @@
       </tags>
   </entry>
   <entry>
+    <title>面向对象设计—动态建模</title>
+    <url>/2021/03/12/%E5%8A%A8%E6%80%81%E5%BB%BA%E6%A8%A1/</url>
+    <content><![CDATA[<h3 id="消息概述"><a href="#消息概述" class="headerlink" title="消息概述"></a>消息概述</h3><p>消息（Messages）: 从一个对象（发送者）向另一个或几个其他对象（接收者）发送信号，或由一个对象（发送者或调用者）调用另一个对象（接收者）的操作。</p>
+<p>•消息定义的是对象之间某种形式的通信，它可以激发某个操作、唤起信号或导致目标对象的创建或撤销。</p>
+<span id="more"></span>
+
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/%E6%B6%88%E6%81%AF%E6%A6%82%E8%BF%B0.png" alt="image-20210312163212533" style="zoom:33%;" />
+
+<p>两种系统：<br>顺序系统中的消息（都是同步的）<br>并发系统中的消息:同步（阻断 ，限时），异步（不论是否准备好）</p>
+<p>消息的接收者是否唯一<br>1）发消息定向发送给唯一的接受者，为<strong>定向消息</strong>，<br>2）把消息发送给某个范围内所有可能的接收者，为<strong>广播消息</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/%E6%B6%88%E6%81%AF%E7%AC%A6%E5%8F%B7%E8%A1%A8%E7%A4%BA.png" alt="image-20210312165153349" style="zoom:33%;" />
+
+<h3 id="顺序图"><a href="#顺序图" class="headerlink" title="顺序图"></a>顺序图</h3><p>组成：</p>
+<p>•活动者（actor）或者 对象（object）</p>
+<p>•生命线（lifeline）</p>
+<p>•激活(activation)/ 控制焦点（focus of control）</p>
+<p>•消息（message）</p>
+<p> <strong>顺序图用来描述对象间的交互行为。</strong>表现用例中的行为顺序，描述了如何一步步完成系统的某项功能</p>
+<p>序列图将交互关系表示为一个二维图。其中，纵轴是时间轴，时间沿竖线向下延伸。横轴代表了在交互中各独立的对象。</p>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png" alt="image-20210312165628621" style="zoom:33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210312171501%E5%AF%B9%E8%B1%A1%E9%97%B4%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1.png" alt="image-20210312171500939" style="zoom:33%;" />
+
+<p>复杂控制逻辑有活动图描述更清晰，但<strong>活动图不能表示消息</strong></p>
+<h3 id="协作图"><a href="#协作图" class="headerlink" title="协作图"></a>协作图</h3><p>合作图可以用来描述系统<strong>对象之间的交互</strong>,表现对象协作关系的图，动态视图的另一种表现形式。强调这组<strong>对象之间的关系</strong>，强调发送和接受消息的对象之间的结构组织的交互图，显示对象、对象之间的链接以及对象之间的消息 。<br>  它表示了协作中作为各种类元角色的对象所处的位置，在图中主要显示了<strong>类元角色（Classifier Roles）和关联角色（Association Roles）。</strong></p>
+<p>1 对象：系统中的对象可以参与一个或多个协作<br>2  链接：表示参与协作执行的<strong>关联</strong>的描述多重性、角色。<br><strong>当协作被实例化时，对象受限于类元角色，连接受限于关联角色</strong></p>
+<h3 id="协作图与顺序图的区别与联系"><a href="#协作图与顺序图的区别与联系" class="headerlink" title="协作图与顺序图的区别与联系"></a>协作图与顺序图的区别与联系</h3><p>顺序图</p>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210312195008%E9%A1%BA%E5%BA%8F%E5%9B%BE.png" alt="image-20210312195008385" style="zoom:33%;" />
+
+
+
+<p>协作图</p>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210312195032%E5%8D%8F%E4%BD%9C%E5%9B%BE.png" style="zoom:33%;" />]]></content>
+      <categories>
+        <category>系统分析与设计</category>
+      </categories>
+      <tags>
+        <tag>面向对象的设计</tag>
+        <tag>动态建模</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>系统规划方法</title>
     <url>/2021/03/10/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<h3 id="系统规划方法"><a href="#系统规划方法" class="headerlink" title="系统规划方法"></a>系统规划方法</h3><p>MIS：管理信息系统( Management Information System,简称MS)</p>
