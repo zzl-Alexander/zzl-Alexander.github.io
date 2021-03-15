@@ -286,6 +286,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Python--Matlibplot入门练习2</title>
+    <url>/2021/03/15/Python--Matlibplot%E5%85%A5%E9%97%A8%E7%BB%83%E4%B9%A02/</url>
+    <content><![CDATA[<h2 id="figure"><a href="#figure" class="headerlink" title="figure"></a>figure</h2><p>plt.figure(figsize=(8,4))<br />定义图的大小<br><a name="z0q2G"></a></p>
+<h2 id="plt-xlim-plt-ylim"><a href="#plt-xlim-plt-ylim" class="headerlink" title="plt.xlim() plt.ylim()"></a>plt.xlim() plt.ylim()</h2><p>限定轴的刻度，范围</p>
+<span id="more"></span>
+
+<iframe
+  src="https://carbon.now.sh/embed?bg=rgba%281%2C1%2C1%2C1%29&t=seti&wt=sharp&l=auto&ds=true&dsyoff=20px&dsblur=96px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=import%2520matplotlib.pyplot%2520as%2520plt%250A%250Aa%2520%253D%2520%255B1%252C%25202%252C%25203%252C%25204%255D%250Ab%2520%253D%2520%255B5%252C%25206%252C%25207%252C%25208%255D%250Aplt.figure%28figsize%253D%288%252C4%29%29%250Aplt.xlim%280%252C11%252C2%29%250Aplt.ylim%280%252C9%29%250Aplt.scatter%28a%252C%2520b%252C%2520c%253D%27r%27%252C%2520marker%253D%27v%27%29%250A%250Aplt.legend%28%27x%27%29%2520%2523%2520%25E5%25B0%2586%25E5%259B%25BE%25E4%25BE%258B%25E6%2598%25BE%25E7%25A4%25BA%25E5%2587%25BA%25E6%259D%25A5%250A%250Aplt.plot%28%29%250Aplt.show%28%29"
+  style="width: 1280px; height: 308px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210315200140.png" alt="image"><br><a name="4KWR0"></a></p>
+<h2 id="plt-subplot"><a href="#plt-subplot" class="headerlink" title="plt.subplot()"></a>plt.subplot()</h2><p>多张子图展示在一起<br />subplot(nrows, ncols, index, *<em>kwargs)<br />nrows表示一共有几行，ncols一共有几列，index表示这是第几个子图<br />例如ax1 = plt.subplot(2, 2, 1)  <br />表示该图放在2</em>2的第一个位置</p>
+<iframe   src="https://carbon.now.sh/embed?bg=rgba%281%2C1%2C1%2C1%29&t=seti&wt=sharp&l=auto&ds=true&dsyoff=20px&dsblur=96px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=import%2520matplotlib.pyplot%2520as%2520plt%250A%250A%2523%2520%25E9%25A6%2596%25E5%2585%2588%25E9%2580%259A%25E8%25BF%2587%2520np.linspace%2520%25E6%2596%25B9%25E5%25BC%258F%25E7%2594%259F%25E6%2588%2590%2520x%25EF%25BC%258C%250A%2523%2520%25E5%25AE%2583%25E5%258C%2585%25E5%2590%25AB%25E4%25BA%2586%252050%2520%25E4%25B8%25AA%25E5%2585%2583%25E7%25B4%25A0%25E7%259A%2584%25E6%2595%25B0%25E7%25BB%2584%25EF%25BC%258C%25E8%25BF%2599%2520100%2520%25E4%25B8%25AA%25E5%2585%2583%25E7%25B4%25A0%25E5%259D%2587%25E5%258C%2580%25E7%259A%2584%25E5%2588%2586%25E5%25B8%2583%25E5%259C%25A8%2520%255B0%252C%252050%255D%2520%25E7%259A%2584%25E5%258C%25BA%25E9%2597%25B4%25E4%25B8%258A%250Aimport%2520numpy%2520as%2520np%250A%250Ax%2520%253D%2520np.linspace%280%252C%252050%252C%2520100%29%250A%250A%250Aax1%2520%253D%2520plt.subplot%282%252C%25202%252C%25201%29%2520%250Aplt.plot%28x%252C%2520np.sin%28x%29%252C%2520%27r%27%29%250A%250Aax2%2520%253D%2520plt.subplot%282%252C%25202%252C%25202%252C%2520sharey%253Dax1%29%2520%2520%2523%2520%25E4%25B8%258E%2520ax1%2520%25E5%2585%25B1%25E4%25BA%25ABy%25E8%25BD%25B4%250Aplt.plot%28x%252C%25202%2520*%2520np.cos%28x%29%252C%2520%27g%27%29%250A%250Aax3%2520%253D%2520plt.subplot%282%252C%25202%252C%25203%29%250Aplt.plot%28x%252C%2520np.tan%28x%29%252C%2520%27b%27%29%250A%250Aax4%2520%253D%2520plt.subplot%282%252C%25202%252C%25204%252C%2520sharey%253Dax3%29%2520%2520%2523%2520%25E4%25B8%258E%2520ax3%2520%25E5%2585%25B1%25E4%25BA%25ABy%25E8%25BD%25B4%250Aplt.plot%28x%252C%25202%2520*%2520np.sin%28x%29%252C%2520%27y%27%29%250A%250A%250Aplt.show%28%29%250A%250A"   style="width: 1280px; height: 524px; border:0; transform: scale(1); overflow:hidden;"   sandbox="allow-scripts allow-same-origin"> </iframe>
+
+<p><br /><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210315200200.png" alt="image (1)"><br /><br><br /><br><br /><br><br /></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数据处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>blog上传文章</title>
     <url>/2021/03/12/%E5%86%99%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<iframe   src="https://carbon.now.sh/embed?bg=rgba%28212%2C223%2C223%2C1%29&t=seti&wt=sharp&l=auto&ds=true&dsyoff=20px&dsblur=96px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=title%253A%2520%250Aauthor%253A%2520Alexander%250Adate%253A%2520%250Aupdated%253A%2520%250Atags%253A%2520%255B%252C%255D%250Acategories%253A%2520%250Adescription%253A%2520%250Acomments%253A%2520true%250Amath%253A%2520true%250A%250A%250A%250A%250A%253C%21--more--%253E"   style="width: 978px; height: 326px; border:0; transform: scale(1); overflow:hidden;"   sandbox="allow-scripts allow-same-origin"> </iframe>
