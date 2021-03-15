@@ -2992,3 +2992,16 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
+body {
+  background: url("https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210315165514blogbackground.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 60% 20%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+.header-inner {
+  opacity: 0.8;
+}
