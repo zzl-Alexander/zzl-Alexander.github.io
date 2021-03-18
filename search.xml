@@ -786,6 +786,30 @@
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
+    <title>Mac上使用VSCode编辑Latex+Skim跳转预览</title>
+    <url>/2021/03/18/Mac%E4%B8%8A%E4%BD%BF%E7%94%A8VSCode%E7%BC%96%E8%BE%91Latex+Skim%E8%B7%B3%E8%BD%AC%E9%A2%84%E8%A7%88/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="57054eaab5aec90ff016b74580c15d1293880db314b675c79b253f3e1a8cc541">fa609df12acca9fd5a65b3cc320f972365657f851aefd155068797416e9e2762534e67a2ab0a0ca180cd7d6c320bcd590d1ec98a850d57bec49e9dd089004e6a2c2172ab83c3a615ff7b8d34ab16788d7ae4f6bae6d4b2bb69b25db6fa4204d9403fcdf7ee6e0690f22c8fe3e9b0603a13cf3f22a4682f66800879c3cea746b2febd3e9cc8883c522a46e929c02bf28126db4dece4c9ef5840389909aef07b766d43d00afbeb8d92011ec943450b9b43f546b39d346dd99eb3680588ecd2781c3e5c4f46d9c548a53f00ebfe9b171ad7f173b7f27598ecaa6a89c81008fbcd7e0fc73efbfcfc85b1dd1310a0b88286c5eb1ba0c03257dfa4a7b0e71c74ef3c16c9395322ef63d85a8cde686bf08594fc729c88fdc73ac186b28111a58573283831c689cc2cd9c8e73f5ee38ca7370a974b3bd302f49db7c89ee22120a4d299c9a575b5a5bee074eacb7950417f90972f0a8237f159c61f7dd311a95a724beaec5f4ad059fc1b74bf3bfde41c61a8aae5fae88b0ead1994ccc41e5822b9c718f53faf8d3cb4c2c490f18658d0070d77b97a34f7559277206b6d9ca1d3d65875ff5af3372b036e4794d8436c8961c16eb35bda9a1983596af81e78d8dfe8b6fe4e84d5425330f9c50c829be722b68bc08dacca09ceb0dedb31e2f60fda99e809901e6c997602f426d3d867559ab2eb4461795a8dc2f867cf46a19180d80894a0c8822006f464bd60decb4e01b9fce55c30e0a088cac162be5f3620da407924b7bb054a165d333eec8e5ea704502eb657ad</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 内部资料需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>论文</category>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>Latex</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给原来的hexo要装新的插件</title>
     <url>/2021/03/18/%E6%9C%AA%E5%91%BD%E5%90%8D%203/</url>
     <content><![CDATA[<h3 id="给原来的hexo要装新的插件"><a href="#给原来的hexo要装新的插件" class="headerlink" title="给原来的hexo要装新的插件"></a>给原来的hexo要装新的插件</h3><p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
