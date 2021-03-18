@@ -785,4 +785,23 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
+  <entry>
+    <title>给原来的hexo要装新的插件</title>
+    <url>/2021/03/18/%E6%9C%AA%E5%91%BD%E5%90%8D%203/</url>
+    <content><![CDATA[<h3 id="给原来的hexo要装新的插件"><a href="#给原来的hexo要装新的插件" class="headerlink" title="给原来的hexo要装新的插件"></a>给原来的hexo要装新的插件</h3><p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
+<p>2.然后传到新的仓库例如A11     </p>
+<span id="more"></span>                                                                                                                                        
+
+<p>3.需求给A11，添加秘钥（Repository secrets  HEXO_DEPLOY_PRI），秘钥存在blogSourceCodeFinal仓库的github-deploy-key文件里</p>
+<p>4.还需修改A11里的.github/workflows/deploy.yml文件的第11行</p>
+<p>5.然后修改A11里的themes/next/_config.yml文件的第300行</p>
+<p>6.然后就完事了</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>
