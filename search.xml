@@ -817,6 +817,7 @@
     <url>/2021/03/23/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
     <content><![CDATA[<p><a name="teaqH"></a></p>
 <h3 id="总的原则"><a href="#总的原则" class="headerlink" title="总的原则"></a>总的原则</h3><p>抽象与复用<br />松耦合<br><a name="jYbyJ"></a></p>
+<span id="more"></span>
 <h3 id="1、单一设计原则"><a href="#1、单一设计原则" class="headerlink" title="1、单一设计原则"></a>1、单一设计原则</h3><p><a name="LZwGq"></a></p>
 <h3 id="2、开闭原则（OCP）"><a href="#2、开闭原则（OCP）" class="headerlink" title="2、开闭原则（OCP）"></a>2、开闭原则（OCP）</h3><p>模块和函数应该对扩展开放，对修改封闭<br />通过扩展实现变化，而不是修改<br><a name="0ei0B"></a></p>
 <h3 id="3、里氏代换原则（LSP）"><a href="#3、里氏代换原则（LSP）" class="headerlink" title="3、里氏代换原则（LSP）"></a>3、里氏代换原则（LSP）</h3><p>子类型必须能够替换掉它们的基类型<br />是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化<br /><br><br />LSP是多态顺利实现的保证，从而使OCP成为可能。<br />正是子类型的可替代性才使得使用基类的模块在无需修改的情况下就可以扩展。<br />增加或修改任何一个子类型，基类不用修改（封闭）<br />基类的使用者（客户程序）通过多态得到扩展或修改过的行为（开放）<br><a name="xxRN7"></a></p>
