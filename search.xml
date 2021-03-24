@@ -862,6 +862,7 @@
     <url>/2021/03/24/Ms/</url>
     <content><![CDATA[<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="OSI的体系结构（7层）介绍每一层的作用"><a href="#OSI的体系结构（7层）介绍每一层的作用" class="headerlink" title="OSI的体系结构（7层）介绍每一层的作用"></a>OSI的体系结构（7层）介绍每一层的作用</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210324182703.png" alt="五层体系结构"></p>
 <p><a href="https://snailclimb.gitee.io/javaguide-interview/#/./docs/c-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C?id=_311-osi%e4%b8%8etcpip%e5%90%84%e5%b1%82%e7%9a%84%e7%bb%93%e6%9e%84%e4%b8%8e%e5%8a%9f%e8%83%bd%e9%83%bd%e6%9c%89%e5%93%aa%e4%ba%9b%e5%8d%8f%e8%ae%ae">各层作用</a></p>
+<span id="more"></span>
 <p>1). 物理层</p>
 <p>　　参考模型的最低层，也是OSI模型的第一层，实现了相邻计算机节点之间比特流的透明传送，并尽可能地屏蔽掉具体传输介质和物理设备的差异，使其上层(数据链路层)不必关心网络的具体传输介质。</p>
 <p>2). 数据链路层（data link layer）</p>
