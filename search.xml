@@ -810,6 +810,30 @@
       </tags>
   </entry>
   <entry>
+    <title>homebrew加速</title>
+    <url>/2021/04/05/homebrew/</url>
+    <content><![CDATA[<p>homebrew换源加速</p>
+<span id="more"></span>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"># 替换brew.git:</span><br><span class="line">cd <span class="string">&quot;$(brew --repo)&quot;</span></span><br><span class="line">git remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.aliyun.com/homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line"># 替换homebrew-core.git:</span><br><span class="line">cd <span class="string">&quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span></span><br><span class="line">git remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.aliyun.com/homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line"># 替换homebrew-cask.git:</span><br><span class="line">cd <span class="string">&quot;$(brew --repo)&quot;</span>/Library/Taps/homebrew/homebrew-cask</span><br><span class="line">git remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.ustc.edu.cn/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line"># 替换homebrew-bottles:</span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改为国内镜像源</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cd /usr/local/Homebrew</span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo homebrew/core)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo homebrew/cask)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>复原的方法</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cd /usr/local/Homebrew</span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//github.com/Homebrew/brew.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo homebrew/core)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//github.com/Homebrew/homebrew-core.git</span></span><br><span class="line"></span><br><span class="line">git -C <span class="string">&quot;$(brew --repo homebrew/cask)&quot;</span> remote <span class="built_in">set</span>-url origin https:<span class="comment">//github.com/Homebrew/homebrew-cask.git</span></span><br><span class="line"></span><br><span class="line">brew update</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>homebrew</category>
+      </categories>
+      <tags>
+        <tag>homebrew</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给原来的hexo要装新的插件</title>
     <url>/2021/03/18/%E7%BB%99%E5%8E%9F%E6%9D%A5%E7%9A%84hexo%E8%A6%81%E8%A3%85%E6%96%B0%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
