@@ -2993,7 +2993,7 @@ mark.search-keyword {
   }
 }
 body {
-  background: url("https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210315165514blogbackground.png");
+  background: #fff;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 60% 20%;

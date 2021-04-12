@@ -305,7 +305,7 @@
   </entry>
   <entry>
     <title>blog上传文章</title>
-    <url>/2021/04/05/%E5%86%99%E6%96%87%E7%AB%A0/</url>
+    <url>/2021/04/12/%E5%86%99%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">title: </span><br><span class="line">author: Alexander</span><br><span class="line">date: </span><br><span class="line">updated: </span><br><span class="line">tags: [,]</span><br><span class="line">categories: </span><br><span class="line">description: </span><br><span class="line">comments: <span class="literal">true</span></span><br><span class="line">math: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
 
 
@@ -813,7 +813,7 @@
   </entry>
   <entry>
     <title>git操作</title>
-    <url>/2021/04/05/git%E6%93%8D%E4%BD%9C/</url>
+    <url>/2021/04/12/git%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="git-的相关操作"><a href="#git-的相关操作" class="headerlink" title="git 的相关操作"></a>git 的相关操作</h3><p>git init 初始化</p>
 <p>git add .    把所有修改的文件加到下一次的commit中，也可把.换成特定的文件名</p>
 <p>git commit -m “” 提交加入的文件，双引号内填写提交信息</p>
