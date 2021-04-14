@@ -843,7 +843,7 @@
   </entry>
   <entry>
     <title>git操作</title>
-    <url>/2021/04/14/git%E6%93%8D%E4%BD%9C/</url>
+    <url>/2021/03/20/git%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="git-的相关操作"><a href="#git-的相关操作" class="headerlink" title="git 的相关操作"></a>git 的相关操作</h3><p>git init 初始化</p>
 <p>git add .    把所有修改的文件加到下一次的commit中，也可把.换成特定的文件名</p>
 <p>git commit -m “” 提交加入的文件，双引号内填写提交信息</p>
