@@ -812,6 +812,112 @@
       </tags>
   </entry>
   <entry>
+    <title>第三章 软件生存期模型</title>
+    <url>/2021/04/15/3-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B-%E7%94%9F%E5%AD%98%E6%9C%9F/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411165234.png" alt="image-20210411165234548"></p>
+<span id="more"></span>
+
+<h2 id="第三章-软件生存期模型"><a href="#第三章-软件生存期模型" class="headerlink" title="第三章 软件生存期模型"></a>第三章 软件生存期模型</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
+<p>1、生存期模型定义</p>
+<p>2、传统生存期模型</p>
+<p>3、敏捷生存期模型</p>
+<p>4、案例分析</p>
+<p>5、课程实践</p>
+</blockquote>
+<h3 id="软件生存期模型特征"><a href="#软件生存期模型特征" class="headerlink" title="软件生存期模型特征"></a>软件生存期模型特征</h3><ul>
+<li>描述了开发的主要阶段</li>
+<li>定义每一个阶段要完成的主要过程和活动</li>
+<li>确定每一个阶段的输入和输出</li>
+</ul>
+<h3 id="常用传统生存期模型"><a href="#常用传统生存期模型" class="headerlink" title="常用传统生存期模型"></a>常用传统生存期模型</h3><h3 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411165726%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B.png" alt="image-20210411165726101"></p>
+<h4 id="适合瀑布模型的项目特征："><a href="#适合瀑布模型的项目特征：" class="headerlink" title="适合瀑布模型的项目特征："></a><strong>适合瀑布模型的项目特征：</strong></h4><p>需求：很明确</p>
+<p>方案：很明确</p>
+<p>类似项目：短期项目等</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a><strong>优点</strong></h4><ul>
+<li>简单、易用、直观</li>
+<li>开发进程比较严格，一个进程接着一个进程</li>
+<li>模型执行过程中需要严密控制</li>
+<li>允许基线和配置早期接受控制</li>
+<li>为项目提供了按阶段划分的检查点，当前一个阶段完成后，只需要关注后续阶段</li>
+</ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h4><ul>
+<li>在软件开发的初期阶段就要求做出正确、全面、完整的需求分析对许多应用软件来说是极其困难的</li>
+<li>由于开发模型是线性的，模型中没有反馈过程，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发风险</li>
+<li>一个新的项目不适合瀑布模型，除非在项目的后期</li>
+<li>用户直到项目结束才能看到产品的质量，用户不是渐渐地熟悉系统</li>
+<li>不允许变更或者限制变更</li>
+<li>早期的错误可能要等到开发后期才能发现，进而带来严重后果</li>
+</ul>
+<h4 id="使用范围"><a href="#使用范围" class="headerlink" title="使用范围"></a><strong>使用范围</strong></h4><ul>
+<li>适合于软件需求很明确的软件项目</li>
+<li>短期项目可以采用瀑布模型</li>
+</ul>
+<h3 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411170246V%E6%A8%A1%E5%9E%8B.png" alt="image-20210411170246491" style="zoom:50%;" />
+
+<h4 id="适合V模型的项目特征："><a href="#适合V模型的项目特征：" class="headerlink" title="适合V模型的项目特征："></a><strong>适合V模型的项目特征：</strong></h4><p>需求：很明确</p>
+<p>方案：很明确</p>
+<p>类似项目：系统性能、<font color=red>安全等有严格要求</font>等</p>
+<h3 id="原型模型"><a href="#原型模型" class="headerlink" title="原型模型"></a>原型模型</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411170442%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%9E%8B.png" alt="image-20210411170442675" style="zoom:50%;" />
+
+<h4 id="适合原型模型的项目特征："><a href="#适合原型模型的项目特征：" class="headerlink" title="适合原型模型的项目特征："></a><strong>适合原型模型的项目特征：</strong></h4><p>需求：不明确</p>
+<p>希望：减少项目需求的不确定性</p>
+<p><font color=red>可以构建一部分系统的模型，通过用户试用提出优缺点，最好选择（快速原型模型）生存期模型。</font></p>
+<h3 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411170619%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B.png" alt="image-20210411170619294" style="zoom:50%;" />
+
+<h4 id="适合增量模型的项目特征："><a href="#适合增量模型的项目特征：" class="headerlink" title="适合增量模型的项目特征："></a><strong>适合增量模型的项目特征：</strong></h4><p>需求：基本明确，可能发生变化</p>
+<p>市场、用户：对于市场和用户把握需要逐步了解</p>
+<p>系统改造：需要一步一步实施</p>
+<p><font color=red>为避免一次性投资太多带来的风险，最好选择（增量式模型 ）生存期模型。</font></p>
+<h3 id="渐进式阶段模型"><a href="#渐进式阶段模型" class="headerlink" title="渐进式阶段模型"></a>渐进式阶段模型</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411170821.png" alt="image-20210411170821493" style="zoom:50%;" />
+
+<p>也称为：渐进式迭代模型</p>
+<h4 id="渐进式开发"><a href="#渐进式开发" class="headerlink" title="渐进式开发"></a><strong>渐进式开发</strong></h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411170925.png" alt="image-20210411170925245" style="zoom: 50%;" />
+
+<h4 id="阶段性提交"><a href="#阶段性提交" class="headerlink" title="阶段性提交"></a><strong>阶段性提交</strong></h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411171001.png" alt="image-20210411171001295" style="zoom:50%;" />
+
+<h4 id="渐进式阶段模型的优点"><a href="#渐进式阶段模型的优点" class="headerlink" title="渐进式阶段模型的优点"></a><strong>渐进式阶段模型的优点</strong></h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411171040.png" alt="image-20210411171040801" style="zoom:50%;" />
+
+<h4 id="RUP模型—-渐进式阶段模型"><a href="#RUP模型—-渐进式阶段模型" class="headerlink" title="RUP模型—-渐进式阶段模型"></a><strong>RUP模型—-渐进式阶段模型</strong></h4><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210411171148810.png" alt="image-20210411171148810" style="zoom:50%;" />
+
+<h3 id="敏捷模型"><a href="#敏捷模型" class="headerlink" title="敏捷模型"></a>敏捷模型</h3><ul>
+<li>敏捷组织提出的一个灵活开发方法</li>
+<li>应对迅速变化需求的快速软件开发方法</li>
+<li>是一种迭代、循序渐进的开发方法</li>
+</ul>
+<p><font color=red>敏捷开发通过（ 迭代）和快速用户反馈应对管理的不确定性和变更。</font></p>
+<img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210415135618249.png" alt="image-20210415135618249" style="zoom:67%;" />
+
+<h4 id="敏捷宣言"><a href="#敏捷宣言" class="headerlink" title="敏捷宣言"></a>敏捷宣言</h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210415135954.png" alt="image-20210415135954447" style="zoom:67%;" />
+
+<h3 id="Scrum模型"><a href="#Scrum模型" class="headerlink" title="Scrum模型"></a>Scrum模型</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210415140047715.png" alt="image-20210415140047715" style="zoom:67%;" />
+
+<h3 id="XP-eXtreme-Programming-极限编程模型"><a href="#XP-eXtreme-Programming-极限编程模型" class="headerlink" title="XP(eXtreme Programming)极限编程模型"></a>XP(eXtreme Programming)极限编程模型</h3><p>XP(eXtreme Programming)极限编程是由Kent Beck提出的一套针对业务需求和软件开发实践的规则。</p>
+<h4 id="极限编程方法的实施原则"><a href="#极限编程方法的实施原则" class="headerlink" title="极限编程方法的实施原则"></a>极限编程方法的实施原则</h4><ul>
+<li>快速反馈 (Rapid feedback) </li>
+<li>假设简单 (Assuming simplicity) </li>
+<li>包容变化 (Embracing change) </li>
+</ul>
+<h3 id="选择生存期的步骤"><a href="#选择生存期的步骤" class="headerlink" title="选择生存期的步骤"></a>选择生存期的步骤</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210415140415.png" alt="image-20210415140415590" style="zoom:67%;" />
+
+<h3 id="迭代模型"><a href="#迭代模型" class="headerlink" title="迭代模型"></a>迭代模型</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210415140543.png" alt="image-20210415140543304" style="zoom:67%;" />
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><h4 id="生存期模型"><a href="#生存期模型" class="headerlink" title="生存期模型"></a>生存期模型</h4><ul>
+<li>瀑布模型</li>
+<li>V模型</li>
+<li>原型模型</li>
+<li>增量模型</li>
+<li>渐进式阶段模型</li>
+<li>敏捷开发模型</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A01答疑总结</title>
     <url>/2021/03/18/A01%E7%AD%94%E7%96%91%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
