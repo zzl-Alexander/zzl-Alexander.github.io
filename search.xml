@@ -892,6 +892,85 @@
       </tags>
   </entry>
   <entry>
+    <title>第一章 软件项目管理概述</title>
+    <url>/2021/04/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h2 id="第一章-软件项目管理概述"><a href="#第一章-软件项目管理概述" class="headerlink" title="第一章 软件项目管理概述"></a>第一章 软件项目管理概述</h2><blockquote>
+<p>本章要点</p>
+<p>一、项目与软件项目</p>
+<p>二、项目管理与软件项目管理</p>
+<p>三、项目管理知识体系（PMBOK）</p>
+<p>四、过程管理与软件项目管理的关系</p>
+<p>五、软件项目管理的过程</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="项目定义"><a href="#项目定义" class="headerlink" title="项目定义"></a>项目定义</h3><p>项目是为了创造一个<strong>唯一</strong>的产品或提供一个<strong>唯一</strong>的服务而进行的<strong>临时性</strong>的努力。</p>
+<h3 id="项目的特征"><a href="#项目的特征" class="headerlink" title="项目的特征"></a>项目的特征</h3><ul>
+<li>有明确的目标</li>
+<li>项目之间的活动具有相关性</li>
+<li>限定的周期</li>
+<li>有独特性</li>
+<li>资源成本的约束性</li>
+<li>项目的不确定性</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408071906%E5%93%AA%E4%BA%9B%E6%98%AF%E9%A1%B9%E7%9B%AE.png" alt="image-20210408071858233" style="zoom: 50%;" />
+
+<h3 id="日常运作与项目的共同点"><a href="#日常运作与项目的共同点" class="headerlink" title="日常运作与项目的共同点"></a>日常运作与项目的共同点</h3><ul>
+<li>都需要人来完成</li>
+<li>均受到有限资源的限制</li>
+<li>均需要计划、执行、控制</li>
+</ul>
+<h3 id="日常运作与项目的不同点"><a href="#日常运作与项目的不同点" class="headerlink" title="日常运作与项目的不同点"></a>日常运作与项目的不同点</h3><ul>
+<li>项目是一次性的，日常运作是重复进行的；</li>
+<li>项目是以目标为导向的，日常运作是通过效率和有效性体现的；</li>
+<li>项目是通过项目经理及其团队工作完成的，日常运作是职能式的线性管理；</li>
+<li>项目存在大量的变更管理，日常运作基本保持持续的连贯性。</li>
+</ul>
+<h3 id="软件项目的特殊性"><a href="#软件项目的特殊性" class="headerlink" title="软件项目的特殊性"></a>软件项目的特殊性</h3><ul>
+<li>逻辑实体</li>
+<li>相互作用的系统</li>
+<li>渐进明细</li>
+<li>变更</li>
+</ul>
+<h3 id="软件项目要素"><a href="#软件项目要素" class="headerlink" title="软件项目要素"></a>软件项目要素</h3><ul>
+<li>软件开发的过程；</li>
+<li>软件开发的结果；</li>
+<li>软件开发赖以生存的资源及软件项目的特定委托人（客户，既是项目结果的需求者，也是项目实施的资金提供者）</li>
+</ul>
+<h3 id="项目目标实现的制约因素"><a href="#项目目标实现的制约因素" class="headerlink" title="项目目标实现的制约因素"></a>项目目标实现的制约因素</h3><ul>
+<li>项目范围：为使客户满意做的所有工作；</li>
+<li>成本：完成项目所需的费用；</li>
+<li>进度计划：每项任务的起止时间及所需的资源；</li>
+<li>客户满意度：交付成果的质量。</li>
+</ul>
+<h3 id="项目管理定义"><a href="#项目管理定义" class="headerlink" title="项目管理定义"></a>项目管理定义</h3><p>项目管理是一系列的伴随着项目的进行而进行的、目的是为了确保项目能够达到期望的结果的一系列管理行为。</p>
+<h3 id="软件项目管理的根本目的"><a href="#软件项目管理的根本目的" class="headerlink" title="软件项目管理的根本目的"></a>软件项目管理的根本目的</h3><p>软件项目管理的根本目的是让软件项目尤其是大型项目的生命周期能在管理者的控制之下，以预定成本按期、按质地完成软件项目，并且交付用户使用。</p>
+<p>研究软件项目管理是为了从已有的成功或者失败的案例中总结出能够指导今后开发的通用原则、方法，以避免前人的失误。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073137PMBOK.png" alt="image-20210408073137193"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073232PMBOK.png" alt="image-20210408073232884"></p>
+<h3 id="过程管理"><a href="#过程管理" class="headerlink" title="过程管理"></a>过程管理</h3><p>过程管理，就是对过程进行管理，目的是要让过程能够被共享、复用，并得到持续的改进。</p>
+<h3 id="软件项目管理过程组"><a href="#软件项目管理过程组" class="headerlink" title="软件项目管理过程组"></a>软件项目管理过程组</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073443.png" alt="image-20210408073443713" style="zoom:50%;" />
+
+<h3 id="软件项目管理过程"><a href="#软件项目管理过程" class="headerlink" title="软件项目管理过程"></a>软件项目管理过程</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073601.png" alt="image-20210408073601271"></p>
+<h4 id="项目初始"><a href="#项目初始" class="headerlink" title="项目初始"></a>项目初始</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073628.png" alt="image-20210408073628288"></p>
+<h4 id="项目计划"><a href="#项目计划" class="headerlink" title="项目计划"></a>项目计划</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073643.png" alt="image-20210408073643850"></p>
+<h4 id="项目执行控制"><a href="#项目执行控制" class="headerlink" title="项目执行控制"></a>项目执行控制</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073707.png" alt="image-20210408073707626"></p>
+<h4 id="项目结束"><a href="#项目结束" class="headerlink" title="项目结束"></a>项目结束</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408073732.png" alt="image-20210408073732402"></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><blockquote>
+<p>软件项目管理基本概念</p>
+<p>过程管理与软件项目管理的关系</p>
+<p>软件项目管理过程</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+        <category>概述</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>给原来的hexo要装新的插件</title>
     <url>/2021/03/18/%E7%BB%99%E5%8E%9F%E6%9D%A5%E7%9A%84hexo%E8%A6%81%E8%A3%85%E6%96%B0%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
