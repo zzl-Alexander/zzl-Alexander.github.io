@@ -918,6 +918,72 @@
       </tags>
   </entry>
   <entry>
+    <title>第 4 章软件项目需求管理</title>
+    <url>/2021/04/15/4-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82/</url>
+    <content><![CDATA[<h2 id="第-4-章软件项目需求管理"><a href="#第-4-章软件项目需求管理" class="headerlink" title="第 4 章软件项目需求管理"></a>第 4 章软件项目需求管理</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
+<p>1.软件需求定义</p>
+<p>2.软件需求管理过程</p>
+<p>3.需求建模的基本方法</p>
+<p>4.案例分析</p>
+<p>5.课程实践</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="软件需求定义"><a href="#软件需求定义" class="headerlink" title="软件需求定义"></a>软件需求定义</h3><p>需求是指用户对软件的功能和性能的要求</p>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414204618.png" alt="image-20210414204611108" style="zoom:67%;" />
+
+<h3 id="软件需求管理的过程"><a href="#软件需求管理的过程" class="headerlink" title="软件需求管理的过程"></a>软件需求管理的过程</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414204657.png" alt="image-20210414204657789" style="zoom:67%;" />
+
+<h4 id="1、需求获取"><a href="#1、需求获取" class="headerlink" title="1、需求获取"></a>1、需求获取</h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414204813.png" alt="image-20210414204813361" style="zoom:50%;" />
+
+<h4 id="2、需求分析"><a href="#2、需求分析" class="headerlink" title="2、需求分析"></a>2、需求分析</h4><p>需求分析是为最终用户所看到的系统建立一个概念模型，是对需求的抽象描述。</p>
+<h5 id="需求分析模型"><a href="#需求分析模型" class="headerlink" title="需求分析模型"></a>需求分析模型</h5><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210414205051631.png" alt="image-20210414205051631" style="zoom:50%;" />
+
+<h4 id="3、需求规格编写"><a href="#3、需求规格编写" class="headerlink" title="3、需求规格编写"></a>3、需求规格编写</h4><p>需求分析工作完成的一个基本标志是形成了一份完整的、规范的需求规格说明书</p>
+<h4 id="4、需求验证"><a href="#4、需求验证" class="headerlink" title="4、需求验证"></a>4、需求验证</h4><p>需求是正确的吗？<br>需求是一致的吗？<br>需求是完全的吗？<br>需求是实际可行的吗？<br>需求是必要的吗？<br>需求是可检验的吗？<br>需求是可跟踪的吗？<br>最后的签字</p>
+<h4 id="5、需求总在变化"><a href="#5、需求总在变化" class="headerlink" title="5、需求总在变化"></a>5、需求总在变化</h4><h3 id="需求变更管理"><a href="#需求变更管理" class="headerlink" title="需求变更管理"></a>需求变更管理</h3><p>①<strong>建立需求基线</strong></p>
+<p>②<strong>确定需求变更控制过程</strong></p>
+<p>③<strong>建立变更控制委员会</strong>(SCCB)</p>
+<p>④<strong>进行需求变更影响分析</strong></p>
+<p>⑤<strong>跟踪所有受需求变更影响的工作产品</strong></p>
+<p>⑥<strong>建立需求基准版本和需求控制版本文档，维护需求变更的历史记录</strong></p>
+<p>⑦<strong>跟踪每项需求的状态衡量需求稳定性</strong></p>
+<h4 id="需求变更控制流程"><a href="#需求变更控制流程" class="headerlink" title="需求变更控制流程"></a>需求变更控制流程</h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414205334.png" alt="image-20210414205334084" style="zoom: 67%;" />
+
+<h3 id="需求建模的基本方法介绍"><a href="#需求建模的基本方法介绍" class="headerlink" title="需求建模的基本方法介绍"></a>需求建模的基本方法介绍</h3><p>1.原型方法</p>
+<p>2.结构化分析法</p>
+<p>3.面向对象的用例分析法</p>
+<p>4.功能列表法</p>
+<h4 id="1、原型方法"><a href="#1、原型方法" class="headerlink" title="1、原型方法"></a>1、原型方法</h4><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210414205426895.png" alt="image-20210414205426895" style="zoom:50%;" />
+
+<h4 id="2、结构化分析方法"><a href="#2、结构化分析方法" class="headerlink" title="2、结构化分析方法"></a>2、结构化分析方法</h4><p>20世纪70年发展起来的面向数据流的方法<br>根据软件内部数据传递、变换的关系进行分析的</p>
+<ul>
+<li>数据流图(DFD)</li>
+<li>数据字典(DD)</li>
+<li>实体联系图(ER)</li>
+<li>系统流程图</li>
+</ul>
+<h4 id="3、面向对象的用例分析"><a href="#3、面向对象的用例分析" class="headerlink" title="3、面向对象的用例分析"></a>3、面向对象的用例分析</h4><ul>
+<li>基于面向对象的情景分析方法</li>
+<li>从用户角度出发考虑的功能需求</li>
+<li>用例是系统向用户提供一个有价值的结果的某项功能</li>
+</ul>
+<h5 id="UML需求视图"><a href="#UML需求视图" class="headerlink" title="UML需求视图"></a>UML需求视图</h5><p>用例视图（Use case Diagram）<br>顺序图（Sequence Diagram）<br>状态图（State Diagram）<br>活动图（Activity Diagram）</p>
+<h5 id="用例需求分析方法综述"><a href="#用例需求分析方法综述" class="headerlink" title="用例需求分析方法综述"></a>用例需求分析方法综述</h5><p>识别出系统的Actor<br>描述主要的Use case<br>实现用例视图<br>实现顺序视图，活动视图,状态视图等</p>
+<h4 id="4、功能列表"><a href="#4、功能列表" class="headerlink" title="4、功能列表"></a>4、功能列表</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414210109.png" alt="image-20210414210109384"></p>
+<h4 id="基于功能列表的实例"><a href="#基于功能列表的实例" class="headerlink" title="基于功能列表的实例"></a>基于功能列表的实例</h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414210205.png" alt="image-20210414210205113" style="zoom:67%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414210421.png" alt="image-20210414210421647"></p>
+<h3 id="需求管理-小结"><a href="#需求管理-小结" class="headerlink" title="需求管理-小结"></a>需求管理-小结</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210414210601.png" alt="image-20210414210600979"></p>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A01答疑总结</title>
     <url>/2021/03/18/A01%E7%AD%94%E7%96%91%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
