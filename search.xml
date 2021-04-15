@@ -984,6 +984,74 @@
       </tags>
   </entry>
   <entry>
+    <title>第5章 软件项目任务分解</title>
+    <url>/2021/04/15/5-%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/</url>
+    <content><![CDATA[<h2 id="第5章-软件项目任务分解"><a href="#第5章-软件项目任务分解" class="headerlink" title="第5章 软件项目任务分解"></a>第5章 软件项目任务分解</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
+<p>1、任务分解定义</p>
+<p>2、任务分解方法</p>
+<p>3、任务分解的基本步骤</p>
+<p>4、案例分析</p>
+<p>5、课程实践</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="任务分解"><a href="#任务分解" class="headerlink" title="任务分解"></a>任务分解</h3><h4 id="任务分解过程"><a href="#任务分解过程" class="headerlink" title="任务分解过程"></a>任务分解过程</h4><p>将一个项目分解为更多的工作细目或者子项目，使项目变得更小、更易管理、更易操作</p>
+<h4 id="任务分解结果"><a href="#任务分解结果" class="headerlink" title="任务分解结果"></a>任务分解结果</h4><p>WBS（ Work Breakdown Structure:任务分解结构）</p>
+<h3 id="WBS"><a href="#WBS" class="headerlink" title="WBS"></a>WBS</h3><ul>
+<li><p>WBS是对项目由粗到细的分解过程。</p>
+</li>
+<li><p>面向交付成果的</p>
+</li>
+<li><p>WBS它组织并定义了整个项目范围</p>
+<ol>
+<li><font color=red>不包括在WBS中的任务就不是该项目的工作</font></li>
+<li>WBS中的每一个具体细目通常都指定唯一的<font color=red>（编码）</font>。</li>
+<li><font color=red>WBS提供了项目范围基线。</font></li>
+<li><font color=red>WBS的最底层任务是能分配到一个项目经理完成的任务。</font></li>
+</ol>
+</li>
+</ul>
+<h3 id="工作包（-Work-packages）"><a href="#工作包（-Work-packages）" class="headerlink" title="工作包（ Work packages）"></a>工作包（ Work packages）</h3><ul>
+<li>WBS的最低层次的可交付成果</li>
+<li>工作包应当由唯一主体负责</li>
+</ul>
+<h3 id="任务分解的形式-图表形式的WBS"><a href="#任务分解的形式-图表形式的WBS" class="headerlink" title="任务分解的形式-图表形式的WBS"></a>任务分解的形式-图表形式的WBS</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412151208.png" alt="image-20210412151201486" style="zoom:50%;" />
+
+<h3 id="任务分解的形式-清单形式的WBS"><a href="#任务分解的形式-清单形式的WBS" class="headerlink" title="任务分解的形式-清单形式的WBS"></a>任务分解的形式-清单形式的WBS</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412151305459.png" alt="image-20210412151305459" style="zoom:50%;" />
+
+<h3 id="分解方法"><a href="#分解方法" class="headerlink" title="分解方法"></a>分解方法</h3><h4 id="类比"><a href="#类比" class="headerlink" title="类比"></a>类比</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152239.png" alt="image-20210412152118346"></p>
+<h4 id="模板参照"><a href="#模板参照" class="headerlink" title="模板参照"></a>模板参照</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152307.png" alt="image-20210412152148334"></p>
+<h4 id="自上而下"><a href="#自上而下" class="headerlink" title="自上而下"></a>自上而下</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152447.png" alt="image-20210412152447387"></p>
+<h4 id="自下而上"><a href="#自下而上" class="headerlink" title="自下而上"></a>自下而上</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152632.png" alt="image-20210412152632701"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152715.png" alt="image-20210412152714656"></p>
+<h3 id="任务分解的基本步骤"><a href="#任务分解的基本步骤" class="headerlink" title="任务分解的基本步骤"></a>任务分解的基本步骤</h3><p>①确认并分解项目的组成要素(WBS编号)</p>
+<p>②确定分解标准</p>
+<p>③确定分解是否详细</p>
+<p>④确定项目交付成果（可以编制WBS字典）</p>
+<p>⑤验证分解的正确性</p>
+<p>​     验证分解正确后，建立一套编号系统。</p>
+<h3 id="WBS编号系统"><a href="#WBS编号系统" class="headerlink" title="WBS编号系统"></a>WBS编号系统</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412153250548.png" alt="image-20210412153250548" style="zoom:50%;" />
+
+<h3 id="分解标准应统一-学生管理"><a href="#分解标准应统一-学生管理" class="headerlink" title="分解标准应统一:学生管理"></a>分解标准应统一:学生管理</h3><p><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412153331265.png" alt="image-20210412153331265"></p>
+<h3 id="不能同时使用两种标准进行分解"><a href="#不能同时使用两种标准进行分解" class="headerlink" title="不能同时使用两种标准进行分解:"></a>不能同时使用两种标准进行分解:</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412153356.png" alt="image-20210412153356635"></p>
+<h3 id="WBS字典"><a href="#WBS字典" class="headerlink" title="WBS字典"></a>WBS字典</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412153502.png" alt="image-20210412153502662"></p>
+<h3 id="检验分解结果的标准"><a href="#检验分解结果的标准" class="headerlink" title="检验分解结果的标准"></a>检验分解结果的标准</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412154332.png" alt="image-20210412154332342"></p>
+<h3 id="WBS任务分解建议"><a href="#WBS任务分解建议" class="headerlink" title="WBS任务分解建议"></a>WBS任务分解建议</h3><ul>
+<li>最低层是可控的和可管理的，但是不必要的过细</li>
+<li>每个Work package必须有一个提交物</li>
+<li>定义任务完成的标准</li>
+<li>有利于责任分配</li>
+<li>推荐任务分解到40小时以内</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A01答疑总结</title>
     <url>/2021/03/18/A01%E7%AD%94%E7%96%91%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
