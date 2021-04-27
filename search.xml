@@ -1128,32 +1128,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git操作</title>
-    <url>/2021/03/20/git%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h3 id="git-的相关操作"><a href="#git-的相关操作" class="headerlink" title="git 的相关操作"></a>git 的相关操作</h3><p>git init 初始化</p>
-<p>git add .    把所有修改的文件加到下一次的commit中，也可把.换成特定的文件名</p>
-<p>git commit -m “” 提交加入的文件，双引号内填写提交信息</p>
-<span id="more"></span>
-
-<p>git status 显示哪些文件已被staged、未被staged以及未追踪（untracked）</p>
-<p>git switch -c &lt; breach &gt; 进行分支的切换，去掉-c将切换到一个已有分支</p>
-<p>git merge &lt; branch &gt; 将制定分支合并到当前分支</p>
-<p>git remote add &lt; name &gt; &lt; url &gt; 添加一个新的远程连接。添加后可使用name作为指定url远程连接的名称</p>
-<p>git fetch &lt; remote &gt; &lt; branch &gt; 从指定remote抓取指定branch的所有commit到本地repo。去掉branch将抓取远程所有分支的修改</p>
-<p>git pull &lt; remote &gt; 从指定remote抓取所有分支的commit并立刻合并到本地repo</p>
-<p>git push &lt; remote &gt; &lt; branch &gt; 将本地指定的branch推送到指定远程remote。如果远程没有对应的分支，将自动在远程创建此分支</p>
-<p>git config –global user.name &lt; name &gt;</p>
-<p>git config –global user.email &lt; email &gt;<br><br></p>
-<h3 id="把本地文件提交到github"><a href="#把本地文件提交到github" class="headerlink" title="把本地文件提交到github"></a>把本地文件提交到github<br></h3><p>git init<br>git add README.md<br><br>git commit -m “first commit”<br><br>git branch -M master<br><br>git remote add origin &lt; 仓库地址 &gt;<br>git push -u origin master</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Acwing101. 最高的牛</title>
     <url>/2021/04/14/acwing101%E6%9C%80%E9%AB%98%E7%9A%84%E7%89%9B/</url>
     <content><![CDATA[<h3 id="Acwing101-最高的牛"><a href="#Acwing101-最高的牛" class="headerlink" title="Acwing101. 最高的牛"></a>Acwing101. 最高的牛</h3><p>有 N 头牛站成一行，被编队为 1、2、3…N，每头牛的身高都为整数。</p>
@@ -1181,6 +1155,32 @@
       <tags>
         <tag>算法</tag>
         <tag>差分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git操作</title>
+    <url>/2021/03/20/git%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h3 id="git-的相关操作"><a href="#git-的相关操作" class="headerlink" title="git 的相关操作"></a>git 的相关操作</h3><p>git init 初始化</p>
+<p>git add .    把所有修改的文件加到下一次的commit中，也可把.换成特定的文件名</p>
+<p>git commit -m “” 提交加入的文件，双引号内填写提交信息</p>
+<span id="more"></span>
+
+<p>git status 显示哪些文件已被staged、未被staged以及未追踪（untracked）</p>
+<p>git switch -c &lt; breach &gt; 进行分支的切换，去掉-c将切换到一个已有分支</p>
+<p>git merge &lt; branch &gt; 将制定分支合并到当前分支</p>
+<p>git remote add &lt; name &gt; &lt; url &gt; 添加一个新的远程连接。添加后可使用name作为指定url远程连接的名称</p>
+<p>git fetch &lt; remote &gt; &lt; branch &gt; 从指定remote抓取指定branch的所有commit到本地repo。去掉branch将抓取远程所有分支的修改</p>
+<p>git pull &lt; remote &gt; 从指定remote抓取所有分支的commit并立刻合并到本地repo</p>
+<p>git push &lt; remote &gt; &lt; branch &gt; 将本地指定的branch推送到指定远程remote。如果远程没有对应的分支，将自动在远程创建此分支</p>
+<p>git config –global user.name &lt; name &gt;</p>
+<p>git config –global user.email &lt; email &gt;<br><br></p>
+<h3 id="把本地文件提交到github"><a href="#把本地文件提交到github" class="headerlink" title="把本地文件提交到github"></a>把本地文件提交到github</h3><p>git init<br>git add README.md<br>git commit -m “first commit”<br>git branch -M master<br>git remote add origin &lt; 仓库地址 &gt;<br>git push -u origin master</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
