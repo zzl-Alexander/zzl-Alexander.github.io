@@ -1208,6 +1208,21 @@
       </tags>
   </entry>
   <entry>
+    <title>快速排序</title>
+    <url>/2021/04/27/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p>分治思想<br>整个数组找基准（一般事最左边或者最右边），所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面<br>递归实现<br>复杂度nlogn</p>
+<span id="more"></span>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;a)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l&gt;=r)<span class="keyword">return</span> ;</span><br><span class="line">	<span class="keyword">int</span> i=l,j=r;</span><br><span class="line">	<span class="keyword">int</span> base=a[l];<span class="comment">//以最左边的值作为基准</span></span><br><span class="line">	<span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span>(i&lt;j&amp;&amp;a[j]&gt;=base)j--;<span class="comment">//因为以左边为基准，所以从右边开始遍历</span></span><br><span class="line">		<span class="keyword">while</span>(i&lt;j&amp;&amp;a[i]&lt;=base)i++;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;j)&#123;</span><br><span class="line">			<span class="keyword">int</span> cnt=a[i];</span><br><span class="line">			a[i]=a[j];</span><br><span class="line">			a[j]=cnt;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	a[l]=a[i];</span><br><span class="line">	a[i]=base;<span class="comment">//交换当前值与基准值</span></span><br><span class="line">	quicksort(l,i<span class="number">-1</span>,a);</span><br><span class="line">	quicksort(i+<span class="number">1</span>,r,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">		a.push_back(x);</span><br><span class="line">	&#125;	</span><br><span class="line">	quicksort(<span class="number">0</span>,n<span class="number">-1</span>,a);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)<span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;	</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">3 2 1 4 5</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+        <category>排序</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一章 软件项目管理概述</title>
     <url>/2021/04/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h2 id="第一章-软件项目管理概述"><a href="#第一章-软件项目管理概述" class="headerlink" title="第一章 软件项目管理概述"></a>第一章 软件项目管理概述</h2><blockquote>
