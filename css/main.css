@@ -3006,3 +3006,6 @@ body {
 .header-inner {
   opacity: 1;
 }
+.post-toc .nav .nav-child {
+  display: block;
+}
