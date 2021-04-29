@@ -1223,78 +1223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>给原来的hexo要装新的插件</title>
-    <url>/2021/03/18/%E7%BB%99%E5%8E%9F%E6%9D%A5%E7%9A%84hexo%E8%A6%81%E8%A3%85%E6%96%B0%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
-<p>2.然后传到新的仓库例如A11     </p>
-<span id="more"></span>                                                                                                                                        
-
-<p>3.需要给A11，添加秘钥（Repository secrets  HEXO_DEPLOY_PRI），秘钥存在blogSourceCodeFinal仓库的github-deploy-key文件里</p>
-<p>4.还需修改A11里的.github/workflows/deploy.yml文件的第11行</p>
-<p>5.然后修改A11里的themes/next/_config.yml文件的第300行</p>
-<p>6.然后就完事了</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计网</title>
-    <url>/2021/04/27/%E8%AE%A1%E7%BD%91/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="68af2e310e342cc5502b645a594bb71def25253fb4f9ca912486bfadad286e88">72bbddc2aa8ae0d49195142c69f7a1bf3e6b5197f97d346c2880234c37cd187de52a066aa06e14efd79e9bbf8d9c6621c7c8fbf76aaa1e33766c5ef6f1afa86500c6f918a675037352a07d622a19adc41676bf2f52b8a98dfa72459f786842b6cfb3064d3fd5b02403d95acccb61808fe8fbd5e4d5a0f2c88c73167f2cf37695bf3d3f00e29b9bbcb8937c32900b1fcc1352312d7642f229d171b24afc07e9d4dec91691be6994e20b409f61d864eb902b0bb4314f29ae6ac6a870dd42d6cd37e3014026a2a49ce2bd2a7bba9e0d0b5067c3c0028b1bfa41f6ea2d7485961b4a1530e9f2ccc78e05b234f4851bfb38ea6a9277b39f8462331021a0fbe55c458470af56d382dade68316973c1975ba2a5c868c23478ae3e44e9b5af63c3833978341c6c6d50fb617521bcbdecd64d63070714e78aae7edfd545f165bb5862d3494be74137523219ca7e1d2d4cb16c37fe2df2308842cb9231ffadb46a721e3f71c330e5afce99d4de16da459128bed246529aa8fa16b8bf40bbeb26422d28aeffeb5c7a7e6519c715e2aefdc89d8665843eb870e60b4ae978f38f207c4ec4b264583825cd27be49c02908f34b35cabc3fcbac362639d45c253679a3e56fdfd93ffe952ed7e3863a37dc05469eb9d245ff1c2810125f69c5b21aa681cf7a7159069e36c4274301722712434b837a04c68422fe19d8dfbae557d5535871feffd2c2aaebe2638389589d33ed5a1d0cc3ab1e5b96e922f3a736565aa66388887d118129bb3f9db540a65746f7cd53ce3ea4bfaaf301a897b6b13fa973e15510282e08659a68e07b707d693f8587e45be9194bf50ab1d44f78eba6b66b310044575f6bb4f11b5bddc6bce71a2f640abf39787241e54fc5de8599187cd3169ded722f0ebacfb9722708ccc7d847c76eb15be533e9163735a1f74bf121a4143d6e65804d62bb253c31c77f136465247b70406d29128f4db7a3bb81b0198ab8121eaaacce9a204dab8b1a06b62abdd5e1debff80e65919185b991214dc7e99ae2ac6b63223aaddef4cf97ed28686169e5491458390dc0d2e5dcc3504c985dec9671dcb808287736d194a4bc6e8c3f458a9bb126637df11288b7eb0774eb47b1afed0e48216721be7890fa97dc12a0a506c8fbb01ef4d8417ea2065e64a82f6dab2a11df13f155794daa3a01088162865fe2eadb472a28a4765d7f5670365b98d27aa95bcafe4f2b89e384b4009fac5a30fae217dbbb9e91be3f9a1e838905b6d65e34ae5f66de3115cec7f43e9502d9bd9a49bf3dfda6c0e661fef9c8ac2592e36a7a4f0141846a18de9e07d41dafa63efb39f1ec2748464f84df45cf507bf983626017b5b4d504f404716015bcb879368ee993ba232dcb4551e7de98876bf6d5389d8aff5739084976e0dc5cf95fa943c4b6d85343fe17bdcd64e13125d242a66638e77735b39aa51528e8a8a6e919526d2c1b1f569fca7a92ea640a156a383d9fd3ca79de80d83bc61a6c7e0c93d446206784fd890f4bc6d53cc773c742cdea6737f45e407f0ae34727dcde35edcb22757b49008e63b87e4e328d27cfb97a25dff7cb6636a47e9521afec251e5dd29ab91033ff70360bf7504eb8b514d48fed43664df9284ea1171c0abb141a6f0998b7307f2d966b3f0d1f555a1f944789399c028b5628c674b298acecce88e5523ef3fb1ca74d120e16b29da3b6eb4707feb2ccecd78d88b43dee9952457b9ea6e81792f78b31f55189fea536fa8493c44aab1df464c22f6cdf2939f619124e5ede161474798a2e043860d89c2baf4e1d26507bf8bf72c29e2a4e60b8ec8e45d20a50601e9c449e0b9b7cdd014df5f83e3a45e7d92dc717734d085a700b27dda31409a5e016ceecce26bcf9b21006ee157eebee9c974add78acf06d3d30a097a702c5c68cfb67ce8811a02811f047a06e3b8f5e747c9e514c28312fc1e371a3479c6dfb1e4b144cf9525f2716ad9565095679093ffab3ee585914969e80e04d3484632fa1fbd74f5bc684aeb75323ebf9df8155ba6a9f6bb056587635dfc918f6ace9a5aa99d192a8d82c7aba7a1c714015cc0778afef8d74e208fa58cecd60f26e965062a2cfc981049b8f8ef2271ef2d8a22d427aa6e70a8daae036929a1ac0adc273a8b7cdf7a1ff763993d6bc8aee6318018c7ff96303cf871a388f86a2fee27ebc60a860f8b1c31272c48111c9ea577dc3e5b38eb5a0aaaa3f8d1e5d4d8f8bb8163a31ee01247f22285f7cf094bc69b279e7f100c177d19813f92ab86bc332384604943892b9791b5544f81b00a46c91b60be32f2b2bc35cb15ea4fc048246441fbd13814be60898d8a35a37dff65cf38f48f39ca171be2b9ac5e1f92a9f11462508c1fa4c5088632d44f0d3a2dfedbd63b7ecdab8b1e2438364ce79797381c213d2df136b00ecb2bf4aa01669268182c846db3c5bfe8d4d320f7c75e5c752895dac7efcf19fcbb60f99d6b6286b01fab0f557073b01ec5936e93bf78aaa236c4561280ec9be0ac319bcb1ec421edbac928811a17c84e2d24ca08d118ec4bf7254a37c2daaa4024782e3be27730cc3b0cba1106154b2c0251a4fb9b54d7159d479449f47a564d41685d273c26f52732fdeda0d651fb42470886716b97e8afe765b8b11a7cc6c10bb95052aaeaf7a6e813b737838fd65bbcaa5cb96498ee9fa744c1e07d93b0010d8fc422116eaf3f29d0a89dafe6eb6ab8649a105711543c01691aef77991e9fd4442faba3c9291cf637aa2d8ac729e3594f010244806d68a26ff3b8c5f9f9cf0c49e889b0b112bd07037e404e4263313da25cac1f0f2fb6dfc15a1d1c7d793a1f1cf90dddd1ce50e6bbbde4ca845a586a5b8658442ed7b75f3ceb02895d68dc720f321fd5d3a5f7a03a60ad3ef35723d40feab8e0dc3a21d8752feaf45cf553a0e55bc30dd683f504fe6a087feccdb8c0bfe8f86ea99f9aa4a87f78659a1a6d13b4abac64ce6813492d5f823ab5ea42443ab9478fc26d687b2784cc14c31327fe452f365ae4d0249c78d9b374914c9bff6a712dd9a85c82f00e46c3a749deabca6cfa315febafd1803e5f6009468742ef71ffdeac745da02cd72ad992d164aeb8143fd59dca8f338ad4c32dac07c2cff8086e2929167dcee25f8713e8d6048064a0461958f439ed81078c65004007095cbbb816c906ed6898c367336581c33c2034ba1ae01630b41c3ccc689ca67f5397a5ad513a1a15f650aaff27078191eed46d3642eca3ed17b5b196bcb12b97efbf07844cb9cbebea77ca55ccb0adc54536426cd4df736ca9a2cfac683a5c825ad5955a2c6c25c75020e19587726c4a8770eac909df44270ce63ee679eb25a37e685d96777858f4387ccffffbf88ac84f0906fb9700f507ac791935d446122a8ec9c3db2bc87d00a6cc53ade5477314bc6c5aa73caf951825dabcaad8c803a21c4eee1f5d0cae0b659b1cee37f5533e678983844c0732ffd6933f52ea30469a3574cd3b74430b8c676e0bf162aea2e7e995d00c0de1ee521c0833bb89b7c99e57ab72fcfbda70c49a05b35b66d7b825c526fb3a95e29b7c3e0aeca36a1a4e16c28ba68ff0b83b7a5fdd1882e46d1216065b8a35160fd6c93391ce4dcc7294aed87979b8453718fc8508ba31d781551753e84de8fff64a05db274c8bf22c16a1f65d44179445378067d79f49d07219b1f3911375c55edd65e1ab8b88c6cf9a78bec5fa6b2a9d5ad0d39d55c44fbf24e7d611c09ea82516c3dd91da3aab5b39f8f42efd265647f34ac290f7d80f4ff4b8ec2454df64594f6caf9069bee7925a54fc93d59043f7668dba3c0337cac29edb4c3602cf8724c14babf8ae8bd25f417d037249c631de834413cb0e9fb9a50f0cfed0843390e1316a88126625e4d3f900eb7cd326f4b871fbe7e05dfad0a1eb7197aa461e5d75d78b2b9affcd80ff52539f8e8f1af346b3c0c50dcfbfe9932fa6a9e2d720ea21e2b8eddf87082b4b4352f1c616526fc154a98079c8388e372b18bfdc385ca416a5e4e43c32bd8cf6cef793c72d33d6bf2e404c721bc3e8caf950c94d957f50a8d27a5b6da189d6f260e2c6cb495d61d041434ead9d15c4007b91cb859e552e1a25d6b941305356e237e878904a32e82ee9d37df7de3aee5acf3ebd8a7e07b3db247de18809339d6f8a9f50aff86337e316f4dcfb9fd9ce190739bdeb29cfe536ca00b1c6ae90546e88a5ecf8fb56d63d4ae7631cc89e3c3c83e43b1b5f1918c311e9a25c56b6e9afa1a921bbe0a1f1958c6fefba665295f528dad803d6ca050272b53686680326a7b072d30324dc9baa1311716e90aa0a89877f6689d800657440e0ad7138032c7d8726b050c35f22f32e499687c25a4f2038ffcd3c592979ae7367f9fd49f0388c9d4595e9227bd91be1692d94f5842fffedfe216c9babd6b80f0befc3fcf14aadb7ca590be919efa13e13c2c9db17aab3022b524235e956c546a2cde555317f8fe04629dba1e1b9738ecf6384695e27e4ff3c52330d2cad38bb1d40c740c948011e64e5f273fe1bbccada796f7d13218594beb9999fe8eb78d388c2119db726385b4f8701482c343e6c43e35a875016a123dbe0816a8b474eb975c338df8478f61985259746308715a748aed30bbb16b69e049ac63962b16b914eda113614cb284200d0475abb5bd86412cc36414f5ece48cd7a2d737be14985606136e436081453123b705caeb3f0d4a01264bd66c7b772be28792257247b25651638b7cc9bc2491a2440b3e1151f688cb8b75a3be61263d4ce9a9da88853f406d7658f1a357ad135c23f33cfa735c531cfa45569c33e67fd8591f1cfd12329b3bb88a53a3f48d6f50d6d7bab642838d9ae6f3a379f508ed0d631d951be54abf8995f3a3c3e8fbb7fcd144c9c693a9cead3aae7b06488f4761b78c3b5504c87de8a764b4244a5be031ca3c8866373bb4529df002857cdb9f9ffd7d75b9b60cb7bce26e8aa8f731d1df75bd0da055f52fb7fa958a6b9b132192e38f54c656a3c7dd344baffcaf6bed47c95e819c7539879e8fe80c559d6e60b2a2e87bbc1ff588553ed2ea99302ddff7d08a8d87443140a28a6f9ab64d2b3ba88099c178feca7d2d1e2c8692ece09c1e84431fad3fa8e367547a36c6708aca2c062526744f03b27791df490f6d1d929bade67ec2060a23bf28d68988e7421af9329471959858db0de2c6311d7a76d8d144e457ee14f821a31b5f86e4c44da250e757568018736b959ccaa70217b3e5814ad21293731eb88e093d112b322af16791a22c14be11b9a50a0b52f93fa968a6f6455c9b86a56f5188e1d833b1108568c334c9f11ee1a82ac0568340449c7a1fa1aad1fbd1ed608335e3b8fda9368a066f22dbc657b7c86c4edf2e734adfc11ecfbb0013d82a2f08b5275f60a89ce9cc7ae5e29538d780eef36d00c466134c435700889d67f32cb1c426c5ce4561ab33d50d538cdbde7e9d9f3d6c07f05ab6a6ae74e4998006d2fe95b7629f1a66c943a0947a7990f1357a0b4cbbe600a330a00c3af57931023badeb2a46b8afc21c433e96bfe051cc2176fa36610cdce4f753584c82e760119041bc9b27376fcf7c12b8c7e7c94ab9f2333955e194f3ed7de89b275194e13b0e65fb1ee082ebbcc7a76e16325a72403626ff017a4244604357bd48fb45a250217f0f23550fe6c403eca08c02eab2a5e6808b57e8b28eb454c165f349b74b335914337385fa59d849e4d83e61008e7340e24b3f6b8f5b54d6a4f8a3dd1711fa4c7b643a4d9253b4cd13d3f519ff449b896a6392ba56ed188c73ab7ac99b61ca6ea450528b24fc3e00039bb71958b611bc2b2626ea6c3333a469fae27c827a3fe2da16ffca18ce0645376500eae41e8445908eb71c25ea6e213194a114a2da615b5db2da772ba42e80aba4a9a37ef5d5d35342a551130c52a23908378489b62ae309e8898a2c2815db2e52915fe3a6147785d73788583564dd3467e2bde399b6c721953fb8659bffcee08924b602cb03c2124aca519ccc14c4ba6edd117bea5f70438a441f8ed381a4704de1cc18203e5096b40ffa42d2bdd3b2b4aeed7ea66eca27ea296f760c00d458919a1777fd6a015e83f2f84419972b225ecb13c795ebd65fddebb85c987c8926c39ac8bb528381ac64e7383fad56dc4083cf69ba22ae46179a99511581793903cf405a6f885ed0ec519467ee64f838fb63a3702bfdfbd1e3fb7f08c87a4cc1810702fd6a54fb5ea73a423a0741f0baccb462bee3edfb222e825a34683f7c3624ceacd6a69b2f4593546ad8d72f7c7d07089380c94b18d7d376359f1063837ea6d36ad515a45662efdd56541ae206da999538c3956c806061ce20142b9d2a429db323f8b5c42c74e3d8a1210ab2d44a1671a8017080507cc233fee92edca8e7451dfc9a0a505483dbd90a542084b78b0294563db8dabdb4c30c0e9f0553eb380d535ba9164082d0eb67b14555b7b4f98439f2d24e1cf77dc9b7154988ca388336ac7d0c88ce4ad7032ac7dee71fb23f9eb16227eb950823f8d3218f59dfb79a342f2680c4ee107298f9511c471978eece5c5748a475cbbf90da6ec3cda0fa262d847b53476f5f9de3f97730c45818fa439ebf22fe90b93553c704f924d285e3ee5c94f5e5319d4bc59670cdc387cdfb9b22e254198391300497e640c68bd85d6c0ac6f10618895ae5d4991c9743b77ed09c5b468e52ed3cc74c4c7c884bb6564bbba8830fe96050d5330aa90242a3a334f35de9b8457710f6ad0365281c7fafaa1971672bb1b0785d54e21e1a38f9a4992b28eb94e4389cabaa9fbd8ee34c8c7b2b8f8d19e07fd8610fdfbf178c076a8b9cad9ca5107bc57e6a623bfabf0f509321e9b5a0e4715d0d032f6616649ccbc3575bc3686ed2c20636cffd2d84794f5ac5b62bcbe66f1a43b9d143ce0b70b482ca13da61d485200fbe61bb58dca5b81a946d8f7ddfd1182cc7b020265bb9da692c8c7e7f52fb2d2187ad3a55fffe413746abc8530e2e456b89db80c47bb41e74d7277efb5f927379b6c4e36961a5ff2e1a3de804a124bf34d23b1401d5c284228758acd8619bfb1308ce8529e85a956e3012746f9c42ffa43e5995a0799430dc7d41bdeade56a141f85209f88692ef58e4c07ac0ccf4fc6e069a222e398c429deb21691b72bd348ae673751b393f68b05e1310dfbcc01ad17f0466d152aa0ce40b748fc63e9147bab0e3c77c3b6bbec098f939b8c2b2992ac7b01d65111730058117bcd513df9323b2355267dd4c747c797a18946516395ad585d41ab88164bf06d1b411f1b508354ba3007a7cede6766a6f7689099232f85fd65c1cee2d29be0bf53571e62038f5dc113dd248adfeeb8331d66077cecad2c744cc96de3c1e4d9bc49e5375b63508eca2e07b34d3f59886a6a192afd2e6753d85dbb130ec06e9570b21725afa7cd8ad351c324d043e63748a78a740e093106c729d409ff4aec82008a0aaf418563fbf9f0395afc6b53b84e048830f691986339706dbc433f59783f660ffa6d47ab79ff8c486cab7b6ba36c2cbe20b7087d5610cf8983c029a53e1539fadafdbaba17b6347e7bba8aea2676884112673c54b26db905e4bda4949c961950d0fcdad8c291627480843f94c88721836427f3c4956fb632285179a325d9e434d8edcaf3b1b641cc0ba26358671aa6723483afb18386187458c07063bd08bfdecf2037e1cc3076e2defe1c9302654ba0e24dfe89ec7a12104344bb3fc1779e271995336b93ffb6b825c3e84268b7679254b445701b7efd34c902e72ac5f420c34b4714cb4a6ec152c34727cb2a1ba37a6e3c9df69c38d10cdca9a6910c01f278c4207ebe39f25b32a2d4745ac65b3afecadfb50c0c0c0ca9ca4feb4e1c93c2bd5859f5c3c270a9405976bbdb79d02fc86909ed59d59d922588daca7ab6ba9349c7b3e952f06cecf42c6db96c59172fac8505a95519683aee71be50af4e5dc914feaec6c83212461fb8a7b04bdfc799e8bd07a869197088c6855598e763ac6f0b9a4bf79c386339fb4f25236acee4f2b4aea05ac850b463bfba75cc17820880a3d204921ec9cd87cca2dd2a9ab6cc53f9c4fa0e1fbaa6a221e5cec6b78fb1471aa88f152d12df5401dee143ef9a737c916021c1590684b71b9077ff311f50d2faa9a0a35b4389fa3b551b3ddea2882c727d440534984529c08b1537c7408e22a50fb551a1b33dd546da3b5ff45ab6f8c0402a552ec6c5115a05350938273cce84f9ef44d397072dce57000fc6e1d6b54f39fb3893886f60429db5b75f4657cbada2dad251d56c94b484afe0fe6e1076e1df03d7d66180a7789ebb1d6d1fe5a08972acd978dc0ddd2764b94f7ecee06aea67cb37df5f8f6730eac7044d7f737066ab76fc17816e2589b003462930f686784ec6e569b2fab5367c63413677a633da94e46714cff9a27c82cf63588f8b21ba36699cccb85f36fe63aaf7b2fa681061b999ab0164945669d7db52f6e6fa9969ab109a767b619a5ef0a1a9b19781ac77bd9168966e27917eea5a878e3a05292e6f6a7b5d677f26831f81f07e3d30a5b3e4dfbcb4531d741437a0208b1d12645dd1785c01d8c0d8eaf40c086bd3aada43cd59e523f4c56fa9c25a8866712c730c876fb9e3e597d5862069eb0a3b3294507c80b6738e8c3e3946c3713551f55b8c2bdbd06f53ee2ad57d5810441f8709adf710e0c686350b6587447775612a4088f4eba841a2d65a798221e615937cafa3d14ccafa075360c27be016ce129de18040e41c5c94a1769db855bd4bebbb360ab103ce62a9929f3603457a489c428a57844ef4d09e7951d521bdcd2397655c2e8641246fc038d3d27e8ec55935c56c0829c99494c0adef9821eb2cb47b30716c6655e0d3506d0a3c290bb1ceab63d5b7f1c20ffa6e71cb63df67ca1b14c77ebad286dc84bee33443a4180315efc1fb413c26272e45040355430f46cdb67ac891e29929927641d0ea84a1b3ccbcc01750feff888c1260cf7f981ad19c82d5382fc05a2391ad6c0fdf8f60da9f3778779e6ce28af063302364d958e4e2a1884985012c996fa9d90af46be8be669ca20d846eef7b966455ad8098699e865471cfc4581a78f16f566bb609eb2d1ccde487a514c52a58c1acb5b297b316bd5a73d7d553543ee3b59b8ac85ea74f947eb9cd79f6b0f07df7d30e8d69e8b5db409e59960deb7c0d057cf999807b239e19923a76eed4ba3179d1010ac38ad076f53245be6c18ef1e0f78886f71d188e0e9ad9b8be09c66e1d5cb816d768cd426f7737deae99d58e748fecdf8deabc375ad5d6c6e4686b0d3e017af881285655ee60dbd15209b53f8f3f3fa2a2afbfa58828a7b22c4e252a4458bf97aaf931b24ca8612ce2a00d8a8ae031da54f4ff15cc10f55f0d613d956d3f4a02d0ce588e6a3e2520b6000d6f194ed64baf94841859d3021470a708ffc59bfa901189aa47f51688ddcaf260abe81331e969d2519f3aab992416630a7d2d81691240b4078f5484ac8b6733bee1f87e72ffa42f000f89d947d6bbb9e6ff15a548c60807775d11acc1e6cc8b77aaf22984d2adc910c18959014d63215300ff2156a587bf701ac2964344f297d3ddd152e8040475e7ab93c69ed46a7cc5dc26f89f1d91159a6ac3751ce0e952670d3e92609196a85219250c9cf7c2e919e4ece390a8b58879276fd0849f619c4d8b9fddb9102ba7337f26b1d15de00047dfbeb0f3f3c336e8111dc46a6111f3941a2461d6e8f27994bba230daffa571c28c347c8a23e01388fabc7bb5a04c38bbfcc2002f85f2a67fa1a7e61f638e81c32506bcfecc642abc657bac879d7da07dc41a6fd9036c928741920ebc1b1412e38fb58bd75a5c9ea769d4f21f224a1c81b6cdc5b2c4c3f7c69d357891403af686bc71aaef5014371e6b121816f440481d053d48f73128c2d64b6061d023db99217a1ae1d17294e488b3b8326708f2d13851dffcee31752d8a4c6b9ad672bd5bc69be9532735a3feed5be5891dd22fb4f22c8a6d2e6db4f97bb52b4bf97a8bc997486a7d5c25723a15a6cd9b4233a4351454d8d588beb05673009338b31ff66188e8b858754f2246d062f19a7ed94dfea474afeae27eccf7c2cbf9ed3f02b947442fd9e49b3e93147b0ad2bc7b59906c476961f2a825a3594b539e6aaf6bd255fded44dc5dec3ef0e8d073ad27fe43719f3a3fad7c70f8f68c8b52d928ab7cc9199afa3dfb2c8f87a7e01fed4c7fe769bf76be2f5fefa788ec90cd4d14943f49690ebb453ce50963649411ee80b28d43ecd0743b4e6c23507de704c056c0c3abfd2bb4b9b9c68a37364d3e7ee6fad8fde504e8a216494f5e2cdf46eab9b6e7739b06616c1e43b3ca04adfc21d96a87b568a710886e4939f943c75760b8a0f2fc0dbfaba7f056086109d2753c235ad407697407c0d3bb6418c156ee9cd788c209fa2a487630e4fec1c8ba4f53218741484b33a16a3b404ee2f9387741797f7b10fdad5d8eeb381669cc81c9cfe822dc635b21e31be1c95f8b5f959e674192eacc3aacb5094815974da36c2d58f4c4d3f9977da749adba9d64fbd05aa5b91cf3d97b87813eb4bfef9cd27e110d438dd1716e31500b7f94a072816d722f73e7e85fe327e289113385b22a845f7bdd539eef2823a508647e757e465452e17e91690a0589f1c2bf9d0f69b58f6be32c4c846bba2b7ed4b823ccd9a0fb48ba58699dc344c4f2a4c06ad3be6cc4c657f580c3ebf7b8036281d18a95c675de02934f11fb694808029efb89146a69564dda6fbe00a6594c189fa283662c60850f60c1dc4fb951c8a6565435bd7956544b38e7d90caebf1d38a230a6a11fa19ea64600a9997a7183b74a41cb6eaec26299bfcbee7e10ea4f1eecb2847db247f391d5cd41723a680bbe4343a05dc4be10e9cc971aadc963cdca44406799d09efe518e55f607d0af6308fbad6cd2d42416831dcab9f348403a6c85be81eff62a980cb52f37deb3ba4852e9b8c48459ad5218b629b07c955b5772d15f0e8f0c3ffb97a592988216c9cfba353789b691df96a61253598d341b1dbff16646653e2b1f4f56e8db25b029698c21f40f8c042e29dd30359fabebd89ca5b23d778a1f57118ba90e19564d5c0e7032545d0a6685bdb84d13149d9185a0f643ef50bafb7c7cba4c5c89b62aa6e7ffc220fafe83a22ef27fce86ade6500136119d41a090299404ae682a2972ace4ffe5adb125a516d2e2cea0ce527aa1397a3103c196e4142221467d2643e6c10283e6175f332e096eb0223729c0c433bcffe45d462041934a8df9fca5a88173ef25882cafff8df75711f1092c9a9c05b4776b0c0f10b4018cf04df7b0404e7fc5edea77a80aeda34184737f2d6650685b27f55c81129884ee401cfffa43fb1d6eb0a68a0e86cef5a0a6e383112bb340755eb74776bbaf68eedaa9b78f4e396342485a18c0fd48fdffb60f947b19fe9d9ddeb4d561731584d95b8f880ebee76561f0fad6d5aeb79203a4f110acb3114dcbc5a4b714a48da05717b8a032555e2232f9b5a97acb13447966828cdbbca0f4364c8f40d33305ed5bbf3d94b47bebd6cb116eb7f7c2f815d42a7bbcd0af85ee3dea8519e5a23f98c150ff7bda41f4f46d595259bb8d0ea88852ef1bcc560c01f82a7884fedc86397b2e9ff86cecd4dbb1a9290879a15e2d9bc6646e75354b9d560d933d58771d42555f3cc04c1392c4ff8a39985a164f6b6e19dfe1813a3baf50c7153a81f9c3835e076f0b24dfd575906ab816fd91b9b1d0c53f3abb368187cfa0ead94638fc72dc29f5f5301eb7ccfa05f22749779f61566155288b5a9deef9ad5cdeb6f9986a31535f3a9e1e5b0f5796e7a1c74e9d3b88a3a25cf9bee3e9d7af597a9e08d8521ca255c19c9a1437cad6ffad36e3bb221437a6d54919df737e7aa116807e1f7cb9e3ad381f1bdc04de9e4099e8cc0e50480a96c2f0cc1792ceeac65bdcd68ea99938a8e69ae65af809718f5b9c8ce41da86b8446f3cba7b26d085cb972a67ed788944a3b096fc06f9f671a2252269dfab5302d588292698fd0a4d030063357a0e92489c6a04c6631970bcb6009ca252c787d82c56ef4578c8c7185d3c4c77cd6465d2aee5a273dc9a4cb7c9dbc232979dd3abdba0727f8cfba1320ba1280b61e5388d3d516628b23da7bb700e6f6a8adfb50afdcf655717af010a0bac4d82507ee25db3727cc588c9df592a56c265b69d46cb04abbe3420338ae945b62220ba8f32ef1e956dec66e192be0ee520e7230fdec7560f4a383d4c03262a3457a445e70582cb0c6ebf92e50181ccf9165410058d1a4cf7d8ce62515d5cf8e0e5dd5c630f0ebe8c3aedb8718dc3ad7f2d6fd0655191a26cd1dfeddc629ff0e25c6c646a081511a3def1c441246f0ea1e762d2e6964bed277f793dc2710c946f3c66eb7d5549f763bd4e68850fd6159c7141c431c5b1886035ad46c67996b37e256174bdc10e3abb572d5600e59d4832b6f0354ff2e13f2b17b689ee6683dc290ce9e1dc8507bb064b5602bdd649fe4ef400d3ac5f28bbbb16db2c57745150d554b989628edc34145477252e38800c31dd2dd192dcc5eaaf34ab45abe7d5e7f9c931acb74efea6f67153fd42096e0d3ef3691e7b5a4cb2d38bb7669b83082aa7c3d42b85978ebc72780c0c1fb6c519b470849d31d104978d9915a4c899f60c24e86290cfcb601f806d7a7dff3289e9ea5179b566e2be295524530cc951c40374f8e9f6093dc2dea719c14ccb572aea309a0b12910ed675c075f6536bd82f7c3814964fb6206b0ed0c644e90a213ec23648f375d11c87e3405a80428de295c299c5dc8654ecea7992149ecbc6538d62d51dfbf5d9a0f968222abb7ec3b5f68b5036c457fd60094e82383fcd852da47e0078b5f1bc21304b0f1c136978e1ddc7cdc5e1a9e1481d814a1867ef07f857ce2177ff9211cf8c983a1fbcbd10a6352887a5d71ca3b262a9ace7cb916ec237a7a4c95</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">暂未公布.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>面试</category>
-        <category>计网</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-        <tag>计网</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计原则</title>
-    <url>/2021/03/23/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
-    <content><![CDATA[<p><a name="teaqH"></a></p>
-<h3 id="总的原则"><a href="#总的原则" class="headerlink" title="总的原则"></a>总的原则</h3><p>抽象与复用<br />松耦合<br><a name="jYbyJ"></a></p>
-<span id="more"></span>
-<h3 id="1、单一设计原则"><a href="#1、单一设计原则" class="headerlink" title="1、单一设计原则"></a>1、单一设计原则</h3><p><a name="LZwGq"></a></p>
-<h3 id="2、开闭原则（OCP）"><a href="#2、开闭原则（OCP）" class="headerlink" title="2、开闭原则（OCP）"></a>2、开闭原则（OCP）</h3><p>模块和函数应该对扩展开放，对修改封闭<br />通过扩展实现变化，而不是修改<br><a name="0ei0B"></a></p>
-<h3 id="3、里氏代换原则（LSP）"><a href="#3、里氏代换原则（LSP）" class="headerlink" title="3、里氏代换原则（LSP）"></a>3、里氏代换原则（LSP）</h3><p>子类型必须能够替换掉它们的基类型<br />是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化<br /><br><br />LSP是多态顺利实现的保证，从而使OCP成为可能。<br />正是子类型的可替代性才使得使用基类的模块在无需修改的情况下就可以扩展。<br />增加或修改任何一个子类型，基类不用修改（封闭）<br />基类的使用者（客户程序）通过多态得到扩展或修改过的行为（开放）<br><a name="xxRN7"></a></p>
-<h3 id="4、依赖倒置原则"><a href="#4、依赖倒置原则" class="headerlink" title="4、依赖倒置原则"></a>4、依赖倒置原则</h3><p>改掉过程化的高层依赖底层，变成细节依赖抽象。即针对接口编程，不针对实现编程。使用接口和抽象类对返回值和变量说明<br />设计时，尽量从抽象类继承，而不是从具体类继承。继承等级树的所有叶子节点应当是具体类，而所有的树枝节点应当是抽象类或者接口。</p>
-<ul>
-<li>可减少类间的耦合，提高系统的稳定性，减少并行开发引起的风险，提高代码的可读性和可维护性。</li>
-<li>大型项目中体现明显。规避非技术性因素引起的问题。以轻松扩展</li>
-<li>是几个设计原则中最难实现的。是实现开闭原则的重要途径</li>
-</ul>
-<p>A.高层模块不应该依赖于底层模块，二者都应该依赖于抽象（针对抽象编程）<br />B.抽象不应该依赖于细节，细节应该依赖于抽象</p>
-<ul>
-<li>高层使用低层的对象及其服务</li>
-<li>设计抽象接口，上层类使用接口，下层类实现接口<br><a name="F7Sus"></a><h3 id="5、接口分离原则（ISP）"><a href="#5、接口分离原则（ISP）" class="headerlink" title="5、接口分离原则（ISP）"></a>5、接口分离原则（ISP）</h3>尽量提供小接口。简单设计会过大。因为每个客户程序并不依赖于接口里的很多<br><a name="xXjFd"></a><h3 id="6、多用组合少用继承"><a href="#6、多用组合少用继承" class="headerlink" title="6、多用组合少用继承"></a>6、多用组合少用继承</h3>希望类之间<strong>尽量是低耦合</strong>的关系，而不希望是强耦合关系<br />即在许多情况下需要避开继承的缺点，而需要组合的优点<br><a name="zH5XO"></a><h3 id="7、迪米特法则"><a href="#7、迪米特法则" class="headerlink" title="7、迪米特法则"></a>7、迪米特法则</h3>知识最少原则，不要和陌生人说话。熟人好办事<br />即 一个对象应该对其他对象有尽可能少的了解。即 <strong>两个类不必彼此直接通信</strong>。通过第三者调用对方的方法。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>系统分析与设计</category>
-      </categories>
-      <tags>
-        <tag>系统分析与设计</tag>
-        <tag>设计原则</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第一章 软件项目管理概述</title>
     <url>/2021/04/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h2 id="第一章-软件项目管理概述"><a href="#第一章-软件项目管理概述" class="headerlink" title="第一章 软件项目管理概述"></a>第一章 软件项目管理概述</h2><blockquote>
@@ -1370,6 +1298,86 @@
       </categories>
       <tags>
         <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给原来的hexo要装新的插件</title>
+    <url>/2021/03/18/%E7%BB%99%E5%8E%9F%E6%9D%A5%E7%9A%84hexo%E8%A6%81%E8%A3%85%E6%96%B0%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p>1.把原来的source克隆下来，在本地装好插件                                                                                                                  </p>
+<p>2.然后传到新的仓库例如A11     </p>
+<span id="more"></span>                                                                                                                                        
+
+<p>3.需要给A11，添加秘钥（Repository secrets  HEXO_DEPLOY_PRI），秘钥存在blogSourceCodeFinal仓库的github-deploy-key文件里</p>
+<p>4.还需修改A11里的.github/workflows/deploy.yml文件的第11行</p>
+<p>5.然后修改A11里的themes/next/_config.yml文件的第300行</p>
+<p>6.然后就完事了</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计网</title>
+    <url>/2021/04/27/%E8%AE%A1%E7%BD%91/</url>
+    <content><![CDATA[<h2 id="OSI七层协议、TCP-IP的四层协议、五层协议的体系结构"><a href="#OSI七层协议、TCP-IP的四层协议、五层协议的体系结构" class="headerlink" title="OSI七层协议、TCP/IP的四层协议、五层协议的体系结构"></a>OSI七层协议、TCP/IP的四层协议、五层协议的体系结构</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/2021-04-27-16-58-33-20210427165833.png" alt="2021-04-27-16-58-33-20210427165833"></p>
+<span id="more"></span>
+<p>各层的作用</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p><strong>应用层(application-layer）的任务是通过应用进程间的交互来完成特定网络应用</strong>。应用层协议定义的是应用进程（进程：主机中正在运行的程序）间的通信和交互的规则。对于不同的网络应用需要不同的应用层协议。在互联网中应用层协议很多，如域名系统DNS，支持万维网应用的 HTTP协议，支持电子邮件的 SMTP协议等等。我们把应用层交互的数据单元称为报文。  </p>
+<h4 id="域名系统"><a href="#域名系统" class="headerlink" title="域名系统"></a>域名系统</h4><p>域名系统(Domain Name System缩写 DNS，Domain Name被译为域名)是因特网的一项核心服务，它作为可以将域名和IP地址相互映射的一个分布式数据库，能够使人更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。（百度百科）例如：一个公司的 Web 网站可看作是它在网上的门户，而域名就相当于其门牌地址，通常域名都使用该公司的名称或简称。</p>
+<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><p><strong>运输层(transport layer)的主要任务就是负责向两台主机进程之间的通信提供通用的数据传输服务</strong>。应用进程利用该服务传送应用层报文。“通用的”是指并不针对某一个特定的网络应用，而是多种应用可以使用同一个运输层服务。由于一台主机可同时运行多个线程，因此运输层有复用和分用的功能。所谓复用就是指多个应用层进程可同时使用下面运输层的服务，分用和复用相反，是运输层把收到的信息分别交付上面应用层中的相应进程。<br>运输层主要使用以下两种协议:<br>传输控制协议 TCP（Transmission Control Protocol）–提供面向连接的，可靠的数据传输服务。<br>用户数据协议 UDP（User Datagram Protocol）–提供无连接的，尽最大努力的数据传输服务（不保证数据传输的可靠性）。</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>在 计算机网络中进行通信的两个计算机之间可能会经过很多个数据链路，也可能还要经过很多通信子网。<strong>网络层的任务就是选择合适的网间路由和交换结点， 确保数据及时传送。</strong> 在发送数据时，网络层把运输层产生的报文段或用户数据报封装成分组和包进行传送。在 TCP/IP 体系结构中，由于网络层使用 IP 协议，因此分组也叫 IP 数据报 ，简称 数据报。</p>
+<p>这里要注意：不要把运输层的“用户数据报 UDP ”和网络层的“ IP 数据报”弄混。另外，无论是哪一层的数据单元，都可笼统地用“分组”来表示。</p>
+<p>这里强调指出，网络层中的“网络”二字已经不是我们通常谈到的具体网络，而是指计算机网络体系结构模型中第三层的名称.</p>
+<p>互联网是由大量的异构（heterogeneous）网络通过路由器（router）相互连接起来的。互联网使用的网络层协议是无连接的网际协议（Intert Protocol）和许多路由选择协议，因此互联网的网络层也叫做网际层或IP层。</p>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>数据链路层(data link layer)通常简称为链路层。<strong>两台主机之间的数据传输，总是在一段一段的链路上传送的，这就需要使用专门的链路层的协议。 在两个相邻节点之间传送数据时，数据链路层将网络层交下来的 IP 数据报组装成帧，在两个相邻节点间的链路上传送帧</strong>。每一帧包括数据和必要的控制信息（如同步信息，地址信息，差错控制等）。</p>
+<p>在接收数据时，控制信息使接收端能够知道一个帧从哪个比特开始和到哪个比特结束。这样，数据链路层在收到一个帧后，就可从中提出数据部分，上交给网络层。 控制信息还使接收端能够检测到所收到的帧中有误差错。如果发现差错，数据链路层就简单地丢弃这个出了差错的帧，以避免继续在网络中传送下去白白浪费网络资源。如果需要改正数据在链路层传输时出现差错（这就是说，数据链路层不仅要检错，而且还要纠错），那么就要采用可靠性传输协议来纠正出现的差错。这种方法会使链路层的协议复杂些。</p>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>在物理层上所传送的数据单位是比特。 <strong>物理层(physical layer)的作用是实现相邻计算机节点之间比特流的透明传送，s尽可能屏蔽掉具体传输介质和物理设备的差异。</strong> 使其上面的数据链路层不必考虑网络的具体传输介质是什么。“透明传送比特流”表示经实际电路传送后的比特流没有发生变化，对传送的比特流来说，这个电路好像是看不见的。</p>
+<p>在互联网使用的各种协中最重要和最著名的就是 TCP/IP 两个协议。现在人们经常提到的TCP/IP并不一定单指TCP和IP这两个具体的协议，而往往表示互联网所使用的整个TCP/IP协议族。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/2021-04-29-11-38-20-20210429113820.png" alt="2021-04-29-11-38-20-20210429113820"></p>
+<h2 id="TCP-UDP协议的区别"><a href="#TCP-UDP协议的区别" class="headerlink" title="TCP,UDP协议的区别"></a>TCP,UDP协议的区别</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/2021-04-29-11-39-54-20210429113953.png" alt="2021-04-29-11-39-54-20210429113953"><br>UDP 在传送数据之前不需要先建立连接，远地主机在收到 UDP 报文后，不需要给出任何确认。虽然 UDP 不提供可靠交付，但在某些情况下 UDP 确是一种最有效的工作方式（一般用于即时通信），比如：<strong>QQ 语音、 QQ 视频 、直播等等</strong></p>
+<p>TCP 提供面向连接的服务。在传送数据之前必须先建立连接，数据传送结束后要释放连接。 TCP 不提供广播或多播服务。由于 TCP 要提供可靠的，面向连接的传输服务（TCP的可靠体现在TCP在传递数据之前，会有三次握手来建立连接，而且在数据传递时，有确认、窗口、重传、拥塞控制机制，在数据传完后，还会断开连接用来节约系统资源），这一难以避免增加了许多开销，如确认，流量控制，计时器以及连接管理等。这不仅使协议数据单元的首部增大很多，还要占用许多处理机资源。<strong>TCP 一般用于文件传输、发送和接收邮件、远程登录等场景。</strong></p>
+<h2 id="TCP三次握手、四次挥手"><a href="#TCP三次握手、四次挥手" class="headerlink" title="TCP三次握手、四次挥手"></a>TCP三次握手、四次挥手</h2><h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的 WWW（万维网） 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。</p>
+<p><a href="https://snailclimb.gitee.io/">参考</a></p>
+]]></content>
+      <categories>
+        <category>面试</category>
+        <category>计网</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>计网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计原则</title>
+    <url>/2021/03/23/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
+    <content><![CDATA[<p><a name="teaqH"></a></p>
+<h3 id="总的原则"><a href="#总的原则" class="headerlink" title="总的原则"></a>总的原则</h3><p>抽象与复用<br />松耦合<br><a name="jYbyJ"></a></p>
+<span id="more"></span>
+<h3 id="1、单一设计原则"><a href="#1、单一设计原则" class="headerlink" title="1、单一设计原则"></a>1、单一设计原则</h3><p><a name="LZwGq"></a></p>
+<h3 id="2、开闭原则（OCP）"><a href="#2、开闭原则（OCP）" class="headerlink" title="2、开闭原则（OCP）"></a>2、开闭原则（OCP）</h3><p>模块和函数应该对扩展开放，对修改封闭<br />通过扩展实现变化，而不是修改<br><a name="0ei0B"></a></p>
+<h3 id="3、里氏代换原则（LSP）"><a href="#3、里氏代换原则（LSP）" class="headerlink" title="3、里氏代换原则（LSP）"></a>3、里氏代换原则（LSP）</h3><p>子类型必须能够替换掉它们的基类型<br />是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化<br /><br><br />LSP是多态顺利实现的保证，从而使OCP成为可能。<br />正是子类型的可替代性才使得使用基类的模块在无需修改的情况下就可以扩展。<br />增加或修改任何一个子类型，基类不用修改（封闭）<br />基类的使用者（客户程序）通过多态得到扩展或修改过的行为（开放）<br><a name="xxRN7"></a></p>
+<h3 id="4、依赖倒置原则"><a href="#4、依赖倒置原则" class="headerlink" title="4、依赖倒置原则"></a>4、依赖倒置原则</h3><p>改掉过程化的高层依赖底层，变成细节依赖抽象。即针对接口编程，不针对实现编程。使用接口和抽象类对返回值和变量说明<br />设计时，尽量从抽象类继承，而不是从具体类继承。继承等级树的所有叶子节点应当是具体类，而所有的树枝节点应当是抽象类或者接口。</p>
+<ul>
+<li>可减少类间的耦合，提高系统的稳定性，减少并行开发引起的风险，提高代码的可读性和可维护性。</li>
+<li>大型项目中体现明显。规避非技术性因素引起的问题。以轻松扩展</li>
+<li>是几个设计原则中最难实现的。是实现开闭原则的重要途径</li>
+</ul>
+<p>A.高层模块不应该依赖于底层模块，二者都应该依赖于抽象（针对抽象编程）<br />B.抽象不应该依赖于细节，细节应该依赖于抽象</p>
+<ul>
+<li>高层使用低层的对象及其服务</li>
+<li>设计抽象接口，上层类使用接口，下层类实现接口<br><a name="F7Sus"></a><h3 id="5、接口分离原则（ISP）"><a href="#5、接口分离原则（ISP）" class="headerlink" title="5、接口分离原则（ISP）"></a>5、接口分离原则（ISP）</h3>尽量提供小接口。简单设计会过大。因为每个客户程序并不依赖于接口里的很多<br><a name="xXjFd"></a><h3 id="6、多用组合少用继承"><a href="#6、多用组合少用继承" class="headerlink" title="6、多用组合少用继承"></a>6、多用组合少用继承</h3>希望类之间<strong>尽量是低耦合</strong>的关系，而不希望是强耦合关系<br />即在许多情况下需要避开继承的缺点，而需要组合的优点<br><a name="zH5XO"></a><h3 id="7、迪米特法则"><a href="#7、迪米特法则" class="headerlink" title="7、迪米特法则"></a>7、迪米特法则</h3>知识最少原则，不要和陌生人说话。熟人好办事<br />即 一个对象应该对其他对象有尽可能少的了解。即 <strong>两个类不必彼此直接通信</strong>。通过第三者调用对方的方法。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>系统分析与设计</category>
+      </categories>
+      <tags>
+        <tag>系统分析与设计</tag>
+        <tag>设计原则</tag>
       </tags>
   </entry>
   <entry>
