@@ -1351,7 +1351,7 @@
   <entry>
     <title>第 6 章 概念描述</title>
     <url>/2021/05/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/%E7%AC%AC6%E7%AB%A0/</url>
-    <content><![CDATA[<p><font face="宋体" size=3>从数据分析角度，DM可分为两类：</p>
+    <content><![CDATA[<p>从数据分析角度，DM可分为两类：</p>
 <blockquote>
 <p>数据概化与基于汇总的特征化<br>属性相关分析<br>挖掘类比较：区分不同的类<br>常见的统计度量指标</p>
 </blockquote>
@@ -1448,7 +1448,7 @@
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524111521.png" alt="20210524111521"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524111536.png" alt="20210524111536"></p>
 <h2 id="离散趋势度量指标"><a href="#离散趋势度量指标" class="headerlink" title="离散趋势度量指标"></a>离散趋势度量指标</h2><p>数值数据趋向于离散的程度称为数据的离散度或方差。数据离散度的最常用度量是四分位数和标准差。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524115527.png" alt="20210524115527"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524115600.png" alt="20210524115600"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524115625.png" alt="20210524115625"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210524115639.png" alt="20210524115639"></p>
-</font>]]></content>
+]]></content>
       <categories>
         <category>大数据开发</category>
       </categories>
