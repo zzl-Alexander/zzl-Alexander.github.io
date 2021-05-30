@@ -877,20 +877,17 @@
 
 <h4 id="渐进式阶段模型的优点"><a href="#渐进式阶段模型的优点" class="headerlink" title="渐进式阶段模型的优点"></a><strong>渐进式阶段模型的优点</strong></h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411171040.png" alt="image-20210411171040801" style="zoom:50%;" />
 
-<h4 id="RUP模型—-渐进式阶段模型"><a href="#RUP模型—-渐进式阶段模型" class="headerlink" title="RUP模型—-渐进式阶段模型"></a><strong>RUP模型—-渐进式阶段模型</strong></h4><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210411171148810.png" alt="image-20210411171148810" style="zoom:50%;" />
-
+<h4 id="RUP模型—-渐进式阶段模型"><a href="#RUP模型—-渐进式阶段模型" class="headerlink" title="RUP模型—-渐进式阶段模型"></a><strong>RUP模型—-渐进式阶段模型</strong></h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210411171148810.png" alt="image-20210411171148810"></p>
 <h3 id="敏捷模型"><a href="#敏捷模型" class="headerlink" title="敏捷模型"></a>敏捷模型</h3><ul>
 <li>敏捷组织提出的一个灵活开发方法</li>
 <li>应对迅速变化需求的快速软件开发方法</li>
 <li>是一种迭代、循序渐进的开发方法</li>
 </ul>
 <p><font color=red>敏捷开发通过（ 迭代）和快速用户反馈应对管理的不确定性和变更。</font></p>
-<img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210415135618249.png" alt="image-20210415135618249" style="zoom:67%;" />
-
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210415135618249.png" alt="image-20210415135618249"></p>
 <h4 id="敏捷宣言"><a href="#敏捷宣言" class="headerlink" title="敏捷宣言"></a>敏捷宣言</h4><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210415135954.png" alt="image-20210415135954447" style="zoom:67%;" />
 
-<h3 id="Scrum模型"><a href="#Scrum模型" class="headerlink" title="Scrum模型"></a>Scrum模型</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210415140047715.png" alt="image-20210415140047715" style="zoom:67%;" />
-
+<h3 id="Scrum模型"><a href="#Scrum模型" class="headerlink" title="Scrum模型"></a>Scrum模型</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210415140047715.png" alt="image-20210415140047715"></p>
 <h3 id="XP-eXtreme-Programming-极限编程模型"><a href="#XP-eXtreme-Programming-极限编程模型" class="headerlink" title="XP(eXtreme Programming)极限编程模型"></a>XP(eXtreme Programming)极限编程模型</h3><p>XP(eXtreme Programming)极限编程是由Kent Beck提出的一套针对业务需求和软件开发实践的规则。</p>
 <h4 id="极限编程方法的实施原则"><a href="#极限编程方法的实施原则" class="headerlink" title="极限编程方法的实施原则"></a>极限编程方法的实施原则</h4><ul>
 <li>快速反馈 (Rapid feedback) </li>
@@ -1017,8 +1014,7 @@
 </ul>
 <h3 id="任务分解的形式-图表形式的WBS"><a href="#任务分解的形式-图表形式的WBS" class="headerlink" title="任务分解的形式-图表形式的WBS"></a>任务分解的形式-图表形式的WBS</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412151208.png" alt="image-20210412151201486" style="zoom:50%;" />
 
-<h3 id="任务分解的形式-清单形式的WBS"><a href="#任务分解的形式-清单形式的WBS" class="headerlink" title="任务分解的形式-清单形式的WBS"></a>任务分解的形式-清单形式的WBS</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412151305459.png" alt="image-20210412151305459" style="zoom:50%;" />
-
+<h3 id="任务分解的形式-清单形式的WBS"><a href="#任务分解的形式-清单形式的WBS" class="headerlink" title="任务分解的形式-清单形式的WBS"></a>任务分解的形式-清单形式的WBS</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210412151305459.png" alt="image-20210412151305459"></p>
 <h3 id="分解方法"><a href="#分解方法" class="headerlink" title="分解方法"></a>分解方法</h3><h4 id="类比"><a href="#类比" class="headerlink" title="类比"></a>类比</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152239.png" alt="image-20210412152118346"></p>
 <h4 id="模板参照"><a href="#模板参照" class="headerlink" title="模板参照"></a>模板参照</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152307.png" alt="image-20210412152148334"></p>
 <h4 id="自上而下"><a href="#自上而下" class="headerlink" title="自上而下"></a>自上而下</h4><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412152447.png" alt="image-20210412152447387"></p>
@@ -1030,9 +1026,8 @@
 <p>④确定项目交付成果（可以编制WBS字典）</p>
 <p>⑤验证分解的正确性</p>
 <p>​     验证分解正确后，建立一套编号系统。</p>
-<h3 id="WBS编号系统"><a href="#WBS编号系统" class="headerlink" title="WBS编号系统"></a>WBS编号系统</h3><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412153250548.png" alt="image-20210412153250548" style="zoom:50%;" />
-
-<h3 id="分解标准应统一-学生管理"><a href="#分解标准应统一-学生管理" class="headerlink" title="分解标准应统一:学生管理"></a>分解标准应统一:学生管理</h3><p><img src="C:\Users\alexa\AppData\Roaming\Typora\typora-user-images\image-20210412153331265.png" alt="image-20210412153331265"></p>
+<h3 id="WBS编号系统"><a href="#WBS编号系统" class="headerlink" title="WBS编号系统"></a>WBS编号系统</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210412153250548.png" alt="image-20210412153250548"></p>
+<h3 id="分解标准应统一-学生管理"><a href="#分解标准应统一-学生管理" class="headerlink" title="分解标准应统一:学生管理"></a>分解标准应统一:学生管理</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/image-20210412153331265.png" alt="image-20210412153331265"></p>
 <h3 id="不能同时使用两种标准进行分解"><a href="#不能同时使用两种标准进行分解" class="headerlink" title="不能同时使用两种标准进行分解:"></a>不能同时使用两种标准进行分解:</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412153356.png" alt="image-20210412153356635"></p>
 <h3 id="WBS字典"><a href="#WBS字典" class="headerlink" title="WBS字典"></a>WBS字典</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412153502.png" alt="image-20210412153502662"></p>
 <h3 id="检验分解结果的标准"><a href="#检验分解结果的标准" class="headerlink" title="检验分解结果的标准"></a>检验分解结果的标准</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210412154332.png" alt="image-20210412154332342"></p>
