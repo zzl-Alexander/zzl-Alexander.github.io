@@ -200,7 +200,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -321,6 +321,89 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="点击进入"><a href="#点击进入" class="headerlink" title="点击进入"></a><a target="_blank" rel="noopener" href="https://zzl-alexander.github.io/algorithm/">点击进入</a></h1>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+	      
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/01/blog/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
+      <meta itemprop="name" content="Alexander">
+      <meta itemprop="description" content="小舟从此逝，江海寄余生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/01/blog/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/" class="post-title-link" itemprop="url">blog文章置顶</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-01 11:00:00" itemprop="dateCreated datePublished" datetime="2021-06-01T11:00:00+08:00">2021-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="设置文章置顶"><a href="#设置文章置顶" class="headerlink" title="设置文章置顶"></a>设置文章置顶</h2><p>卸载 hexo-generator-index</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm r hexo-generator-index</span><br></pre></td></tr></table></figure>
+<p>安装 hexo-generator-index-pin-top</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-generator-index-pin-top -S</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在文章中添加置顶信息<br>添加 top<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 文章置顶</span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">top:<span class="number">10</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>然后在文章标题下面添加一个置顶标签样式<br>打开：themes\hexo-theme-next\layout_partials\post\post-meta.njk文件，定位到div class=”post-meta”标签下，插入如下代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> post.top %&#125;</span><br><span class="line">  &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;font color=red&gt;置顶&lt;/font&gt;</span><br><span class="line">  &lt;span class=<span class="string">&quot;post-meta-divider&quot;</span>&gt;|&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -482,93 +565,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/25/POJO/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-	      
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/15/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/5-%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
-      <meta itemprop="name" content="Alexander">
-      <meta itemprop="description" content="小舟从此逝，江海寄余生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alexander">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/15/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/5-%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/" class="post-title-link" itemprop="url">第5章 软件项目任务分解</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-  
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-04-15 15:49:00" itemprop="dateCreated datePublished" datetime="2021-04-15T15:49:00+08:00">2021-04-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">软件项目管理</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="第5章-软件项目任务分解"><a href="#第5章-软件项目任务分解" class="headerlink" title="第5章 软件项目任务分解"></a>第5章 软件项目任务分解</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
-<p>1、任务分解定义</p>
-<p>2、任务分解方法</p>
-<p>3、任务分解的基本步骤</p>
-<p>4、案例分析</p>
-<p>5、课程实践</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/15/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/5-%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

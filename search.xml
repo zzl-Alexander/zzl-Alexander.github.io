@@ -13,6 +13,27 @@
       </tags>
   </entry>
   <entry>
+    <title>blog文章置顶</title>
+    <url>/2021/06/01/blog/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</url>
+    <content><![CDATA[<h2 id="设置文章置顶"><a href="#设置文章置顶" class="headerlink" title="设置文章置顶"></a>设置文章置顶</h2><p>卸载 hexo-generator-index</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">npm r hexo-generator-index</span><br></pre></td></tr></table></figure>
+<p>安装 hexo-generator-index-pin-top</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">npm i hexo-generator-index-pin-top -S</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在文章中添加置顶信息<br>添加 top<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">title: 文章置顶</span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">top:<span class="number">10</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>然后在文章标题下面添加一个置顶标签样式<br>打开：themes\hexo-theme-next\layout_partials\post\post-meta.njk文件，定位到div class=”post-meta”标签下，插入如下代码：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> post.top %&#125;</span><br><span class="line">  &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;font color=red&gt;置顶&lt;/font&gt;</span><br><span class="line">  &lt;span class=<span class="string">&quot;post-meta-divider&quot;</span>&gt;|&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第 6 章 概念描述</title>
     <url>/2021/05/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/%E7%AC%AC6%E7%AB%A0/</url>
     <content><![CDATA[<p>从数据分析角度，DM可分为两类：</p>
@@ -307,16 +328,13 @@
   <entry>
     <title>第三章 软件生存期模型</title>
     <url>/2021/04/15/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/3-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B-%E7%94%9F%E5%AD%98%E6%9C%9F/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411165234.png" alt="image-20210411165234548"></p>
-<span id="more"></span>
-
-<h2 id="第三章-软件生存期模型"><a href="#第三章-软件生存期模型" class="headerlink" title="第三章 软件生存期模型"></a>第三章 软件生存期模型</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
+    <content><![CDATA[<h2 id="第三章-软件生存期模型"><a href="#第三章-软件生存期模型" class="headerlink" title="第三章 软件生存期模型"></a>第三章 软件生存期模型</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
 <p>1、生存期模型定义</p>
 <p>2、传统生存期模型</p>
 <p>3、敏捷生存期模型</p>
-<p>4、案例分析</p>
-<p>5、课程实践</p>
 </blockquote>
+<span id="more"></span>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210411165234.png" alt="image-20210411165234548"></p>
 <h3 id="软件生存期模型特征"><a href="#软件生存期模型特征" class="headerlink" title="软件生存期模型特征"></a>软件生存期模型特征</h3><ul>
 <li>描述了开发的主要阶段</li>
 <li>定义每一个阶段要完成的主要过程和活动</li>
@@ -410,16 +428,13 @@
   <entry>
     <title>第二章 软件项目确立</title>
     <url>/2021/04/15/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/2-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B--%E9%A1%B9%E7%9B%AE%E7%A1%AE%E7%AB%8B/</url>
-    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408074250.png" alt="image-20210408074250488"></p>
-<span id="more"></span>
-
-<h2 id="第二章-软件项目确立"><a href="#第二章-软件项目确立" class="headerlink" title="第二章 软件项目确立"></a>第二章 软件项目确立</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
+    <content><![CDATA[<h2 id="第二章-软件项目确立"><a href="#第二章-软件项目确立" class="headerlink" title="第二章 软件项目确立"></a>第二章 软件项目确立</h2><h3 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h3><blockquote>
 <p>一、项目立项</p>
 <p>二、项目招标书</p>
 <p>三、项目授权</p>
-<p>四、案例总结</p>
-<p>五、课程实践</p>
 </blockquote>
+<span id="more"></span>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408074250.png" alt="image-20210408074250488"></p>
 <h3 id="项目立项"><a href="#项目立项" class="headerlink" title="项目立项"></a>项目立项</h3><p>  明确项目的目标、时间表、项目使用的资源和经费，而且得到<strong>执行该项目的项目经理和项目发起人的认可</strong></p>
 <h3 id="Make-or-Buy决策"><a href="#Make-or-Buy决策" class="headerlink" title="Make or Buy决策"></a>Make or Buy决策</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210408081705.png" alt="image-20210408081705615"></p>
 <p>make:自主开发</p>
@@ -580,7 +595,7 @@
   </entry>
   <entry>
     <title>blog上传文章</title>
-    <url>/2021/04/01/%E5%86%99%E6%96%87%E7%AB%A0/</url>
+    <url>/2021/04/01/blog/%E5%86%99%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">title: </span><br><span class="line">author: Alexander</span><br><span class="line">date: </span><br><span class="line">updated: </span><br><span class="line">tags: [,]</span><br><span class="line">categories: </span><br><span class="line">description: </span><br><span class="line">comments: <span class="literal">true</span></span><br><span class="line">math: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
 
 
