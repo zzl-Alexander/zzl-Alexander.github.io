@@ -19,9 +19,10 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">npm r hexo-generator-index</span><br></pre></td></tr></table></figure>
 <p>安装 hexo-generator-index-pin-top</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">npm i hexo-generator-index-pin-top -S</span><br></pre></td></tr></table></figure>
-<ol>
-<li>在文章中添加置顶信息<br>添加 top<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">title: 文章置顶</span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">top:<span class="number">10</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+<span id="more"></span>
+<p>在文章中添加置顶信息<br>   添加 top</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">title: 文章置顶</span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">top:<span class="number">10</span></span><br></pre></td></tr></table></figure>
+
 <p>然后在文章标题下面添加一个置顶标签样式<br>打开：themes\hexo-theme-next\layout_partials\post\post-meta.njk文件，定位到div class=”post-meta”标签下，插入如下代码：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> post.top %&#125;</span><br><span class="line">  &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;font color=red&gt;置顶&lt;/font&gt;</span><br><span class="line">  &lt;span class=<span class="string">&quot;post-meta-divider&quot;</span>&gt;|&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
