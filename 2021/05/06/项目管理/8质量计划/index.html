@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="本章要点 软件质量基本概念软件质量管理过程软件质量计划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 8 章 软件项目质量计划">
+<meta property="og:url" content="http://example.com/2021/05/06/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/8%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92/index.html">
+<meta property="og:site_name" content="Alexander">
+<meta property="og:description" content="本章要点 软件质量基本概念软件质量管理过程软件质量计划">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154519.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154351.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154423.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506155059.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160717.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160744.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160809.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160847.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160420.png">
+<meta property="article:published_time" content="2021-05-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-05T16:00:00.000Z">
+<meta property="article:author" content="Alexander">
+<meta property="article:tag" content="软件项目管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154519.png">
+
+
+<link rel="canonical" href="http://example.com/2021/05/06/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/8%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>第 8 章 软件项目质量计划 | Alexander</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Alexander</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-实用网站"><a href="/Mysite" rel="section"><i class="fa fa-sitemap fa-fw"></i>实用网站</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E7%AB%A0%E8%A6%81%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">本章要点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">2.</span> <span class="nav-text">质量定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">软件质量模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Boehm%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.1.</span> <span class="nav-text">Boehm模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#McCall%E8%B4%A8%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">McCall质量模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ISO-IEC9126%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.3.</span> <span class="nav-text">ISO&#x2F;IEC9126模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E7%9A%84%E5%BD%A2%E6%88%90"><span class="nav-number">4.</span> <span class="nav-text">质量的形成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E6%88%90%E6%9C%AC%EF%BC%88CoQ%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">质量成本（CoQ）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">质量管理的对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E8%BF%87%E7%A8%8B"><span class="nav-number">7.</span> <span class="nav-text">软件质量管理过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92"><span class="nav-number">7.1.</span> <span class="nav-text">软件质量计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92%E6%96%B9%E6%B3%95"><span class="nav-number">7.1.1.</span> <span class="nav-text">质量计划方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%95%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">7.1.1.1.</span> <span class="nav-text">试验设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E5%87%86%E5%AF%B9%E7%85%A7"><span class="nav-number">7.1.1.2.</span> <span class="nav-text">基准对照</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90"><span class="nav-number">7.1.1.3.</span> <span class="nav-text">质量成本分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%96%B9%E6%B3%95"><span class="nav-number">7.1.1.4.</span> <span class="nav-text">流程图方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%A0%E6%9E%9C%E5%88%86%E6%9E%90%E5%9B%BE"><span class="nav-number">7.1.1.5.</span> <span class="nav-text">因果分析图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81-QA"><span class="nav-number">7.2.</span> <span class="nav-text">质量保证(QA)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E7%9A%84%E8%A6%81%E7%82%B9"><span class="nav-number">7.2.1.</span> <span class="nav-text">质量保证的要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E6%B4%BB%E5%8A%A8"><span class="nav-number">7.2.2.</span> <span class="nav-text">质量保证活动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6-QC"><span class="nav-number">7.3.</span> <span class="nav-text">质量控制(QC)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E8%A6%81%E7%82%B9"><span class="nav-number">7.3.1.</span> <span class="nav-text">质量控制的要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">7.3.2.</span> <span class="nav-text">质量控制方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">7.4.</span> <span class="nav-text">质量保证与质量控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">小结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Alexander"
+      src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
+  <p class="site-author-name" itemprop="name">Alexander</p>
+  <div class="site-description" itemprop="description">小舟从此逝，江海寄余生</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zzl-Alexander" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zzl-Alexander" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xustudy.com/" title="https:&#x2F;&#x2F;xustudy.com&#x2F;" rel="noopener" target="_blank">xustudy</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/zzl-Alexander" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/06/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/8%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
+      <meta itemprop="name" content="Alexander">
+      <meta itemprop="description" content="小舟从此逝，江海寄余生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第 8 章 软件项目质量计划<a href="https://github.com/zzl-Alexander/blogSourceCode3-17/blob/master/source/_posts/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/8%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-06T00:00:00+08:00">2021-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">软件项目管理</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>软件质量基本概念<br>软件质量管理过程<br>软件质量计划  </p>
+</blockquote>
+<span id="more"></span>
+<h1 id="质量定义"><a href="#质量定义" class="headerlink" title="质量定义"></a>质量定义</h1><p>质量是满足要求的程度,包括符合规定的要求和满足顾客隐含需求.</p>
+<p><strong>软件质量</strong>是软件满足明确说明或者隐含的需求的程度</p>
+<p>质量好的一个重要方面是让用户满意，<br>质量管理的目标是满足项目干系人的需求。</p>
+<h1 id="软件质量模型"><a href="#软件质量模型" class="headerlink" title="软件质量模型"></a>软件质量模型</h1><p>人们通常把影响软件质量的特性用软件质量模型来描述。</p>
+<p>1976年  Boehm质量模型<br>1979年  McCall质量模型<br>1985年  ISO质量模型</p>
+<h2 id="Boehm模型"><a href="#Boehm模型" class="headerlink" title="Boehm模型"></a>Boehm模型</h2><p>定量评价软件质量，60个质量度量公式，层次模型<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154519.png" alt="20210506154519"></p>
+<h2 id="McCall质量模型"><a href="#McCall质量模型" class="headerlink" title="McCall质量模型"></a>McCall质量模型</h2><p>软件质量要素、准则、度量<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154351.png" alt="20210506154351"></p>
+<h2 id="ISO-IEC9126模型"><a href="#ISO-IEC9126模型" class="headerlink" title="ISO/IEC9126模型"></a>ISO/IEC9126模型</h2><p>内部质量度量和外部质量度量<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154423.png" alt="20210506154423"></p>
+<h1 id="质量的形成"><a href="#质量的形成" class="headerlink" title="质量的形成"></a>质量的形成</h1><p>质量形成于产品或者服务的开发过程中，而不是事后的检查（测试）把关等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506155059.png" alt="20210506155059"></p>
+<h1 id="质量成本（CoQ）"><a href="#质量成本（CoQ）" class="headerlink" title="质量成本（CoQ）"></a>质量成本（CoQ）</h1><p>质量成本是由于产品的第一次工作不正常而衍生的附加花费，包括两部分<br>预防成本：评估费用、预防费用。<br>缺陷成本：内部费用、外部费用。</p>
+<h1 id="质量管理的对象"><a href="#质量管理的对象" class="headerlink" title="质量管理的对象"></a>质量管理的对象</h1><p>过程的质量<br>  需求过程、设计过程、编码过程、测试过程、提交过程等<br>产品的质量<br>  需求规格、设计说明书、代码、测试用例、测试报告、使用手册等</p>
+<h1 id="软件质量管理过程"><a href="#软件质量管理过程" class="headerlink" title="软件质量管理过程"></a>软件质量管理过程</h1><p>软件质量计划<br>软件质量保证<br>软件质量控制</p>
+<h2 id="软件质量计划"><a href="#软件质量计划" class="headerlink" title="软件质量计划"></a>软件质量计划</h2><p>确定项目应达到的质量标准(目标)<br>决定如何满足质量标准的计划安排和方法</p>
+<h3 id="质量计划方法"><a href="#质量计划方法" class="headerlink" title="质量计划方法"></a>质量计划方法</h3><p>试验设计<br>基准对照<br>质量成本分析<br>流程图方法<br>因果分析图</p>
+<h4 id="试验设计"><a href="#试验设计" class="headerlink" title="试验设计"></a>试验设计</h4><p>试验设计是一种统计学方法，确定哪些因素可能会对特定变量产生影响。<br>例如：针对成本和时间可以设计不同的组合方案，并筛选出最优的组合。</p>
+<h4 id="基准对照"><a href="#基准对照" class="headerlink" title="基准对照"></a>基准对照</h4><p>是一种寻找最佳实践的方法，是利用其他项目的实施情况作为当前项目性能衡量的标准。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160717.png" alt="20210506160717"></p>
+<h4 id="质量成本分析"><a href="#质量成本分析" class="headerlink" title="质量成本分析"></a>质量成本分析</h4><p>质量成本的综合分析，以便决定质量活动<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160744.png" alt="20210506160744"></p>
+<h4 id="流程图方法"><a href="#流程图方法" class="headerlink" title="流程图方法"></a>流程图方法</h4><p>可以显示系统的各种成分是相互的关系，帮助我们预测在何处可能发生何种质量问题.<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160809.png" alt="20210506160809"></p>
+<h4 id="因果分析图"><a href="#因果分析图" class="headerlink" title="因果分析图"></a>因果分析图</h4><p>描述相关的各种原因和子原因如何产生潜在问题或影响，将影响质量问题的“人员、设备、参考资料、方法、环境”等各方面的原因进行细致的分解，方便地在质量计划中制定相应的预防措施<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160847.png" alt="20210506160847"></p>
+<h2 id="质量保证-QA"><a href="#质量保证-QA" class="headerlink" title="质量保证(QA)"></a>质量保证(QA)</h2><p>为了提供信用，证明项目将会达到有关质量标准而开展的有计划、有组织的工作活动。</p>
+<p>通过评价项目整体绩效,建立对质量要求的信任<br>提供项目和产品可视化的管理报告<br>          例如：《软件设计说明书》质量审计<br>Is it done right?（完成是否正确）<br>这个任务本身并不能提高产品的质量<br>一般由质量保证部门人员实施</p>
+<h3 id="质量保证的要点"><a href="#质量保证的要点" class="headerlink" title="质量保证的要点"></a>质量保证的要点</h3><p>对项目进行评价<br>推测能否达到质量指标<br>建立对项目的信心</p>
+<h3 id="质量保证活动"><a href="#质量保证活动" class="headerlink" title="质量保证活动"></a>质量保证活动</h3><p>软件项目中常用的质量保证活动:<br>项目执行过程审计<br>项目产品审计</p>
+<p><strong>审计(Audit) 是对过程或者产品的一次独立评估</strong>。将审核的主体与为该主体以前建立的一组规程和标准进行比较<br>目的是确保真正的遵循了这一个过程，产生了合适的文档和精确反映实际项目的报告<br>可以预先规划的，也可以是临时决定的。 </p>
+<h2 id="质量控制-QC"><a href="#质量控制-QC" class="headerlink" title="质量控制(QC)"></a>质量控制(QC)</h2><p>确定项目结果与质量标准是否相符,同时,确定消除不符的原因和方法<br>控制产品的质量，及时纠正缺陷<br>        例如：评审、单元测试<br>Is it right done?（是否正确完成？）<br>这个任务本身提高产品的质量<br>一般由开发人员实施</p>
+<h3 id="质量控制的要点"><a href="#质量控制的要点" class="headerlink" title="质量控制的要点"></a>质量控制的要点</h3><ol>
+<li>检查工作结果</li>
+<li>按照标准跟踪检查</li>
+<li>确定措施消灭质量问题</li>
+</ol>
+<h3 id="质量控制方法"><a href="#质量控制方法" class="headerlink" title="质量控制方法"></a>质量控制方法</h3><p>技术评审<br>代码走查<br>测试<br>返工</p>
+<h2 id="质量保证与质量控制"><a href="#质量保证与质量控制" class="headerlink" title="质量保证与质量控制"></a>质量保证与质量控制</h2><p>QA:审计产品和过程质量，保证过程被正确执行，确认项目按照要求进行。<br>QC:检验产品的质量，保证产品符合客户的需求。是产品质量监察者，即挑毛病。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160420.png" alt="20210506160420"></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ol>
+<li>软件质量管理过程<ol>
+<li>质量计划</li>
+<li>质量保证</li>
+<li>质量控制</li>
+</ol>
+</li>
+<li>软件质量计划</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 软件项目管理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/27/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="prev" title="快速排序">
+                  <i class="fa fa-chevron-left"></i> 快速排序
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/07/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/9%E9%85%8D%E7%BD%AE%E8%AE%A1%E5%88%92/" rel="next" title="第 9 章 软件项目配置管理计划">
+                  第 9 章 软件项目配置管理计划 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alexander</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('.gitalk-container', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c1b498f6462a59526198',
+      clientSecret: '0a3a95674d90afec06d8b9f6848c273fe8e860e6',
+      repo        : 'zzl-Alexander.github.io',
+      owner       : 'zzl-Alexander',
+      admin       : ['zzl-Alexander'],
+      id          : '0d5f8e9c6399d843269931d05e7b0681',
+      proxy       : 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render(document.querySelector('.gitalk-container'));
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

@@ -144,6 +144,383 @@
       </tags>
   </entry>
   <entry>
+    <title>第 17 章 项目结束过程</title>
+    <url>/2021/05/09/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/17%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9D%9F/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>一、合同结束<br>二、项目结束</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="合同结束"><a href="#合同结束" class="headerlink" title="合同结束"></a>合同结束</h1><p>项目终止的条件<br>下列条件出现，可以终止项目：</p>
+<ol>
+<li>项目计划中确定的可交付成果已经出现，项目的目标已经成功实现</li>
+<li>由于相关原因,项目无法继续进行,例如<br>项目已经不具备实用价值<br>项目无竞争力，难以生存 </li>
+</ol>
+<p>合同的生存期：<br>合同准备<br>合同签署<br>合同管理<br>合同终止</p>
+<h1 id="项目结束"><a href="#项目结束" class="headerlink" title="项目结束"></a>项目结束</h1><p>项目结束过程:<br>制定结束计划、完成收尾工作、项目最后评审<br>项目收尾：<br>范围确认<br>质量验收<br>产品交付<br>费用决算<br>项目文档验收</p>
+<h2 id="项目最后评审"><a href="#项目最后评审" class="headerlink" title="项目最后评审"></a>项目最后评审</h2><ul>
+<li>是否实现项目目标</li>
+<li>是否遵循项目进度</li>
+<li>是否在预算成本内完成项目</li>
+<li>项目进度过程中出现的突发问题以及解决措施是否合适，问题是否得到解决</li>
+<li>从该项目的实践中可以得到哪些经验和教训</li>
+</ul>
+<h2 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h2><p>项目总结是一个把实际运行情况与项目计划不断比较以提炼经验教训的过程。通过项目总结，项目过程中的经验和教训将得到完整的记录和升华，成为“组织财富”。</p>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 16 章 项目辅助计划执行控制</title>
+    <url>/2021/05/09/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/16%E8%BE%85%E5%8A%A9%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C%E6%8E%A7%E5%88%B6/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>人员管理<br>干系人管理<br>沟通管理<br>风险管理<br>合同管理</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="人员计划执行控制"><a href="#人员计划执行控制" class="headerlink" title="人员计划执行控制"></a>人员计划执行控制</h1><h2 id="团队建设"><a href="#团队建设" class="headerlink" title="团队建设:"></a>团队建设:</h2><p>团队创建有4个主要阶段：组建、磨合、规范、执行。</p>
+<h2 id="人员培训"><a href="#人员培训" class="headerlink" title="人员培训:"></a>人员培训:</h2><p>项目培训的特点：</p>
+<ul>
+<li>短期</li>
+<li>片断式</li>
+<li>针对性强</li>
+<li>见效快<br>培训形式：</li>
+<li>岗前培训</li>
+<li>岗上培训</li>
+</ul>
+<h2 id="人员激励"><a href="#人员激励" class="headerlink" title="人员激励:"></a>人员激励:</h2><p>项目成员的激励理论：</p>
+<h3 id="马斯洛的需求层次理论"><a href="#马斯洛的需求层次理论" class="headerlink" title="马斯洛的需求层次理论"></a>马斯洛的需求层次理论</h3><h3 id="海兹伯格的激励理论"><a href="#海兹伯格的激励理论" class="headerlink" title="海兹伯格的激励理论"></a>海兹伯格的激励理论</h3><p>激励因素（内在因素）：</p>
+<ul>
+<li>成就感</li>
+<li>责任感</li>
+<li>晋升</li>
+<li>被赏识、认可<br>保健因素（外在因素）：</li>
+<li>工作环境</li>
+<li>薪金</li>
+<li>工作关系</li>
+<li>安全等</li>
+</ul>
+<h3 id="麦克勒格的-X－理论"><a href="#麦克勒格的-X－理论" class="headerlink" title="麦克勒格的 X－理论"></a>麦克勒格的 X－理论</h3><p>强势管理—针对懒惰型人员<br>参与管理—针对勤奋型人员</p>
+<h3 id="超Y理论"><a href="#超Y理论" class="headerlink" title="超Ｙ理论"></a>超Ｙ理论</h3><p>１ 人们情况不同、处理方法不同<br>２ 组织形式和管理方法要与工作性质和人们的需要相适应<br>３ 组织机构和管理层次的划分、职工培训和工作分配、工作报酬和控制程度等, 不能千篇一律;<br>４ 当一个目标达到后,应激起员工的胜任感,使他们为达到新的、更高的目标而努力。 </p>
+<h3 id="Z理论"><a href="#Z理论" class="headerlink" title="Ｚ理论"></a>Ｚ理论</h3><p>１ 企业对员工实行长期或终身雇佣制度,<br>２ 注意员工培训,<br>３ 注意对人的经验和潜在能力进行诱导;<br>４ 企业决策采取集体研究和个人负责的方式,<br>５ 让职工多参与管理。 </p>
+<h3 id="期望理论（Expectancy-Theory）"><a href="#期望理论（Expectancy-Theory）" class="headerlink" title="期望理论（Expectancy Theory）"></a>期望理论（Expectancy Theory）</h3><p>人们在下列情况下能够受到激励并且出大量成果</p>
+<ul>
+<li>相信他们的努力很可能会产生成功的结果</li>
+<li>他们也相信自己会因为成功得到相应的回报<h1 id="干系人计划执行控制"><a href="#干系人计划执行控制" class="headerlink" title="干系人计划执行控制"></a>干系人计划执行控制</h1>项目的目的是实现项目干系人的需求和愿望，项目干系人管理应当贯穿始终，项目经理及<br>其项目成员要分清项目干系人包含哪些人和组织，通过沟通协调对他们施加影响，驱动他们对<br>项目的支持，调查并明确他们的需求和愿望，减小其对项目的阻力，以确保项目获得成功。</li>
+</ul>
+<h1 id="沟通管理"><a href="#沟通管理" class="headerlink" title="沟通管理"></a>沟通管理</h1><p>主要沟通方式:</p>
+<h2 id="利用信息技术沟通方式"><a href="#利用信息技术沟通方式" class="headerlink" title="利用信息技术沟通方式"></a>利用信息技术沟通方式</h2><p>项目网站<br>邮件往来<br>QQ群<br>配置管理系统</p>
+<h2 id="正式沟通"><a href="#正式沟通" class="headerlink" title="正式沟通"></a>正式沟通</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210509201306.png" alt="20210509201306"></p>
+<h2 id="非正式沟通"><a href="#非正式沟通" class="headerlink" title="非正式沟通"></a>非正式沟通</h2><p>讨论<br>聊天<br>聚会</p>
+<h1 id="风险管理"><a href="#风险管理" class="headerlink" title="风险管理"></a>风险管理</h1><p>风险识别<br>风险评估<br>风险规划<br>风险控制</p>
+<h2 id="风险控制过程"><a href="#风险控制过程" class="headerlink" title="风险控制过程"></a>风险控制过程</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210509202033.png" alt="20210509202033"></p>
+<h1 id="合同管理"><a href="#合同管理" class="headerlink" title="合同管理"></a>合同管理</h1><h2 id="甲方合同管理"><a href="#甲方合同管理" class="headerlink" title="甲方合同管理"></a>甲方合同管理</h2><p>对采购对象的检验和验收过程<br>违约事件处理过程</p>
+<h2 id="乙方合同管理"><a href="#乙方合同管理" class="headerlink" title="乙方合同管理"></a>乙方合同管理</h2><p>合同执行跟踪管理过程<br>合同修改控制<br>违约事件处理过程<br>产品提交过程<br>产品维护过程</p>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 15 章 项目核心计划执行控制</title>
+    <url>/2021/05/09/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/15%E6%A0%B8%E5%BF%83%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C%E6%8E%A7%E5%88%B6/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>范围管理<br>时间\成本管理<br>质量管理</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="范围管理"><a href="#范围管理" class="headerlink" title="范围管理"></a>范围管理</h1><p>范围管理主要是针对需求变更的管理<br>变更控制系统流程：<br>提出需求变更请求，评估变更的影响，最后通过SCCB的表决<br>需求变更后需要重新修改WBS<br>需求变更管理也是一个重要的基线变更管理</p>
+<h1 id="性能分析的主要技术"><a href="#性能分析的主要技术" class="headerlink" title="性能分析的主要技术"></a>性能分析的主要技术</h1><h2 id="图解控制法"><a href="#图解控制法" class="headerlink" title="图解控制法"></a>图解控制法</h2><p>图解控制法是利用表示进度的甘特图、表示成本的累计费用曲线图和表示资源的资源载荷<br>图对项目的性能进行分析的过程。</p>
+<p>累计费用(S) 曲线对监视费用偏差是很有用的，<br>计划成本曲线和实际支出曲线之间的高度差表示成本偏差</p>
+<p>资源载荷图围住的面积代表某段工作时间的资源消耗</p>
+<h2 id="挣值分析法"><a href="#挣值分析法" class="headerlink" title="挣值分析法"></a>挣值分析法</h2><p>又称已获取价值分析</p>
+<p>BAC(Budget At Completion)<br>预算总值（估算结果）<br>TAC(Time At Completion)<br>预计完成时间<br>BCWS(Budgeted cost of work scheduled)<br>计划工作成本<br>ACWP(Actual cost of work performed)<br>实际工作成本<br>BCWP(Budgeted cost of work performed)<br>已获值(Earned Value)<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210509162820.png" alt="20210509162820"></p>
+<p>BCWP的计算:<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210509163047.png" alt="20210509163047"></p>
+<p>进度差异:SV（Schedule Variance）=BCWP-BCWS<br>        =0：按照计划进度进行<br>        &lt;0：落后于进度<br>        &gt;0：超前于进度</p>
+<p>成本差异:CV（Cost Variance )=BCWP-ACWP<br>        =0：按照计划预算进行<br>        &lt;0：超出预算<br>        &gt;0：低于预算</p>
+<p>进度效能指标 SPI（Schedule  Performance Index)= BCWP/BCWS<br>=1：按照计划进度进行</p>
+<blockquote>
+<p>1：超前于进度<br>&lt;1：落后于进度</p>
+</blockquote>
+<p>成本效能指标：CPI(Cost Performance Index)= BCWP/ACWP<br>=1：按照计划预算进行</p>
+<blockquote>
+<p>1：低于预算<br>&lt;1：超出预算</p>
+</blockquote>
+<p><font color="red">研究表明：进度进展到20%左右的时候，CPI趋于稳定。</font></p>
+<p>预测项目完成成本 EAC (Estimate At Completion)=BAC/CPI<br>项目完成的成本差异 VAC(Variance At Completion)=BAC-EAC<br>预测项目完成时间 SAC(Schedule At Completion )=TAC/SPI</p>
+<p>未完工指数 TCPI=剩余工作/剩余成本<br>        =(BAC-BCWP)/(Goal-ACWP)</p>
+<h2 id="敏捷进度控制"><a href="#敏捷进度控制" class="headerlink" title="敏捷进度控制"></a>敏捷进度控制</h2><p>在任何时间，达成目标的剩余工作量是可以累计的。<br>敏捷进度燃尽图</p>
+<h1 id="质量执行控制"><a href="#质量执行控制" class="headerlink" title="质量执行控制"></a>质量执行控制</h1><p>质量管理围绕着质量保证和质量控制两方面进行</p>
+<h2 id="质量保证"><a href="#质量保证" class="headerlink" title="质量保证"></a>质量保证</h2><p>QA:质量审计（ Audit ）<br>质量保证的主要活动是产品审计和执行过程审计。</p>
+<h2 id="质量控制"><a href="#质量控制" class="headerlink" title="质量控制"></a>质量控制</h2><p>质量控制3个要点：<br>1、检查控制对象是项目工作结果。<br>2、进行跟踪检查的依据是相关质量标准。<br>3、对于不满意的质量问题，需要进行一步分析其产生的原因，并确定采取何种措施来消除这些问题。</p>
+<h3 id="质量控制的方法和策略"><a href="#质量控制的方法和策略" class="headerlink" title="质量控制的方法和策略"></a>质量控制的方法和策略</h3><ol>
+<li>技术评审<br>尽早发现工作成果中的缺陷，并帮助开发人员及时消除缺陷，从而有效地提高产品的质量</li>
+</ol>
+<p><strong>对等评审</strong>是一个特殊类型的技术评审，是由与工作产品开发人员具有同等背景和能力的人<br>员对工作产品进行的一种技术评审，目的是早期和有效地消除软件工作产品中的缺陷，并可对<br>软件工作产品和其中可预防的缺陷有更好的理解。对等评审是提高生产率和产品质量的重要<br>手段。<br>2. 代码评审/走查<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210509171444.png" alt="20210509171444"><br>3. 软件测试<br>(1) 测试是程序的执行过程，目的在于发现错误；<br>(2) 一个好的测试用例在于能发现至今未发现的错误；<br>(3) 一个成功的测试是发现了至今未发现的错误的测试。<br>4. 返工<br>返工是将有缺陷的和不合格项改造为与需求和规格一致的行为<br>5. 控制图法<br>控制图法是一种图形的控制方法，它显示软件产品的质量随着时间变化的情况，在控制图法中标识出质量控制的偏差标准。<br>6. 趋势分析<br>趋势分析指运用数字技巧，依据过去的成果预测将来的产品。<br>7. 抽样统计<br>抽样统计是根据一定的分布概率抽取部分产品进行检查。它是以小批量的抽样为基准进行检验，以确定大量或批量产品质量的最常使用的方法。 </p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>项目核心计划的执行控制</p>
+<ul>
+<li>范围执行控制</li>
+<li>时间\成本执行控制</li>
+<li>质量执行控制</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 12 章 软件项目合同计划</title>
+    <url>/2021/05/08/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/12%E5%90%88%E5%90%8C%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>项目合同<br>合同计划 </p>
+</blockquote>
+<span id="more"></span>
+
+
+<h1 id="项目采购"><a href="#项目采购" class="headerlink" title="项目采购"></a>项目采购</h1><p>为了执行项目而从项目团队外部获取产品、服务或者结果的过程，称为采购 .</p>
+<h1 id="合同"><a href="#合同" class="headerlink" title="合同"></a>合同</h1><p>合同是具有法律效力的协议</p>
+<ul>
+<li>双方自愿达成的协议</li>
+<li>签订者具有相应的法律能力</li>
+<li>有充分的签约理由</li>
+<li>具有合法的目的</li>
+</ul>
+<h2 id="合同类型"><a href="#合同类型" class="headerlink" title="合同类型"></a>合同类型</h2><h3 id="成本补偿类合同"><a href="#成本补偿类合同" class="headerlink" title="成本补偿类合同"></a>成本补偿类合同</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210508214738.png" alt="20210508214738"></p>
+<h3 id="固定价格合同"><a href="#固定价格合同" class="headerlink" title="固定价格合同"></a>固定价格合同</h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210508215212.png" alt="20210508215212"></p>
+<h3 id="单价合同-Unit-Price"><a href="#单价合同-Unit-Price" class="headerlink" title="单价合同(Unit Price)"></a>单价合同(Unit Price)</h3><p>一个产品或者时间度量单位的价格 :例如<br>工程师单价:130美元/工时<br>产品单价:1500元/功能点</p>
+<h2 id="合同类型与相应的风险"><a href="#合同类型与相应的风险" class="headerlink" title="合同类型与相应的风险"></a>合同类型与相应的风险</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210508215445.png" alt="20210508215445"></p>
+<h1 id="合同计划"><a href="#合同计划" class="headerlink" title="合同计划"></a>合同计划</h1><ol>
+<li>明确如何进行委托、委托什么项目、何时进行、费用如何等，</li>
+<li>选择需要的合同类型，采用的招标方式、合同形式等。</li>
+</ol>
+<p>输出:<br>    招标书或者类似招标书的形式体现的   </p>
+<h1 id="软件外包"><a href="#软件外包" class="headerlink" title="软件外包"></a>软件外包</h1><p>软件项目外包的实质是软件开发过程的管理规范与管理技术从企业内部部分或全部延伸到外部。</p>
+<h2 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h2><p>按照承包商地理位置分类：境内外包和境外外包<br>按照外包内容分类：技术外包、业务流外包、知识流外包。</p>
+<h2 id="软件外包基本步骤："><a href="#软件外包基本步骤：" class="headerlink" title="软件外包基本步骤："></a>软件外包基本步骤：</h2><ul>
+<li>竞标邀请</li>
+<li>评估候选乙方的综合能力</li>
+<li>确定承包商</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 11 章 软件项目风险计划</title>
+    <url>/2021/05/08/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/11%E9%A3%8E%E9%99%A9%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>风险基本概念<br>风险管理过程<br>风险管理计划  </p>
+</blockquote>
+<span id="more"></span>
+<h1 id="项目风险的三要素"><a href="#项目风险的三要素" class="headerlink" title="项目风险的三要素"></a>项目风险的三要素</h1><ol>
+<li>风险事件</li>
+<li>风险事件发生的概率</li>
+<li>风险事件造成的影响</li>
+</ol>
+<h1 id="风险类型"><a href="#风险类型" class="headerlink" title="风险类型"></a>风险类型</h1><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506191411.png" alt="20210506191411"></p>
+<h1 id="风险管理的四个过程"><a href="#风险管理的四个过程" class="headerlink" title="风险管理的四个过程"></a>风险管理的四个过程</h1><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506191540.png" alt="20210506191540"></p>
+<h2 id="1–风险识别"><a href="#1–风险识别" class="headerlink" title="1–风险识别"></a>1–风险识别</h2><p>风险识别是试图通过系统化地确定对项目计划的威胁，识别已知和可预测的风险。</p>
+<h3 id="风险识别方法"><a href="#风险识别方法" class="headerlink" title="风险识别方法"></a>风险识别方法</h3><ul>
+<li>德尔菲方法</li>
+<li>头脑风暴法</li>
+<li>情景分析法</li>
+<li>利用风险条目检查表<h4 id="利用风险条目检查表"><a href="#利用风险条目检查表" class="headerlink" title="利用风险条目检查表"></a>利用风险条目检查表</h4></li>
+<li>利用检查表作为风险识别的工具</li>
+<li>根据列表中的条目识别风险</li>
+<li>集中识别常见的类型中的已知和可预测的风险</li>
+</ul>
+<h2 id="2–风险评估"><a href="#2–风险评估" class="headerlink" title="2–风险评估"></a>2–风险评估</h2><p>对风险事件发生概率的评估，对项目风险影响的评估，给出项目风险排序。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506202001.png" alt="20210506202001"></p>
+<h3 id="风险评估的方法-定性风险评估"><a href="#风险评估的方法-定性风险评估" class="headerlink" title="风险评估的方法-定性风险评估"></a>风险评估的方法-定性风险评估</h3><p>定性评估风险概率及后果</p>
+<p>风险概率度量：<br>高、中、低<br>极高、高、中、低、极低<br>不可能，不一定，可能和极可能<br>等等</p>
+<p>风险影响度量:<br>高、中、低<br>极高、高、中、低、极低<br>灾难，严重，轻微，可忽略<br>等等</p>
+<p>风险概率及后果估计-矩阵图<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506202325.png" alt="20210506202325"></p>
+<h3 id="风险评估的方法-定量风险评估"><a href="#风险评估的方法-定量风险评估" class="headerlink" title="风险评估的方法-定量风险评估"></a>风险评估的方法-定量风险评估</h3><ol>
+<li>盈亏平衡分析</li>
+<li>模拟</li>
+<li>决策树分析</li>
+</ol>
+<p>决策树分析:</p>
+<ul>
+<li>决策树分析是一种图表分析方法</li>
+<li>提供项目所有可供选择的行动方案，行动方案之间的关系，行动方案的后果以及发生的概率</li>
+<li>提供选择一个最佳的方案的依据</li>
+</ul>
+<p><font color="red">EMV (损益期望值)是决策树的一种计算值</font><br>根据结果、发生的概率计算出一种期望的损益<br>例如：<br>    某行动方案成功的概率是50%，收益是10<br>    EMV=10*50%=5</p>
+<h2 id="3–风险规划"><a href="#3–风险规划" class="headerlink" title="3–风险规划"></a>3–风险规划</h2><p>针对风险分析的结果，为提高实现项目目标的机会，降低风险的负面影响而制定风险应对策略和应对措施的过程，即制定一定的行动和策略来对付、减少、以至于消灭风险事件造成的影响</p>
+<p>风险规划的主要策略:</p>
+<ol>
+<li>回避风险</li>
+<li>转移风险</li>
+<li>损失控制</li>
+<li>自留风险</li>
+</ol>
+<h3 id="回避风险"><a href="#回避风险" class="headerlink" title="回避风险"></a>回避风险</h3><p>回避风险是对可能发生的风险尽可能的规避，采取主动放弃或者拒绝使用导致风险的方案</p>
+<p>例如放弃采用新技术<br>注意事项</p>
+<ul>
+<li>对风险有足够的认识，当风险发生概率极高、风险后果影响很严重时，可以采用</li>
+<li>当其他风险策略不理想的时候，可以考虑</li>
+<li>可能产生另外的风险</li>
+<li>不是所有的情况都适用的，如自然灾害<h3 id="转移风险"><a href="#转移风险" class="headerlink" title="转移风险"></a>转移风险</h3>转移风险是为了避免承担风险损失，有意识将损失或与损失有关的财务后果转嫁出去的方法。<br>例如</li>
+<li>分包</li>
+<li>开脱责任合同</li>
+<li>保险<h3 id="损失控制"><a href="#损失控制" class="headerlink" title="损失控制"></a>损失控制</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506204329.png" alt="20210506204329"><h3 id="自留风险"><a href="#自留风险" class="headerlink" title="自留风险"></a>自留风险</h3>由项目组织自己承担风险事故所致损失的措施。 </li>
+</ul>
+<h1 id="风险管理计划"><a href="#风险管理计划" class="headerlink" title="风险管理计划"></a>风险管理计划</h1><ul>
+<li>风险应对计划（例如TOP 清单）<ul>
+<li>风险事件</li>
+<li>风险排序</li>
+<li>风险应对策略</li>
+</ul>
+</li>
+<li>岗位职责</li>
+<li>风险追踪</li>
+</ul>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>风险管理的四个过程<br>风险管理计划</p>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 9 章 软件项目配置管理计划</title>
+    <url>/2021/05/07/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/9%E9%85%8D%E7%BD%AE%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>软件项目配置管理基本概念<br>软件项目配置管理过程<br>软件项目配置管理计划</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="配置管理简述"><a href="#配置管理简述" class="headerlink" title="配置管理简述"></a>配置管理简述</h1><p>软件配置管理是一套管理软件开发和维护以及其中各种中间软件产品的方法和规则，同时是提高软件质量的重要手段，它帮助开发团队对软件开发过程进行有效的变更控制，高效地开发高质量的软件。<br>记录软件产品的演化过程<br>得到精确的产品配置。<br>最终保证软件产品的<font color="red">完整性、一致性、追朔性、可控性</font></p>
+<h1 id="配置管理的几个重要的概念"><a href="#配置管理的几个重要的概念" class="headerlink" title="配置管理的几个重要的概念"></a>配置管理的几个重要的概念</h1><p>(1) 配置项<br>(2) 基线<br>(3) 软件配置控制委员会</p>
+<h2 id="软件配置项"><a href="#软件配置项" class="headerlink" title="软件配置项"></a>软件配置项</h2><p>SCI:software configration item<br>受控于软件配置管理的项<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506170112.png" alt="20210506170112"></p>
+<h2 id="基线定义"><a href="#基线定义" class="headerlink" title="基线定义"></a>基线定义</h2><ul>
+<li>基线提供了软件生存期中各个开发阶段的一个特定点</li>
+<li>一个(些)配置项形成并通过审核，即形成基线</li>
+<li>基线标志开发过程一个阶段的结束和里程碑</li>
+<li>基线修改需要按照正式的程序执行<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506170223.png" alt="20210506170223"><h2 id="SCCB-Software-Configuration-Control-Board"><a href="#SCCB-Software-Configuration-Control-Board" class="headerlink" title="SCCB (Software Configuration Control Board)"></a>SCCB (Software Configuration Control Board)</h2>软件配置控制委员会(SCCB)</li>
+</ul>
+<ol>
+<li>评估变更</li>
+<li>批准变更申请</li>
+<li>在生存期内规范变更申请流程</li>
+<li>对变更进行反馈</li>
+<li>与项目管理层沟通 <h1 id="配置管理的基本过程"><a href="#配置管理的基本过程" class="headerlink" title="配置管理的基本过程"></a>配置管理的基本过程</h1><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506170345.png" alt="20210506170345"><h2 id="1、配置项标识、跟踪"><a href="#1、配置项标识、跟踪" class="headerlink" title="1、配置项标识、跟踪"></a>1、配置项标识、跟踪</h2></li>
+</ol>
+<ul>
+<li>将软件项目中需要进行控制的部分拆分成SCI</li>
+<li>建立唯一的标识</li>
+<li>建立相互间的对应关系，进行系统的跟踪和版本控制.<h3 id="配置项的标识"><a href="#配置项的标识" class="headerlink" title="配置项的标识"></a>配置项的标识</h3>配置项被唯一的标识<h3 id="配置项的跟踪"><a href="#配置项的跟踪" class="headerlink" title="配置项的跟踪"></a>配置项的跟踪</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171015.png" alt="20210506171015"><h2 id="2、配置管理环境建立"><a href="#2、配置管理环境建立" class="headerlink" title="2、配置管理环境建立"></a>2、配置管理环境建立</h2>软件配置管理库是用来存储所有基线配置项及相关文件等内容的系统，是在软件产品的整个生存期中建立和维护软件产品完整性的主要手段。 <h3 id="受控操作"><a href="#受控操作" class="headerlink" title="受控操作"></a>受控操作</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171147.png" alt="20210506171147"><h2 id="3、基线变更管理过程"><a href="#3、基线变更管理过程" class="headerlink" title="3、基线变更管理过程"></a>3、基线变更管理过程</h2>基线修改应受到控制，这种变化要经SCCB授权，按程序进行控制并记录基线修改的过程。 <h3 id="基线变更系统"><a href="#基线变更系统" class="headerlink" title="基线变更系统"></a>基线变更系统</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171238.png" alt="20210506171238"><h3 id="变更请求"><a href="#变更请求" class="headerlink" title="变更请求"></a>变更请求</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171253.png" alt="20210506171253"><h3 id="变更评估"><a href="#变更评估" class="headerlink" title="变更评估"></a>变更评估</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171309.png" alt="20210506171309"><h3 id="变更批准-拒绝"><a href="#变更批准-拒绝" class="headerlink" title="变更批准/拒绝"></a>变更批准/拒绝</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171327.png" alt="20210506171327"><h3 id="变更实现"><a href="#变更实现" class="headerlink" title="变更实现"></a>变更实现</h3><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171348.png" alt="20210506171348"></li>
+</ul>
+<h2 id="4、配置管理审计"><a href="#4、配置管理审计" class="headerlink" title="4、配置管理审计"></a>4、配置管理审计</h2><ul>
+<li>配置管理过程审计</li>
+<li>基线审计<h2 id="5、配置状态统计"><a href="#5、配置状态统计" class="headerlink" title="5、配置状态统计"></a>5、配置状态统计</h2>例如：</li>
+<li>被批准的配置项 </li>
+<li>变更请求的数量</li>
+<li>配置项的所有请求的变化状态 </li>
+<li>配置项所有被批准的变更实现状态</li>
+<li>配置管理系统以及SCCB在运作中发生异常的次数等等 </li>
+</ul>
+<h1 id="配置管理计划大纲"><a href="#配置管理计划大纲" class="headerlink" title="配置管理计划大纲"></a>配置管理计划大纲</h1><ul>
+<li>人员职责（确定SCCB等）</li>
+<li>配置项定义</li>
+<li>基线定义</li>
+<li>版本控制</li>
+<li>定义变更控制系统<h1 id="常用配置管理的工具"><a href="#常用配置管理的工具" class="headerlink" title="常用配置管理的工具"></a>常用配置管理的工具</h1><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506171548.png" alt="20210506171548"><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1></li>
+</ul>
+<ol>
+<li>配置管理的基本概念<ol>
+<li>配置项</li>
+<li>基线</li>
+<li>sccb</li>
+</ol>
+</li>
+<li>配置管理过程</li>
+<li>配置管理计划</li>
+</ol>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第 8 章 软件项目质量计划</title>
+    <url>/2021/05/06/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/8%E8%B4%A8%E9%87%8F%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><font color="red"></font></p>
+<h1 id="本章要点"><a href="#本章要点" class="headerlink" title="本章要点"></a>本章要点</h1><blockquote>
+<p>软件质量基本概念<br>软件质量管理过程<br>软件质量计划  </p>
+</blockquote>
+<span id="more"></span>
+<h1 id="质量定义"><a href="#质量定义" class="headerlink" title="质量定义"></a>质量定义</h1><p>质量是满足要求的程度,包括符合规定的要求和满足顾客隐含需求.</p>
+<p><strong>软件质量</strong>是软件满足明确说明或者隐含的需求的程度</p>
+<p>质量好的一个重要方面是让用户满意，<br>质量管理的目标是满足项目干系人的需求。</p>
+<h1 id="软件质量模型"><a href="#软件质量模型" class="headerlink" title="软件质量模型"></a>软件质量模型</h1><p>人们通常把影响软件质量的特性用软件质量模型来描述。</p>
+<p>1976年  Boehm质量模型<br>1979年  McCall质量模型<br>1985年  ISO质量模型</p>
+<h2 id="Boehm模型"><a href="#Boehm模型" class="headerlink" title="Boehm模型"></a>Boehm模型</h2><p>定量评价软件质量，60个质量度量公式，层次模型<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154519.png" alt="20210506154519"></p>
+<h2 id="McCall质量模型"><a href="#McCall质量模型" class="headerlink" title="McCall质量模型"></a>McCall质量模型</h2><p>软件质量要素、准则、度量<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154351.png" alt="20210506154351"></p>
+<h2 id="ISO-IEC9126模型"><a href="#ISO-IEC9126模型" class="headerlink" title="ISO/IEC9126模型"></a>ISO/IEC9126模型</h2><p>内部质量度量和外部质量度量<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506154423.png" alt="20210506154423"></p>
+<h1 id="质量的形成"><a href="#质量的形成" class="headerlink" title="质量的形成"></a>质量的形成</h1><p>质量形成于产品或者服务的开发过程中，而不是事后的检查（测试）把关等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506155059.png" alt="20210506155059"></p>
+<h1 id="质量成本（CoQ）"><a href="#质量成本（CoQ）" class="headerlink" title="质量成本（CoQ）"></a>质量成本（CoQ）</h1><p>质量成本是由于产品的第一次工作不正常而衍生的附加花费，包括两部分<br>预防成本：评估费用、预防费用。<br>缺陷成本：内部费用、外部费用。</p>
+<h1 id="质量管理的对象"><a href="#质量管理的对象" class="headerlink" title="质量管理的对象"></a>质量管理的对象</h1><p>过程的质量<br>  需求过程、设计过程、编码过程、测试过程、提交过程等<br>产品的质量<br>  需求规格、设计说明书、代码、测试用例、测试报告、使用手册等</p>
+<h1 id="软件质量管理过程"><a href="#软件质量管理过程" class="headerlink" title="软件质量管理过程"></a>软件质量管理过程</h1><p>软件质量计划<br>软件质量保证<br>软件质量控制</p>
+<h2 id="软件质量计划"><a href="#软件质量计划" class="headerlink" title="软件质量计划"></a>软件质量计划</h2><p>确定项目应达到的质量标准(目标)<br>决定如何满足质量标准的计划安排和方法</p>
+<h3 id="质量计划方法"><a href="#质量计划方法" class="headerlink" title="质量计划方法"></a>质量计划方法</h3><p>试验设计<br>基准对照<br>质量成本分析<br>流程图方法<br>因果分析图</p>
+<h4 id="试验设计"><a href="#试验设计" class="headerlink" title="试验设计"></a>试验设计</h4><p>试验设计是一种统计学方法，确定哪些因素可能会对特定变量产生影响。<br>例如：针对成本和时间可以设计不同的组合方案，并筛选出最优的组合。</p>
+<h4 id="基准对照"><a href="#基准对照" class="headerlink" title="基准对照"></a>基准对照</h4><p>是一种寻找最佳实践的方法，是利用其他项目的实施情况作为当前项目性能衡量的标准。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160717.png" alt="20210506160717"></p>
+<h4 id="质量成本分析"><a href="#质量成本分析" class="headerlink" title="质量成本分析"></a>质量成本分析</h4><p>质量成本的综合分析，以便决定质量活动<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160744.png" alt="20210506160744"></p>
+<h4 id="流程图方法"><a href="#流程图方法" class="headerlink" title="流程图方法"></a>流程图方法</h4><p>可以显示系统的各种成分是相互的关系，帮助我们预测在何处可能发生何种质量问题.<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160809.png" alt="20210506160809"></p>
+<h4 id="因果分析图"><a href="#因果分析图" class="headerlink" title="因果分析图"></a>因果分析图</h4><p>描述相关的各种原因和子原因如何产生潜在问题或影响，将影响质量问题的“人员、设备、参考资料、方法、环境”等各方面的原因进行细致的分解，方便地在质量计划中制定相应的预防措施<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160847.png" alt="20210506160847"></p>
+<h2 id="质量保证-QA"><a href="#质量保证-QA" class="headerlink" title="质量保证(QA)"></a>质量保证(QA)</h2><p>为了提供信用，证明项目将会达到有关质量标准而开展的有计划、有组织的工作活动。</p>
+<p>通过评价项目整体绩效,建立对质量要求的信任<br>提供项目和产品可视化的管理报告<br>          例如：《软件设计说明书》质量审计<br>Is it done right?（完成是否正确）<br>这个任务本身并不能提高产品的质量<br>一般由质量保证部门人员实施</p>
+<h3 id="质量保证的要点"><a href="#质量保证的要点" class="headerlink" title="质量保证的要点"></a>质量保证的要点</h3><p>对项目进行评价<br>推测能否达到质量指标<br>建立对项目的信心</p>
+<h3 id="质量保证活动"><a href="#质量保证活动" class="headerlink" title="质量保证活动"></a>质量保证活动</h3><p>软件项目中常用的质量保证活动:<br>项目执行过程审计<br>项目产品审计</p>
+<p><strong>审计(Audit) 是对过程或者产品的一次独立评估</strong>。将审核的主体与为该主体以前建立的一组规程和标准进行比较<br>目的是确保真正的遵循了这一个过程，产生了合适的文档和精确反映实际项目的报告<br>可以预先规划的，也可以是临时决定的。 </p>
+<h2 id="质量控制-QC"><a href="#质量控制-QC" class="headerlink" title="质量控制(QC)"></a>质量控制(QC)</h2><p>确定项目结果与质量标准是否相符,同时,确定消除不符的原因和方法<br>控制产品的质量，及时纠正缺陷<br>        例如：评审、单元测试<br>Is it right done?（是否正确完成？）<br>这个任务本身提高产品的质量<br>一般由开发人员实施</p>
+<h3 id="质量控制的要点"><a href="#质量控制的要点" class="headerlink" title="质量控制的要点"></a>质量控制的要点</h3><ol>
+<li>检查工作结果</li>
+<li>按照标准跟踪检查</li>
+<li>确定措施消灭质量问题</li>
+</ol>
+<h3 id="质量控制方法"><a href="#质量控制方法" class="headerlink" title="质量控制方法"></a>质量控制方法</h3><p>技术评审<br>代码走查<br>测试<br>返工</p>
+<h2 id="质量保证与质量控制"><a href="#质量保证与质量控制" class="headerlink" title="质量保证与质量控制"></a>质量保证与质量控制</h2><p>QA:审计产品和过程质量，保证过程被正确执行，确认项目按照要求进行。<br>QC:检验产品的质量，保证产品符合客户的需求。是产品质量监察者，即挑毛病。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210506160420.png" alt="20210506160420"></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ol>
+<li>软件质量管理过程<ol>
+<li>质量计划</li>
+<li>质量保证</li>
+<li>质量控制</li>
+</ol>
+</li>
+<li>软件质量计划</li>
+</ol>
+]]></content>
+      <categories>
+        <category>软件项目管理</category>
+      </categories>
+      <tags>
+        <tag>软件项目管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>快速排序</title>
     <url>/2021/04/27/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<p>分治思想<br>整个数组找基准（一般事最左边或者最右边），所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面<br>递归实现<br>复杂度nlogn</p>
