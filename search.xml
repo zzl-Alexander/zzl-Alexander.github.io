@@ -160,6 +160,26 @@
       </tags>
   </entry>
   <entry>
+    <title>数据规范化(Matlab)</title>
+    <url>/2021/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E9%AA%8C1/</url>
+    <content><![CDATA[<p>数据规范化处理是数据挖掘的一项基础工作。不同的属性变量往往具有不同的取值范围，数值间的差别可能很大，不进行处理可能会影响到数据分析的结果。为了消除指标之间由于取值范围带来的差异，需要进行标准化处理。将数据按照比例进行缩放，使之落入一个特定的区域，便于进行综合分析。</p>
+<span id="more"></span>
+<p>（1）最小-最大规范化<br>假定minA和maxA分别为属性A的最小和最大值，则通过下面公式将A的值映射到区间[new_min, new_max]中的v’：<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210515223018.png" alt="20210515223018"><br>将data规范化到[0,1]之间</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"> A=data;</span><br><span class="line">[m,n]=size(A);</span><br><span class="line">&gt;&gt; jizhi=zeros(n,<span class="number">2</span>);  %% 将data中每个变量的最大值和最小值存放到数组jizhi中</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span>:n</span><br><span class="line">	jizhi(i,<span class="number">1</span>)=min(A(:,i));</span><br><span class="line">    jizhi(i,<span class="number">2</span>)=max(A(:,i)); </span><br><span class="line">end</span><br><span class="line">&gt;&gt; <span class="keyword">for</span> i=<span class="number">1</span>:m   %%对矩阵B中的每一个元素按照公式进行标准化为[<span class="number">0</span>,<span class="number">1</span>]区间的数。</span><br><span class="line">    <span class="keyword">for</span> j=<span class="number">1</span>:n</span><br><span class="line">        C(i,j)=(A(i,j)-jizhi(j,<span class="number">1</span>))/(jizhi(j,<span class="number">2</span>)-jizhi(j,<span class="number">1</span>));</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>（2）零-均值规范化<br>将属性A的值根据其平均值和标准差进行规范化：<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210515223045.png" alt="20210515223045"></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">&gt;&gt; A1=data;</span><br><span class="line">&gt;&gt; A1_mean=mean(A1,<span class="number">1</span>); %%对矩阵A的每一列求均值，如果参数为<span class="number">2</span>，则是对矩阵A每一行的均值</span><br><span class="line">&gt;&gt; A1_std=<span class="built_in">std</span>(A1); %% 求矩阵每一列的方差</span><br><span class="line">&gt;&gt; B1=(A1-repmat(A1_mean,size(A1,<span class="number">1</span>),<span class="number">1</span>))./repmat(A1_std,size(A1,<span class="number">1</span>),<span class="number">1</span>);</span><br><span class="line">或：</span><br><span class="line">[m,n]=size(A1);</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span>:m</span><br><span class="line"><span class="keyword">for</span> j=<span class="number">1</span>:n</span><br><span class="line">B1(i,j)=(A1(i,j)-A1_mean(<span class="number">1</span>,j))/A1_std(<span class="number">1</span>,j);</span><br><span class="line">end</span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>注意，该程序中又用到了一个新的函数repmat，该函数是在处理大矩阵且内容有重复时使用的函数，其功能是通过重复某矩阵X的内容，生成新的矩阵Y。新矩阵Y的规模由矩阵X的规模和相应的参数决定，如：如果X是一个2x2的矩阵，则Y = repmat(X,2,3)，是将矩阵X的规模变成4 x 6而得到的。<br>如：X=[1 2 ; 3 4]; Y=repmat(X,2,3);<br>则：Y =[ 1     2     1     2     1     2<br>        3     4     3     4     3     4<br>        1     2     1     2     1     2<br>        3     4     3     4     3     4]；<br>在B=(A-repmat(A_mean,size(A,1),1))./repmat(A_std,size(A,1),1)中，size(A,1)表示A的行数。分子中，通过repmat函数将A的均值矩阵重复变成一个2x3列的矩阵。</p>
+<p>（3）小数定标规范化<br>通过移动属性A的小数点位置进行规范化，小数点的移动依赖于A的最大绝对值：<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210515223103.png" alt="20210515223103"><br>其中，j是使 Max(| v’ |)&lt;1的最小整数。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">A2=data;  </span><br><span class="line">[m,n]=size(A2);</span><br><span class="line"> B2=max(<span class="built_in">abs</span>(A2));  %%% B2存放A2每列的绝对值的最大值</span><br><span class="line"> x1=<span class="built_in">log10</span>(B2);  %% 看最大值是<span class="number">10</span>的多少倍数</span><br><span class="line"> x2=<span class="built_in">ceil</span>(x1);  %% 利用<span class="built_in">ceil</span>函数向上取整。即得到j的值。</span><br><span class="line"> C=zeros(m,n); %% 用C存储最终小数定标后的结果</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span>:m</span><br><span class="line">    <span class="keyword">for</span> j=<span class="number">1</span>:n</span><br><span class="line">        C(i,j)=A2(i,j)/<span class="number">10</span>^x2(:,j); %% 对A2中的每个元素进行小数定标规范化；其中每一列的数据除以<span class="number">10</span>的j次方。j的数值为x2中对应列的数据</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>大数据开发基础</category>
+      </categories>
+      <tags>
+        <tag>大数据开发基础</tag>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第 17 章 项目结束过程</title>
     <url>/2021/05/09/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/17%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9D%9F/</url>
     <content><![CDATA[<p><font color="red"></font></p>
