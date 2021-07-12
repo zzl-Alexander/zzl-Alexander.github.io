@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="软件开发过程用以开发和维护软件及其相关产品（项目计划、设计文档、代码、测试用例、用户手册等）的一组活动、方法、实践和变换。软件开发过程是软件开发与维护的工作流程和工艺流程，是软件工程的重要组成部分。 软件开发过程是指软件设计思路和方法的一般过程，包括设计软件的功能和实现的算法和方法、软件的总体结构设计和模块设计、编程和调试、程序联调和测试以及编写、提交程序。 软件开发过程所涉及的阶段 软件开发过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试策略">
+<meta property="og:url" content="http://example.com/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC2%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Alexander">
+<meta property="og:description" content="软件开发过程用以开发和维护软件及其相关产品（项目计划、设计文档、代码、测试用例、用户手册等）的一组活动、方法、实践和变换。软件开发过程是软件开发与维护的工作流程和工艺流程，是软件工程的重要组成部分。 软件开发过程是指软件设计思路和方法的一般过程，包括设计软件的功能和实现的算法和方法、软件的总体结构设计和模块设计、编程和调试、程序联调和测试以及编写、提交程序。 软件开发过程所涉及的阶段 软件开发过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112509.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112643.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530201345.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112327.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530201535.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530151513.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210607093355.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210607094023.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614211414.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614213006.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615091226.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615091257.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092007.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530153326.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530153400.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092421.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530164202.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092531.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092704.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530164252.png">
+<meta property="article:published_time" content="2021-05-12T07:49:00.000Z">
+<meta property="article:modified_time" content="2021-05-12T07:49:00.000Z">
+<meta property="article:author" content="Alexander">
+<meta property="article:tag" content="软件质量保证与测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112509.png">
+
+
+<link rel="canonical" href="http://example.com/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC2%E7%AB%A0/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>软件测试策略 | Alexander</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Alexander</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-实用网站"><a href="/Mysite" rel="section"><i class="fa fa-sitemap fa-fw"></i>实用网站</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">软件开发过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E6%89%80%E6%B6%89%E5%8F%8A%E7%9A%84%E9%98%B6%E6%AE%B5"><span class="nav-number">1.1.</span> <span class="nav-text">软件开发过程所涉及的阶段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">软件开发过程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">瀑布模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B%E4%B8%89%E4%B8%AA%E7%89%B9%E5%BE%81%EF%BC%9A"><span class="nav-number">2.1.1.</span> <span class="nav-text">瀑布模型三个特征：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">2.1.2.</span> <span class="nav-text">瀑布模型优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B%E4%B8%8D%E8%B6%B3%EF%BC%9A"><span class="nav-number">2.1.3.</span> <span class="nav-text">瀑布模型不足：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E5%90%88"><span class="nav-number">2.1.4.</span> <span class="nav-text">通常使用的场合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">快速原型模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E8%B6%B3%EF%BC%9A"><span class="nav-number">2.2.1.</span> <span class="nav-text">不足：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E5%90%88%EF%BC%9A"><span class="nav-number">2.2.2.</span> <span class="nav-text">通常使用的场合：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">增量模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">2.3.1.</span> <span class="nav-text">增量模型的优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E8%B6%B3%EF%BC%9A-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">不足：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E5%90%88%EF%BC%9A-1"><span class="nav-number">2.3.3.</span> <span class="nav-text">通常使用的场合：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.4.</span> <span class="nav-text">螺旋模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">2.4.1.</span> <span class="nav-text">螺旋模型的优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E8%B6%B3%EF%BC%9A-2"><span class="nav-number">2.4.2.</span> <span class="nav-text">不足：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9C%BA%E5%90%88%EF%BC%9A-2"><span class="nav-number">2.4.3.</span> <span class="nav-text">通常使用的场合：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">单元测试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="nav-number">3.1.</span> <span class="nav-text">什么是单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">3.2.</span> <span class="nav-text">单元测试的目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">3.3.</span> <span class="nav-text">单元测试的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.4.</span> <span class="nav-text">单元测试的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E7%8E%AF%E5%A2%83%E6%9E%84%E6%88%90"><span class="nav-number">3.5.</span> <span class="nav-text">单元测试的环境构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="nav-number">3.6.</span> <span class="nav-text">如何构建单元测试的环境：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9"><span class="nav-number">4.</span> <span class="nav-text">单元测试内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95"><span class="nav-number">4.1.</span> <span class="nav-text">模块接口测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.</span> <span class="nav-text">局部数据结构测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E6%B5%8B%E8%AF%95%EF%BC%88%E5%9F%BA%E6%9C%AC%EF%BC%89"><span class="nav-number">4.3.</span> <span class="nav-text">路径测试（基本）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%B5%8B%E8%AF%95-%E5%AE%B9%E9%94%99"><span class="nav-number">4.4.</span> <span class="nav-text">错误处理测试(容错)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E7%95%8C%E6%B5%8B%E8%AF%95"><span class="nav-number">4.5.</span> <span class="nav-text">边界测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">单元测试类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%AD%E8%A8%80%EF%BC%88-Assertion-%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">断言（ Assertion ）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">7.</span> <span class="nav-text">单元测试的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E7%9B%AE%E7%9A%84-1"><span class="nav-number">7.1.</span> <span class="nav-text">单元测试的目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BD%9C%E7%94%A8-1"><span class="nav-number">7.2.</span> <span class="nav-text">单元测试的作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E7%9B%AE%E7%9A%84"><span class="nav-number">8.</span> <span class="nav-text">集成测试目的</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95"><span class="nav-number">8.1.</span> <span class="nav-text">什么是集成测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">8.2.</span> <span class="nav-text">集成测试的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E7%9A%84%E5%85%B3%E6%B3%A8%E7%82%B9"><span class="nav-number">8.3.</span> <span class="nav-text">集成测试的关注点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E8%8C%83%E5%9B%B4"><span class="nav-number">8.4.</span> <span class="nav-text">集成测试范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E5%B1%82%E6%AC%A1"><span class="nav-number">8.5.</span> <span class="nav-text">集成测试层次</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E7%AD%96%E7%95%A5"><span class="nav-number">8.6.</span> <span class="nav-text">集成测试策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95"><span class="nav-number">9.</span> <span class="nav-text">集成测试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E5%A2%9E%E8%AF%95%E6%B5%8B%E8%AF%95"><span class="nav-number">9.1.</span> <span class="nav-text">非增试测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E7%88%86%E7%82%B8%E9%9B%86%E6%88%90"><span class="nav-number">9.1.1.</span> <span class="nav-text">大爆炸集成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A2%9E%E8%AF%95%E6%B5%8B%E8%AF%95"><span class="nav-number">9.2.</span> <span class="nav-text">增试测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%EF%BC%88Top-Down-Testing%EF%BC%89"><span class="nav-number">9.2.1.</span> <span class="nav-text">自顶向下（Top Down Testing）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%BA%95%E5%90%91%E4%B8%8A%EF%BC%88Bottom-Up-Testing-%EF%BC%89"><span class="nav-number">9.2.2.</span> <span class="nav-text">自底向上（Bottom Up Testing ）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E5%92%8C%E8%87%AA%E5%BA%95%E5%90%91%E4%B8%8A%E7%9A%84%E6%AF%94%E8%BE%83%EF%BC%9A"><span class="nav-number">9.2.3.</span> <span class="nav-text">自顶向下和自底向上的比较：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E5%85%B3%E7%B3%BB%E6%A6%82%E8%BF%B0"><span class="nav-number">10.</span> <span class="nav-text">软件测试与软件开发过程关系概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B-1"><span class="nav-number">10.1.</span> <span class="nav-text">软件开发过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E7%9A%84%E7%BB%84%E6%88%90%EF%BC%9A"><span class="nav-number">10.1.1.</span> <span class="nav-text">软件产品的组成：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E7%BB%84%EF%BC%9A"><span class="nav-number">10.1.2.</span> <span class="nav-text">软件开发项目组：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="nav-number">10.1.3.</span> <span class="nav-text">软件生命周期的模型：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5"><span class="nav-number">10.2.</span> <span class="nav-text">软件测试与软件开发概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%A8%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">11.</span> <span class="nav-text">软件测试在软件开发生命周期的位置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9A"><span class="nav-number">11.1.</span> <span class="nav-text">一、软件生命周期的三阶段：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E8%BD%AF%E4%BB%B6%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="nav-number">11.1.1.</span> <span class="nav-text">1、软件规划阶段测试：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="nav-number">11.1.2.</span> <span class="nav-text">2、软件设计阶段测试：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%98%B6%E6%AE%B5%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="nav-number">11.1.3.</span> <span class="nav-text">3、软件开发阶段测试：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">11.2.</span> <span class="nav-text">二、软件测试与软件开发的关系：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.</span> <span class="nav-text">常见的软件测试模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#V%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.1.</span> <span class="nav-text">V模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#W%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.2.</span> <span class="nav-text">W模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#H%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.3.</span> <span class="nav-text">H模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#X%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.4.</span> <span class="nav-text">X模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B"><span class="nav-number">12.5.</span> <span class="nav-text">前置测试模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="nav-number">12.6.</span> <span class="nav-text">测试模型的使用：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-number">13.</span> <span class="nav-text">黑盒测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-number">14.</span> <span class="nav-text">白盒测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E5%92%8C%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">15.</span> <span class="nav-text">黑盒测试和白盒测试的比较</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Alexander"
+      src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
+  <p class="site-author-name" itemprop="name">Alexander</p>
+  <div class="site-description" itemprop="description">小舟从此逝，江海寄余生</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zzl-Alexander" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zzl-Alexander" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xustudy.com/" title="https:&#x2F;&#x2F;xustudy.com&#x2F;" rel="noopener" target="_blank">xustudy</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/zzl-Alexander" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC2%E7%AB%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/avatar.gif">
+      <meta itemprop="name" content="Alexander">
+      <meta itemprop="description" content="小舟从此逝，江海寄余生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软件测试策略<a href="https://github.com/zzl-Alexander/blogSourceCode3-17/blob/master/source/_posts/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC2%E7%AB%A0.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-12 15:49:00" itemprop="dateCreated datePublished" datetime="2021-05-12T15:49:00+08:00">2021-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">软件质量保证与测试</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="软件开发过程"><a href="#软件开发过程" class="headerlink" title="软件开发过程"></a>软件开发过程</h1><p>用以开发和维护软件及其相关产品（项目计划、设计文档、代码、测试用例、用户手册等）的一组活动、方法、实践和变换。<br><strong>软件开发过程</strong>是软件开发与维护的工作流程和工艺流程，是软件工程的重要组成部分。</p>
+<p><strong>软件开发过程</strong>是指软件设计思路和方法的一般过程，包括设计软件的功能和实现的算法和方法、软件的总体结构设计和模块设计、编程和调试、程序联调和测试以及编写、提交程序。</p>
+<h2 id="软件开发过程所涉及的阶段"><a href="#软件开发过程所涉及的阶段" class="headerlink" title="软件开发过程所涉及的阶段"></a>软件开发过程所涉及的阶段</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112509.png" alt="20210530112509"></p>
+<h1 id="软件开发过程模型"><a href="#软件开发过程模型" class="headerlink" title="软件开发过程模型"></a>软件开发过程模型</h1><p>软件开发模型则描述阶段如何组合到一起，是软件开发活动以及它们之间关系的<strong>结构框架</strong>。</p>
+<p>这种模型通过以下属性刻画：</p>
+<ul>
+<li>所执行的活动</li>
+<li>每种活动的可交付产品</li>
+<li>可交付产品的确认方法</li>
+<li>活动序列</li>
+<li>每种活动的验证方法，包括活动之间的沟通机制</li>
+</ul>
+<p>软件开发模型的种类：<br>瀑布模型、原型模型、快速原型模型,<br>增量模型、螺旋模型、V字模型,<br>W模型、X模型、H模型,<br>喷泉模型、XP开发模型等等。</p>
+<h2 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112643.png" alt="20210530112643"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530201345.png" alt="20210530201345"></p>
+<h3 id="瀑布模型三个特征："><a href="#瀑布模型三个特征：" class="headerlink" title="瀑布模型三个特征："></a>瀑布模型三个特征：</h3><ol>
+<li>项目分解为独立的不同阶段</li>
+<li>阶段之间具有顺序性和依赖性，每个阶段通过预先定义的输出与下一个阶段发生联系</li>
+<li>如果发现错误，则返回到上一阶段，一次跳一个阶段，直到在某个较早阶段改正该错误</li>
+</ol>
+<h3 id="瀑布模型优点："><a href="#瀑布模型优点：" class="headerlink" title="瀑布模型优点："></a>瀑布模型优点：</h3><ul>
+<li>简单：如果项目可以实际划分为独立部分，那么瀑布模型会非常有用。</li>
+<li>易于组织，易于管理：因为可以预先完成所有计划。</li>
+<li>质量保证：每个阶段必须完成规定的文档；每个阶段结束前完成文档审查，及早改正错误。</li>
+</ul>
+<h3 id="瀑布模型不足："><a href="#瀑布模型不足：" class="headerlink" title="瀑布模型不足："></a>瀑布模型不足：</h3><ul>
+<li>各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量。</li>
+<li>由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发的风险。</li>
+<li>早期的错误可能要等到开发后期的测试阶段才能发现，进而带来严重的后果。</li>
+</ul>
+<h3 id="通常使用的场合"><a href="#通常使用的场合" class="headerlink" title="通常使用的场合"></a>通常使用的场合</h3><ul>
+<li>需求分析做的比较好的系统</li>
+<li>二次开发的系统</li>
+</ul>
+<h2 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h2><ol>
+<li>第一步是建造一个快速原型，实现客户或未来的用户与系统的交互，用户或客户对原型进行评价，进一步细化待开发软件的需求；</li>
+<li>第二步则在第一步的基础上开发客户满意的软件产品。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112327.png" alt="20210530112327"></li>
+</ol>
+<h3 id="不足："><a href="#不足：" class="headerlink" title="不足："></a>不足：</h3><ul>
+<li>不能支持风险分析</li>
+<li>开发者为了使一个原型快速运行起来，往往在实现过程中采用折衷的手段。软件系统的组成部分可能会打折扣</li>
+</ul>
+<h3 id="通常使用的场合："><a href="#通常使用的场合：" class="headerlink" title="通常使用的场合："></a>通常使用的场合：</h3><p>开发者在不了解的应用领域开发。<br>客户不清楚其所开发的软件项目的最终目标。</p>
+<h2 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h2><p><strong>增量模型</strong>又称演化模型，在增量模型中，软件被作为一系列的增量构件来设计、实现、集成和测试，每一个构件是由多种相互作用的模块所形成的提供特定功能的代码片段构成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530201535.png" alt="20210530201535"></p>
+<h3 id="增量模型的优点："><a href="#增量模型的优点：" class="headerlink" title="增量模型的优点："></a>增量模型的优点：</h3><ul>
+<li>有助于获取用户需求，加强对需求的理解。</li>
+<li>尽早发现软件中的错误，降低开发风险。</li>
+<li>支持需求的动态变化。</li>
+</ul>
+<h3 id="不足：-1"><a href="#不足：-1" class="headerlink" title="不足："></a>不足：</h3><ul>
+<li>加入的各个构件不能破坏已构造好的系统部分，这要求软件具备开放式的体系结构。</li>
+<li>易退化为边做边改模型，从而使软件过程的控制失去整体性。</li>
+</ul>
+<h3 id="通常使用的场合：-1"><a href="#通常使用的场合：-1" class="headerlink" title="通常使用的场合："></a>通常使用的场合：</h3><p>技术风险较大、用户需求较为稳定的软件系统。</p>
+<h2 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h2><p>模型融合了瀑布模型、快速原型模型，它最大的特点是引入了其他模型所忽略的风险分析，如果项目不能排除重大风险，就停止项目从而减小损失。这种模型比较适合开发复杂的大型软件。</p>
+<p>螺旋模型基本思想</p>
+<ul>
+<li>迭代地进行;</li>
+<li>需求获取、设计、编码和测试活动之间会有大量重叠;</li>
+<li>如果给定需求的任何阶段出现缺陷，会使该需求返回到前面的阶段;</li>
+<li>开发人员能够在任何时候演示当时产品所具有的功能，还可以向客户提供增量版本以得到认可;</li>
+<li>可以降低在项目后期发现重大缺陷的风险。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530151513.png" alt="20210530151513"></li>
+</ul>
+<h3 id="螺旋模型的优点："><a href="#螺旋模型的优点：" class="headerlink" title="螺旋模型的优点："></a>螺旋模型的优点：</h3><ul>
+<li>有助于获取用户需求，加强对需求的理解。</li>
+<li>尽早发现软件中的错误。</li>
+<li>支持需求的动态变化。</li>
+<li>支持风险分析，可降低或者消除软件开发风险。</li>
+<li>适合于需求动态变化，事先难以确定并且开发风险较大的系统。</li>
+</ul>
+<h3 id="不足：-2"><a href="#不足：-2" class="headerlink" title="不足："></a>不足：</h3><p>螺旋模型开发的成败，很大程度上依赖于风险评估的成败。需要开发人员具有相当丰富的风险评估经验和专门知识。</p>
+<h3 id="通常使用的场合：-2"><a href="#通常使用的场合：-2" class="headerlink" title="通常使用的场合："></a>通常使用的场合：</h3><p>需求不能完全确定，同时又存在技术、资金或开发时间等风险因素的大型开发项目。</p>
+<h1 id="单元测试方法"><a href="#单元测试方法" class="headerlink" title="单元测试方法"></a>单元测试方法</h1><p>测试的基本阶段</p>
+<p>测试的4个阶段：<br>     单元测试-&gt;集成测试-&gt;系统测试-&gt;验收测试</p>
+<p>按阶段进行测试是一种基本的<strong>测试策略</strong></p>
+<h2 id="什么是单元测试"><a href="#什么是单元测试" class="headerlink" title="什么是单元测试"></a>什么是单元测试</h2><p><strong>定义:</strong></p>
+<pre><code>单元测试是对软件基本组成单元进行的测试。
+</code></pre>
+<p><strong>时机:</strong></p>
+<pre><code>一般在代码完成后由开发人员完成,QA人员辅助.
+</code></pre>
+<p><strong>对象:</strong></p>
+<pre><code> 类、模块, 组件, 单元　
+</code></pre>
+<ol>
+<li>单元测试是对软件组成的基本单元测试。<br>在传统的结构化编程语言如C语言中，单元一般是模块，也就是函数或子过程；<br>在象C++中， 单元是类或类的方法；<br>在Ada语言中，单元可为独立的过程、函数或Ada包；<br>在第四代语言(4GL)中，单元对应为一个菜单或显示界面。</li>
+<li>多个被测模块之间的单元测试可同时进行，以提高单元测试效率。</li>
+<li>单元测试一般应该由编程人员完成，有时测试人员也加入进来，但编程人员仍会起到主要作用。</li>
+<li>单元测试的依据是软件的<strong>详细设计描述、源程序清单、编码标准等。</strong></li>
+</ol>
+<h2 id="单元测试的目的"><a href="#单元测试的目的" class="headerlink" title="单元测试的目的"></a>单元测试的目的</h2><ul>
+<li>验证<strong>代码</strong>能否达到详细设计的预期要求。</li>
+<li>发现代码中不符合<strong>编码规范</strong>的地方。</li>
+<li>准确定位发现的错误，以便排除错误。<h2 id="单元测试的优点"><a href="#单元测试的优点" class="headerlink" title="单元测试的优点"></a>单元测试的优点</h2></li>
+<li>由于单元测试是在编码过程中进行的（<strong>在所有测试前</strong>），若发现了一个错误，不管是从做回归测试的角度，还是对错误原因理解的深刻性的角度，修复错误的成本远小于集成测试阶段，更是小于系统测试阶段（<strong>效益更优</strong>）。</li>
+<li>在编码的过程中考虑单元测试问题，有助于编程人员养成良好的编程习惯（<strong>规范</strong>），提高源代码质量。<h2 id="单元测试的步骤"><a href="#单元测试的步骤" class="headerlink" title="单元测试的步骤"></a>单元测试的步骤</h2>单元测试的实施应遵循一定的步骤，力争做到<strong>有计划、可重用。</strong><br>单元测试的步骤如下：<br>① 计划单元测试<br>② 设计单元测试<br>③ 实现单元测试<br>④ 执行单元测试<br>⑤ 单元测试结果分析并提交<strong>测试报告</strong></li>
+</ul>
+<h2 id="单元测试的环境构成"><a href="#单元测试的环境构成" class="headerlink" title="单元测试的环境构成"></a>单元测试的环境构成</h2><p>在单元测试时，单元测试<strong>一般为编码步骤的附属部分，模块不是独立的程序,自己不能运行,要靠其它部分来调用和驱动</strong>,要为每个单元测试开发两个软件:<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210607093355.png" alt="20210607093355"><br><strong>驱动模块（Driver）</strong><br>   用来代替被测单元的上层模块的。<strong>驱动模块能接收测试数据，调用被测单元，也就是将数据传递给被测单元</strong>，最后打印测试的执行结果。可将驱动模块理解为被测单元的主程序。<br><strong>桩模块（Stub）</strong><br>   又称为存根模块，它用来代替被测单元的子模块。<strong>设计桩模块的目的是模拟实现被测单元的接口</strong>。桩模块不需要包括子模块的全部功能，但应做少量的数据操作，并打印接口处的信息。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210607094023.png" alt="20210607094023"></p>
+<ul>
+<li>人们在进行单元测试时尽量避免开发驱动模块和桩模块。尤其应避免开发桩模块，因为驱动模块开发的工作量一般少于桩模块。</li>
+<li>若采用自底向上的方式进行开发，底层的单元先开发并先测试，可以避免开发桩模块，采用这种方法测试上层单元时，也是对下层单元的间接测试，但当下层单元被改动后，则需要执行回归测试判断其上层单元是否需要修改。</li>
+<li>当不得不开发驱动模块及桩模块时，人们力求它们的简单以提高工作效率。但过于简单的驱动模块和桩模块会影响单元测试的有效性，因而，对被测单元的彻底测试有时会被推迟到集成测试阶段完成。<h2 id="如何构建单元测试的环境："><a href="#如何构建单元测试的环境：" class="headerlink" title="如何构建单元测试的环境："></a>如何构建单元测试的环境：</h2></li>
+<li>构造最小<strong>运行</strong>调度系统，即构造被测单元的驱动模块。</li>
+<li>模拟被测单元的<strong>接口</strong>，即构造被被测单元调用的桩模块。</li>
+<li><strong>模拟生成测试数据及状态</strong>，为被测单元运行准备动态环境。<h1 id="单元测试内容"><a href="#单元测试内容" class="headerlink" title="单元测试内容"></a>单元测试内容</h1>单元测试的对象是软件设计的最小单位——模块或函数，单元测试的依据是<strong>详细设计描述。</strong><br>单元测试的内容</li>
+<li>模块接口 </li>
+<li>局部数据结构测试 </li>
+<li>路径测试 </li>
+<li>错误处理测试 </li>
+<li>边界测试 <h2 id="模块接口测试"><a href="#模块接口测试" class="headerlink" title="模块接口测试"></a>模块接口测试</h2></li>
+<li>调用所测模块的输入参数与模块的<strong>形式参数在个数、属性、顺序上是否匹配</strong>；</li>
+<li>所测模块调用子模块时，它输入个子模块的参数与子模块的形式参数在个数、属性、顺序上是否匹配；</li>
+<li>是否修改了只做输入用的<strong>形式参数</strong>；</li>
+<li>输出给标准函数的参数在个数、属性、顺序上是否匹配；</li>
+<li>全局变量的定义在各模块中是否一致；</li>
+<li>限制是否通过形式参数来传送。<h2 id="局部数据结构测试"><a href="#局部数据结构测试" class="headerlink" title="局部数据结构测试"></a>局部数据结构测试</h2></li>
+<li>检查不正确或不一致的数据类型说明；</li>
+<li>使用尚未赋值或尚未初始化的变量；</li>
+<li>错误的初始值或错误的默认值；</li>
+<li>变量名拼写错误或书写错误；</li>
+<li>不一致的数据类型。 <h2 id="路径测试（基本）"><a href="#路径测试（基本）" class="headerlink" title="路径测试（基本）"></a>路径测试（基本）</h2>1、常见的不正确的计算有：</li>
+<li>运算的优先次序不正确或误解了运算的优先次序；</li>
+<li>运算的方式错误（运算的对象彼此在类型上不相容）；</li>
+<li>算法错误；</li>
+<li>初始化不正确；</li>
+<li>运算精度不够；</li>
+<li>表达式的符号表示不正确等。<br>2、常见的比较和控制流错误有： </li>
+<li>不同数据类型的比较；</li>
+<li>不正确的逻辑运算符或优先次序；</li>
+<li>因浮点运算精度问题而造成的两值比较不等；</li>
+<li>关系表达式中不正确的变量和比较符；</li>
+<li>“差1错”，即不正确地多循环或少循环一次；</li>
+<li>错误的或不可能的循环终止条件；</li>
+<li>当遇到发散的迭代时不能终止循环；</li>
+<li>不适当地修改了循环变量等。 <h2 id="错误处理测试-容错"><a href="#错误处理测试-容错" class="headerlink" title="错误处理测试(容错)"></a>错误处理测试(容错)</h2></li>
+<li>出错的描述难以理解；</li>
+<li>出错的描述不足以对错误定位和确定出错的原因；</li>
+<li>显示的错误与实际的错误不符；</li>
+<li>对错误条件的处理不正确；</li>
+<li>在对错误进行处理之前，错误条件已经引起系统的干预；</li>
+<li>如果出错情况不予考虑，那么检查恢复正常后模块可否正常工作。<h2 id="边界测试"><a href="#边界测试" class="headerlink" title="边界测试"></a>边界测试</h2></li>
+<li>在n次循环的第0次、1次、n次是否有错误；</li>
+<li>运算或判断中取最大最小值时是否有错误；</li>
+<li>数据流、控制流中刚好等于、大于、小于确定的比较值时是否出现错误。<h1 id="单元测试类型"><a href="#单元测试类型" class="headerlink" title="单元测试类型"></a>单元测试类型</h1></li>
+<li>逻辑单元测试；</li>
+<li>集成单元测试；</li>
+<li>功能单元测试。</li>
+</ul>
+<p>单元测试应试应从<strong>各个层次</strong>来对单元<strong>内部算法、外部功能</strong>实现等进行检验，包括对<strong>程序代码的评审</strong>和通过运行单元程序来验证其<strong>功能特性</strong>等内容。</p>
+<p>一般单元测试应紧接在编码之后，当源程序编制完成并通过复审和编译检查，便可开始单元测试。测试用例的设计应与复审工作相结合，根据设计信息选取测试数据，将增大发现上述各类错误的可能性。在确定测试用例的同时，应给出期望结果。<br>   进行单元测试时，常用的方法是<strong>采用白盒测试，辅之以黑盒测试。</strong></p>
+<p>根据测试对象的其内部结构的逻辑关系、测试的方法，按照由小到大、由单一到组合、又简单到复杂，单元测试可以逻辑单元测试、集成单元测试和功能单元测试。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614211414.png" alt="20210614211414"></p>
+<h1 id="断言（-Assertion-）"><a href="#断言（-Assertion-）" class="headerlink" title="断言（ Assertion ）"></a>断言（ Assertion ）</h1><p>定义:</p>
+<pre><code>简单的方法调用，判断一个语句、一个函数或对象的一个方法所产生的结果是
+</code></pre>
+<p>否符合你期望的那个结果（为真）。</p>
+<p>时机:</p>
+<pre><code>1、用错误处理代码来处理预期会发生的状况，用断言来处理绝不应该发生的状况。
+2、用断言来注解并验证前（置）条件和后（置）条件
+3、对于高健壮性的代码，应该先使用断言再处理错误
+</code></pre>
+<p>应用场景:</p>
+<pre><code>1、在功能代码开发阶段，可以逐步添加断言测试是否获取自己想要的数据结果
+2、写单元测试时，可用到断言，主要目的：测试这个功能片段的代码能否返回预期的结果。
+3、自己提供接口供他人使用时，可先断言使用者传递过来的参数是否符合要求，如果不符合要求，将以AssertionError的方式告知使用者。
+</code></pre>
+<p>　<br>assertion(断言)是软件开发中一种常用的调试方式，很多开发语言中都支持这种<strong>机制。</strong><br>assertion就是在程序中的<strong>一条语句</strong>，它对一个布尔表达式进行检查，必须保证这个表达式的值为true；如果为false，则说明程序已经处于不正确的状态，系统将给出警告或退出。<br>assertion用于保证程序最基本、关键的<strong>正确性</strong>。<br>assertion 通常在开发和测试时<strong>开启</strong>。为了提高性能，在软件发布后，assertion 通常是<strong>关闭</strong>的。</p>
+<p><strong>断言的语法格式</strong><br>assert( b_exp1 );或   assert( b_exp1 ): info;</p>
+<p><strong>注意</strong><br>若断言为假，将抛出AssertionError异常。<br>与if 判断不同，assert为假则报错。</p>
+<h1 id="单元测试的作用"><a href="#单元测试的作用" class="headerlink" title="单元测试的作用"></a>单元测试的作用</h1><h2 id="单元测试的目的-1"><a href="#单元测试的目的-1" class="headerlink" title="单元测试的目的"></a>单元测试的目的</h2><ul>
+<li>验证代码能否达到详细设计的预期要求。</li>
+<li>发现代码中不符合编码规范的地方。</li>
+<li>准确定位发现的错误，以便排除错误。</li>
+</ul>
+<h2 id="单元测试的作用-1"><a href="#单元测试的作用-1" class="headerlink" title="单元测试的作用"></a>单元测试的作用</h2><ul>
+<li>编写单元测试可以帮助开发人员书写高质量的代码。</li>
+<li>编写单元测试可以使开发人员更有信心重构应用程序 ，去拥抱变化。</li>
+</ul>
+<h1 id="集成测试目的"><a href="#集成测试目的" class="headerlink" title="集成测试目的"></a>集成测试目的</h1><h2 id="什么是集成测试"><a href="#什么是集成测试" class="headerlink" title="什么是集成测试"></a>什么是集成测试</h2><p>定义:<br>是在单元测试的基础上，将所有模块按照概要设计要求组装成子系统或系统，进行集中测试。又称组装测试、联合测试、子系统测试或部件测试。</p>
+<p>时机:<br>单元测试完成后便进入集成测试阶段。</p>
+<p>对象:<br>模块间的接口，接口之间的关系。　</p>
+<h2 id="集成测试的特点"><a href="#集成测试的特点" class="headerlink" title="集成测试的特点"></a><strong>集成测试的特点</strong></h2><ul>
+<li>单元测试具有不彻底性，对于模块间接口信息内容的正确性、相互调用关系是否符合设计无能为力。只能依靠集成测试来进行保障。</li>
+<li>同系统测试相比，集成测试用例是从程序结构出发的，目的性、针对性更强，测试项发现问题的效率更高，定位问题的效率也较高。</li>
+<li>能够较容易地测试到系统测试用例难以模拟的特殊异常流程，从纯理论的角度来讲，集成测试能够模拟所有实际情况。</li>
+<li>定位问题较快。</li>
+</ul>
+<h2 id="集成测试的关注点"><a href="#集成测试的关注点" class="headerlink" title="集成测试的关注点"></a><strong>集成测试的关注点</strong></h2><ul>
+<li>在把各个模块连接起来时，穿越模块接口的数据是否会丢失。</li>
+<li>各个子功能组合起来，能否达到预期要求的功能。</li>
+<li>一个模块的功能是否会对另一个模块的功能产生不利的影响。</li>
+<li>全局数据结构是否有问题，会不会被异常修改。</li>
+<li>单个模块的误差积累起来，是否会放大，从而达不到可以接受的程度。</li>
+</ul>
+<h2 id="集成测试范围"><a href="#集成测试范围" class="headerlink" title="集成测试范围"></a>集成测试范围</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614213006.png" alt="20210614213006"></p>
+<h2 id="集成测试层次"><a href="#集成测试层次" class="headerlink" title="集成测试层次"></a>集成测试层次</h2><p>子系统内集成测试(模块)<br>子系统间集成测试 (可执行程序)</p>
+<h2 id="集成测试策略"><a href="#集成测试策略" class="headerlink" title="集成测试策略"></a>集成测试策略</h2><ul>
+<li>那些模块是集成测试的重点。</li>
+<li>模块接口应该以什么样的顺序进行检测。</li>
+<li>应该使用哪种测试设计技术检测每个接口。</li>
+</ul>
+<p>集成策略就是在测试对象分析的基础上，描述软件模块集成（组装）的<strong>方式、方法。</strong>集成的基本策略比较多，分类比较复杂，但不管怎样分，所有分类的方法都可以归结为<strong>非增值式和增值式</strong>两大类，其余的很多方法都是在此基础上的细分。</p>
+<h1 id="集成测试方法"><a href="#集成测试方法" class="headerlink" title="集成测试方法"></a>集成测试方法</h1><h2 id="非增试测试"><a href="#非增试测试" class="headerlink" title="非增试测试"></a>非增试测试</h2><p>定义:<br>分别测试每个模块，再把所有模块按设计要求放在一起结合成所要的<br>程序。</p>
+<p>优点:<br>一是方法简单，二是允许多个测试人员并行工作，对人力、物力资源<br>利用率较高。</p>
+<p>缺点:<br>必须为每个模块准备相应的驱动模块和辅助桩模块，故测试成本<br>较高；其次，一旦集成后的系统包含多种错误，难以对错误定位和纠正。 
+　</p>
+<h3 id="大爆炸集成"><a href="#大爆炸集成" class="headerlink" title="大爆炸集成"></a>大爆炸集成</h3><p>大爆炸集成是属于非增值式集成的一种方法，它把所有的系统组件<strong>一次性集合</strong>到被测试系统中，不考虑组件之间的相互依赖性或者可能存在的风险。</p>
+<p>优点：<br>可以迅速完成集成测试，并且只要极少数的驱动和桩模块。<br>多个测试人员可以并行工作，对人力、物力资源利用率较高。<br>缺点：<br>发现错误时，定位和修改比较困难。<br>许多接口错误很容易躲过测试而进入系统测试。</p>
+<h2 id="增试测试"><a href="#增试测试" class="headerlink" title="增试测试"></a>增试测试</h2><p>定义:<br>这种集成方式又称<strong>渐增式组装</strong>。首先对<strong>一个个模块</strong>进行模块测试，然后将这些模块逐步组装成<strong>较大的系统</strong>，在组装的过程中<strong>边连接边测试</strong>，以发现连接过程中产生的问题。通过增值逐步组装成为要求的软件系统。</p>
+<p>优点:<br>相对非增值式策略，可以较早发现模块间的接口错误；发现问题也<br>易于定位。 </p>
+<p>缺点:<br>测试周期比较长，可以同时投入的人力物力受限。  </p>
+<h3 id="自顶向下（Top-Down-Testing）"><a href="#自顶向下（Top-Down-Testing）" class="headerlink" title="自顶向下（Top Down Testing）"></a>自顶向下（Top Down Testing）</h3><p><strong>特点：</strong><br>从主控模块（“主程序”）开始，沿着软件的控制层次向下移动，从而逐渐把各个模块结合起来。<br>这种测试方法不需要驱动模块 。<br>在组装过程中，可以使用深度优先的策略，或宽度优先的策略。</p>
+<p><strong>步骤：</strong><br>1、从主控模块（“主程序”）为测试驱动，把对主控模块进行单元测试时引入的所有<strong>桩模块</strong>用实际模块替代。<br>2、依据所选的集成策略（深度优先或广度优先），每次<strong>只替代一个桩模块</strong>。<br>3、每集成一个模块即<strong>测试一遍</strong>。<br>4、只有每组测试完成后，才着手替换<strong>下一个模块</strong>。</p>
+<p>自顶向下-深度优先<br>自顶向下-广度（宽度）优先</p>
+<p><strong>自顶向下适应范围</strong><br>产品的控制结构比较清晰和稳定。<br>产品的高层接口变化比较小。<br>产品的底层接口未定义或经常可能被修改。<br>产品的控制模块具有较大的技术风险，需要尽早被验证。</p>
+<p><strong>自顶向下的优缺点</strong><br>优点：<br>较早的验证了主要的控制和判断。<br>如果按深度方向组装，可以首先实现和验证一个完整的软件功能。<br>最多只需一个驱动模块。<br>支持故障隔离。<br>缺点<br>桩的开发和维护成本较大。<br>底层组件的无法预计的需求可能会导致许多顶层组件的修改。</p>
+<p><strong>自顶向下集成策略：</strong><br>当桩模块不能正确的向上传递有用信息，可以采用一些解决办法：</p>
+<ul>
+<li>将很多测试推迟到装模块用实际模块代替了之后进行。</li>
+<li>进一步开发能模拟实际模块功能的桩模块。</li>
+<li>自底向上集成和测试软件。</li>
+</ul>
+<h3 id="自底向上（Bottom-Up-Testing-）"><a href="#自底向上（Bottom-Up-Testing-）" class="headerlink" title="自底向上（Bottom Up Testing ）"></a>自底向上（Bottom Up Testing ）</h3><p>特点：<br>从具有最小依赖性的底层组件开始，按照依赖关系的结构，逐层向上集成，以检测整个系统的稳定性。<br>步骤：<br>1、把底层模块组织成实现某个子功能的<strong>模块簇</strong>。<br>2、开发一个<strong>测试驱动模块</strong>，控制测试数据的输入和测试结果的输出。<br>3、每模块簇进行测试。<br>4、删除测试使用的模块驱动，用较高层模块把模块组织成为<strong>更大功能的新模块群</strong>。</p>
+<p><strong>自顶向下适应范围</strong><br>底层接口比较稳定，高层接口变化比较频繁的产品。</p>
+<p><strong>自底向上的优缺点</strong><br>优点：<br>允许对底层模块行为进行早期验证，可以在任何一个叶子节点已经就绪的情况下进行集成测试。<br>减少了桩模块的工作量。<br>支持故障隔离。<br>缺点：<br>驱动模块的开发工作量比较庞大。<br>对高层的验证被推迟到了最后，设计上的错误不能被及时发现。<br>底层的异常比较难覆盖。</p>
+<p><strong>自底向上集成策略：</strong><br>对软件结构中较上层，使用的是“自顶向下”法；对软件结构中较下层，使用的是“自底向上”法，两者相结合。</p>
+<h3 id="自顶向下和自底向上的比较："><a href="#自顶向下和自底向上的比较：" class="headerlink" title="自顶向下和自底向上的比较："></a>自顶向下和自底向上的比较：</h3><ul>
+<li>“自顶向下”法的主要优点：不需要测试驱动程序，能够在测试阶段的早期实现并验证系统的主要功能，而且能在早期发现上层模块的接口错误。</li>
+<li>“自顶向下”法的主要缺点：需要存根程序，可能遇到与此相联系的测试困难，低层关键模块中的错误发现较晚，而且用这种方法在早期不能充分展开人力。</li>
+<li>“自底向上”法的优缺点与“自顶向下”法刚好相反。</li>
+</ul>
+<h1 id="软件测试与软件开发过程关系概述"><a href="#软件测试与软件开发过程关系概述" class="headerlink" title="软件测试与软件开发过程关系概述"></a>软件测试与软件开发过程关系概述</h1><p>软件的开发和测试都是软件过程中重要的活动，是软件生命周期中重要的组成部分；软件开发是一个自顶向下、逐步细化的过程，软件计划阶段定义软件作用域；而测试过程是以相反顺序自底向上，逐步集成的过程。</p>
+<p><strong>软件测试</strong>是软件工程（Software Engineering）的一个重要分支，随着软件工程学科的发展，现在的软件测试与传统的软件测试相比有了很大的发展，它与<strong>软件开发过程和软件质量保证（Quality Assurance，QA）密切相关</strong>。</p>
+<p><strong>软件开发过程</strong>是生产软件产品所用的<strong>工具、方法和实践过程的集合</strong>。在商业上软件开发通常是由一组协同工作的人来完成的，我们把这组人称为开发团队。开发团队里有各种角色，一个人可以充当不止一个角色，特别是在许多小公司，有时一个人身上集中了几个角色。</p>
+<p><strong>生命周期</strong> 一个软件产品是由上述多种角色的团队协同工作而完成的。从策划、定义、开发、使用与维护直到最后，要经过一个<strong>漫长的时期</strong>，通常把这个时期称为软件的生命周期（Software Life Cycle），很多人也把它称为软件开发生命周（Software Development Life Cycle）。</p>
+<h2 id="软件开发过程-1"><a href="#软件开发过程-1" class="headerlink" title="软件开发过程"></a>软件开发过程</h2><h3 id="软件产品的组成："><a href="#软件产品的组成：" class="headerlink" title="软件产品的组成："></a>软件产品的组成：</h3><p>1、软件产品需要各种开发投入；<br>2、客户需求；<br>3、产品说明；<br>4、设计文档；<br>5、测试文档；<br>6、开发进度；<br>7、软件产品的其他组成部分。</p>
+<h3 id="软件开发项目组："><a href="#软件开发项目组：" class="headerlink" title="软件开发项目组："></a>软件开发项目组：</h3><p>1、项目经理（程序经理）：负责管理产品的质量，以及项目的进度和预算。<br>2、商业分析师（软件分析师）：分析客户的真正需求，用能被程序员或其他设计人员理解的术语来定义客户的需求。<br>3、架构师（系统工程师）：是产品小组的专家，负责系统的总体内部设计（定义代码，数据结构，数据通信和开发策略等）。<br>4、程序员（开发人员）：设计、编写程序并编写内部设计规格说明。<br>5、测试员（质量保证员）：负责找出并报告软件产品的问题。<br>6、产品经理（产品营销经理）：负责符合公司长期战略和形象的产品的交付，并在产品发布后负责市场营销活动。对产品的盈利负责。<br>7、技术支持代表：负责处理客户投诉和服务的小组的成员。在产品开发期间他们会尽力对产品的设计和手册的内容施加影响，以减少客户的投诉。<br>8、技术文档编写员：制作用户手册和在线帮助。</p>
+<h3 id="软件生命周期的模型："><a href="#软件生命周期的模型：" class="headerlink" title="软件生命周期的模型："></a>软件生命周期的模型：</h3><p>瀑布模型、原型模型、快速应用开发模型、增量模型、螺旋模型、V模型、形式方法模型、RUP（Rational Unified Process）模型、敏捷过程模型、构件组装模型、并发开发模型等。</p>
+<p>几种比较流行的模型<br>1、传统的瀑布模型（Waterfall Model）<br>2、原型模型（Prototyping Model）<br>3、螺旋模型（Spiral Model）</p>
+<h2 id="软件测试与软件开发概念"><a href="#软件测试与软件开发概念" class="headerlink" title="软件测试与软件开发概念"></a>软件测试与软件开发概念</h2><p>狭义定义测试：<br>比如“程序设计”与“测试”之间的关系，传统上总以为程序设计在先，测试在后。这种专指测试程序代码，定义在编码之后的“测试”是一种狭义定义的测试。<br>广义定义测试：<br>这种测试活动可以在软件开发生命周期的任何阶段进行。但是，随着开发不断地进行，越到后续阶段，找出错误并改正它的代价会越大<br>全新的软件开发模式：<br><strong>以测试驱动软件开发。</strong>软件测试贯穿了整个软件开发过程，软件开发生命周期的各个阶段中都少不了相应的测试，这种思想与软件质量保证的出发点是一致的。</p>
+<h1 id="软件测试在软件开发生命周期的位置"><a href="#软件测试在软件开发生命周期的位置" class="headerlink" title="软件测试在软件开发生命周期的位置"></a>软件测试在软件开发生命周期的位置</h1><h2 id="一、软件生命周期的三阶段："><a href="#一、软件生命周期的三阶段：" class="headerlink" title="一、软件生命周期的三阶段："></a>一、软件生命周期的三阶段：</h2><p>在<strong>软件规划</strong>阶段中，主要进行软件目标的策划、可行性研究和软件的需求分析工作。<br>软件被定义之后，进入<strong>开发</strong>阶段，主要对软件的体系架构、数据结构和主要算法进行设计；将设计用程序语言编码实现，并进行测试。<br>软件的<strong>运行与维护</strong>阶段在软件生命周期中占据的比例最大。针对不同的需求，维护工作一般可以分为纠错性维护、适应性维护、扩充性维护和预防性维护等不同类型。</p>
+<p>软件开发阶段还可细分为软件设计、编码和测试阶段</p>
+<h3 id="1、软件规划阶段测试："><a href="#1、软件规划阶段测试：" class="headerlink" title="1、软件规划阶段测试："></a>1、软件规划阶段测试：</h3><ul>
+<li>产品策划  由项目经理确定进度计划、项目范围和开发产品所需的资源</li>
+<li>需求分析  由产品市场开发团队根据客户提出的要求来描述产品的需求</li>
+</ul>
+<p>对象：需求规格文档<br>内容：审核通过，编写测试文档</p>
+<h3 id="2、软件设计阶段测试："><a href="#2、软件设计阶段测试：" class="headerlink" title="2、软件设计阶段测试："></a>2、软件设计阶段测试：</h3><p>定义：<br>软件设计阶段是设计人员将软件需求转换为<strong>语言文字和图表的集合</strong>，用来描述系统结构、数据结构、算法和用户界面。根据不同的设计方法和模式，设计分为外部设计和内部设计，或者分为高层设计（或概要设计）和低层设计（或详细设计）。<br>设计描述：<br>外部设计主要从用户的角度对产品进行描述，内部设计则描述产品的内部工作机制。它们是并行展开，相互制约，相互要求。概要设计描述了总体上系统架构应该包含的组成元素，各个模块之间的关联。详细设计主要描述各个模块如何实现以及所用的算法和数据结构。</p>
+<p>对象：设计文档<br>内容：评审设计文档是否满足需求、完备、可行</p>
+<p>由于设计依赖于需求文档，如果文档不存在、不完善或者始终处于变更之中，设计人员就需要与需求分析人员沟通，以确定软件产品应该具备什么能力。<strong>因此设计阶段也是对软件需求的深化理解和完善阶段。</strong></p>
+<h3 id="3、软件开发阶段测试："><a href="#3、软件开发阶段测试：" class="headerlink" title="3、软件开发阶段测试："></a>3、软件开发阶段测试：</h3><p>1）软件开发编码阶段测试：<br>在编码阶段程序员通过白盒测试对编写代码、程序进行测试。主要结构测试、集成测试等。<br>2）软件测试阶段测试：<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615091226.png" alt="20210615091226"></p>
+<h2 id="二、软件测试与软件开发的关系："><a href="#二、软件测试与软件开发的关系：" class="headerlink" title="二、软件测试与软件开发的关系："></a>二、软件测试与软件开发的关系：</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615091257.png" alt="20210615091257"></p>
+<p><strong>软件测试方法在软件开发过程的运用</strong><br>1、<strong>在软件需求分析与建模阶段中</strong>，主要进行软件目标的定义，可行性研究和软件需求分析工作。这时<strong>测试的对象是相关文档资料</strong>，如：需求规格说明书等。从需求的完备、可实现、是否合理、是否可测试等方面<strong>进行评审，采用的静态测试方法。</strong><br>2、<strong>在概要设计与详细设计阶段</strong>。概要设计描述总体系统架构中各个模块的划分及相互之间的关系；详细设计则描述各个模块具体的算法和数据结构。这些都是用文字、图表的形式进行描述的，<strong>测试时也是用静态测试的方法，对文字、图表进行评审。</strong><br>3、<strong>在编码工作阶段</strong>，主要是采用高级语言对已详细设计的模块进行编程。这时的测试工作主要是对已有的程序代码进行白盒测试，可以是<strong>静态与动态相结合，采用各种覆盖方法进行测试（白盒测试）</strong>，此时主要由程序员进行测试。<br>4、<strong>在测试阶段中</strong>，此时进行的集成与系统测试。<strong>集成测试采用灰盒测试方法</strong>（白盒测试与黑盒测试相结合），主要测试产品的接口以及各模块之间的关系。而<strong>系统测试一般采用黑盒测试方法</strong>，主要测试系统的功能、性能等；由测试人员来完成测试。<br>5、<strong>在检验交付与维护阶段</strong>，模拟或实际客户环境，对系统进行验收测试。大多采用<strong>自动化测试工具进行测试验收</strong>。包括功能测试、性能测试、回归测试、发布测试等。</p>
+<p>对于软件测试与软件开发过程之间的关系，套用固定的模型不是聪明之举。比如“程序设计”与“测试”之间的关系，习惯上总以为程序设计在先，测试在后，如下图（a）所示。而对于一些复杂的程序，将测试分为同步测试与总测试更有效，如下图（b）所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092007.png" alt="20210615092007"></p>
+<p>软件测试过程模型：<br>单元测试：是基于代码测试，最初由开发人员执行，已验证其可执行代码的各个部分是否已达到预期的功能要求。<br>集成测试：是为了验证2个或多个单元之间的集成是否正确，并有针对性地对详细设计中所定义的各个单元之间的接口进行检查。<br>系统测试：在所有的单元测试和集成测试完成后，系统测试开始完整的模拟客户环境，运行系统进行测试，以验证系统是否到达了在概要设计中所定义的功能和性能。<br>验收测试：当技术部门完成了所有的测试工作后，有业务专家或用户进行验收测试，以确保产品能真正符合用户业务上的需要。</p>
+<h1 id="常见的软件测试模型"><a href="#常见的软件测试模型" class="headerlink" title="常见的软件测试模型"></a>常见的软件测试模型</h1><h2 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530153326.png" alt="20210530153326"><br>V_model的特点：<br>（1）V模型是软件开发瀑布模型的变种；<br>（2）它反映了测试活动与分析和设计的关系；<br>（3）V模型的软件测试策略包括：<br>-低层测试，是为了源代码的正确性；<br>-高层测试，高层测试是为了使整个系统满足用户。的需求。<br>V_model的局限性：<br>仅仅把测试过程作为在需求分析、系统设计及编码之后的一个阶段，忽视了测试对需求分析、系统设计的验证，一直到后期的验收测试才被发现。</p>
+<ul>
+<li>非常明确地标明了测试过程中存在的不同级别。</li>
+<li>清楚地描述了测试阶段和开发过程期间各阶段的对应关系。</li>
+</ul>
+<h2 id="W模型"><a href="#W模型" class="headerlink" title="W模型"></a>W模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530153400.png" alt="20210530153400"><br>W_model的特点：<br>（1） W模型由两个V字形模型做成，分别代表测试与开发过程；<br>（2） W模型强调，测试伴随着整个软件开发周期，而且测试的对象不仅仅是程序，需求、功能和设计同样要测试；<br>（3）测试与开发是同步进行的。</p>
+<p>W_model的局限性：<br>（1）把软件的开发视为需求、设计、编码等一系列串行的活动;<br>（2）软件开发和测试保持一种线性的前后关系，需要有严格的指令表示上一阶段完全结束，才可以正式开始下一个阶段。<br>（3）无法支持迭代开发模型.</p>
+<ul>
+<li>W模型强调“测试伴随着整个软件开发周期”。</li>
+<li>测试的对象不仅仅是程序，需求、功能和设计同样要测试。</li>
+<li>有利于尽早地发现问题。</li>
+<li>W模型有利于即时了解项目的测试风险，及早制定应对方案，加快项目进度。</li>
+</ul>
+<h2 id="H模型"><a href="#H模型" class="headerlink" title="H模型"></a>H模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092421.png" alt="20210615092421"><br>H_model的特点：<br>（1） H模型将测试活动完全独立出来，形成一个完全独立的流程，贯穿于整个产品周期，与其他流程并发地进行;<br>（2）尽早准备，尽早执行；<br>（3）测试准备与测试执行分离，有利于资源调配、减低成本，提高效率;<br>（4）充分体现测试过程）的复杂性。</p>
+<h2 id="X模型"><a href="#X模型" class="headerlink" title="X模型"></a>X模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530164202.png" alt="20210530164202"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092531.png" alt="20210615092531"><br>X_model的特点：<br>（1） X模型左边描述的是针对单独程序片段所进行的相互分离的编码和测试，此后，将进行频繁的交接，通过集成最终合成为可执行的程序；<br>（2） x模型还定位了探索性测试，这是不进行事先计划的特殊类型的测试，这一方式往往能帮助有经验的测试人员在测试计划之外发现更多的软件错误。 </p>
+<p>X_model的局限性：<br>（1）提出了测试设计，却没有指出在软件测试的各个阶段都应该进行测试设计;<br>（2）过于关注低级别即程序级别的行为，而没有抽象成一个系统的模型<br>（3）可能对测试造成人力、物力和财力的浪费，对测试员的熟练程度要求比较高型.</p>
+<h2 id="前置测试模型"><a href="#前置测试模型" class="headerlink" title="前置测试模型"></a>前置测试模型</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210615092704.png" alt="20210615092704"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530164252.png" alt="20210530164252"><br>pretest-model，它是将测试和开发紧密结合的模型，该模型提供了轻松的方式，可以使你的项目加快速度。</p>
+<ul>
+<li>非常明确地将测试和开发紧密联系在一起。</li>
+<li>清楚地描述了测试阶段，减少了大量的重复工作。<h2 id="测试模型的使用："><a href="#测试模型的使用：" class="headerlink" title="测试模型的使用："></a>测试模型的使用：</h2>V-model强调了在整个软件项目开发中需要经历的若干个测试级别，而且每一个级别都与一个开发级别相对应，但它忽略了测试对象不仅仅包括程序，或者说它没有明确地指出应该对软件的需求、设计进行测试。<br>W-model强调了测试计划等工作的先行和对系统需求和系统设计的测试，但W-model和V-model一样也没有专门对软件测试流程予以说明，因为事实上，随着软件质量要求越来越为大家所重视，软件测试也逐步发展成为一个独立于软件开发部的组织，就每一个软件测试的细节而言，它都有一个独立的操作流程。比如，现在的第三方测试，就包含了从测试计划和测试案例编写，到测试实施以及测试报告编写的全过程，<br>H-model强调测试是独立的，只要测试准备完成，就可以执行测试了。<br>X-model和Pretest-model又在此基础上增加了许多不确定因素的处理情况，因为在真实项目中，经常会有变更的发生，例如需要重新访问前一阶段的内容，或者跟踪并纠正以前提交的内容，修复错误，排除多余的成分，以及增加新发现的功能等。</li>
+</ul>
+<h1 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h1><p>黑盒测试：是一种从软件外部对软件实施的测试，也称功能测试或基于规格说明的测试。无需考虑程序的内部结构，仅仅靠输入输出之间的关系和程序的功能来设计测试用例，推断测试结果的正确性，以程序的外部特性来判断是否正确运行。</p>
+<p>黑盒测试的基本观点是：任何程序都可以看作是从输入定义域到输出值域的映射。</p>
+<p>黑盒测试有两个重要的优点：</p>
+<ul>
+<li>黑盒测试与<strong>软件的具体实现方式无关</strong>，因此软件实现方式如果发生了变更、修改但功能测试不变的话，仍可以使用原来的测试用例。</li>
+<li>在进行软件开发的同时，也可以进行软件黑盒测试用例的设计，这样可以节省一部分时间成本，减少总开发时间。</li>
+</ul>
+<p>黑盒测试常用工具：</p>
+<ul>
+<li>QACenter主要包括功能测试工具QARun、性能测试工具QALoad、应用可用性管理工具EcoTools、应用性能优化工具EcoScope。</li>
+<li>WinRunner具有以下几个显著的功能：创建测试、插入检查点、检验数据、增强测试、运行测试、分析结果与维护测试。</li>
+</ul>
+<h1 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a>白盒测试</h1><p>白盒测试：白盒测试又称结构测试、透明盒测试、逻辑驱动测试或基于代码的测试。白盒测试是一种测试用例设计方法，盒子指的是被测试的软件。</p>
+<p>白盒测试方法：全面了解程序内部逻辑结构、对所有逻辑路径进行测试；主要方法有逻辑驱动、基路测试等，主要用于软件验证。<br>白盒测试必须遵从的规则如下:</p>
+<ul>
+<li>一个模块中所有的独立路径都需至少得到一次测试。</li>
+<li>所有逻辑值的真与假情况都需要被测试到。</li>
+<li>为了保证程序结构的有效性，需要检查程序的内部逻辑结构。</li>
+<li>在程序的上、下边界与可操作范围内都能保证循环的顺利运行。</li>
+</ul>
+<p><strong>白盒测试工具</strong>一般是针对代码进行测试，测试中发现的缺陷可以定位到代码级，而根据测试工具原理的不同，又可以分为静态测试工具和动态测试工具。</p>
+<p><strong>静态测试工具</strong>直接对代码进行分析，不需要运行代码，也不需要对代码编译链接，生成可执行文件。</p>
+<p><strong>动态测试工具</strong>的一般采用“插桩”的方式，向代码生成的可执行文件中插入一些监测代码，用来统计程序运行时的数据。<br>白盒测试工具及其特点：</p>
+<ul>
+<li>Jtest<br>Jtest是一个代码分析和动态类、组件测试工具，是一个集成的、易于使用和自动化的Java单元测试工具。它增强代码的稳定性，防止软件错误。</li>
+<li>Jcontract<br>Jcontract在系统级验证类/部件是否正确工作并被正确使用。Jcontract是个独立工具，在功能上是Jtest 的补充。</li>
+<li>C++Test<br>C++Test可以帮助开发人员防止软件错误，保证代码的健全性、可靠性、可维护性和可移植性。</li>
+<li>CodeWizard<br>CodeWizard是代码静态分析工具，先进的C/C++源代码分析工具，使用超过500个编码规范自动化地标明危险的，但是编译器不能检查到代码结构。</li>
+<li>Insure++<br>Insure++是一个基于C/C++的自动化的内存错误、内存泄漏的精确检测工具。Insure++能够可视化实时内存操作,准确检测出内存泄漏产生的根源。Insure++还能执行覆盖性分析,清楚地指示那些代码已经测试过。</li>
+</ul>
+<h1 id="黑盒测试和白盒测试的比较"><a href="#黑盒测试和白盒测试的比较" class="headerlink" title="黑盒测试和白盒测试的比较"></a>黑盒测试和白盒测试的比较</h1><p>黑盒测试与白盒测试的主要区别在以下几个方面中：</p>
+<ol>
+<li>已知产品的因素<br>黑盒测试：已知程序的功能需求、设计规格，可以通过测试验证程序需要的功能是否已被实现，是否符合要求。<br>白盒测试：已知程序的内部工作结构，可以通过测试验证程序的内部结构是否符合要求，是否含有缺陷。</li>
+<li>检查测试的主要内容</li>
+</ol>
+<p>1)黑盒测试主要检查的内容包括但不限于：<br>功能是否都满足需求；是否有功能出现缺陷。<br>接口上是否能正确接受输入；输出结果是否正确。<br>是否有数据结构信息或者外部信息访问错误。<br>是否有初始化或终止性错误。<br>2)白盒测试主要检查的内容包括但不限于：<br>所有程序模块的独立路径都需要至少被测试一遍。<br>所有的逻辑判定的真值与假值都需要至少被测试一遍。<br>在运行的界限内和循环的边界上执行循环体。<br>测试内部的数据结构是否有效。<br>3. 静态测试方法：<br>静态黑盒测试方法：产品需求文档、用户手册、帮助文件等。<br>静态白盒测试方法：走查、复审、评审程序源代码、数据字典、系统设计文档、环境设置、软件配置项等。<br>4. 动态测试方法：<br>动态黑盒测试方法：通过数据输入并运行程序来检验输出结果，如功能测试、验收测试和一些性能测试（或兼容性、安全性）等。<br>动态白盒测试方法：通过驱动程序来调用，如进行单元测试、集成测试和部分性能测试（或可靠性、恢复性）等。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 软件质量保证与测试</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/12/Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="prev" title="Python字符串">
+                  <i class="fa fa-chevron-left"></i> Python字符串
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E9%AA%8C1/" rel="next" title="数据规范化(Matlab)">
+                  数据规范化(Matlab) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alexander</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('.gitalk-container', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c1b498f6462a59526198',
+      clientSecret: '0a3a95674d90afec06d8b9f6848c273fe8e860e6',
+      repo        : 'zzl-Alexander.github.io',
+      owner       : 'zzl-Alexander',
+      admin       : ['zzl-Alexander'],
+      id          : 'ad16d2a25243b5497762a7d6563c37d1',
+      proxy       : 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render(document.querySelector('.gitalk-container'));
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
