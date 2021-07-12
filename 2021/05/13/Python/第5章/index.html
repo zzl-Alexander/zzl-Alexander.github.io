@@ -23,12 +23,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="按文件中数据的组织形式把文件分为文本文件和二进制文件两类。文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。二进制文件：二进制文件把对象内容以字节串(bytes)进行存储，无法用记事本或其他">
+<meta name="description" content="按文件中数据的组织形式把文件分为文本文件和二进制文件两类。文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python文件使用">
 <meta property="og:url" content="http://example.com/2021/05/13/Python/%E7%AC%AC5%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Alexander">
-<meta property="og:description" content="按文件中数据的组织形式把文件分为文本文件和二进制文件两类。文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。二进制文件：二进制文件把对象内容以字节串(bytes)进行存储，无法用记事本或其他">
+<meta property="og:description" content="按文件中数据的组织形式把文件分为文本文件和二进制文件两类。文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210621214804.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210621214911.png">
@@ -331,7 +331,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>按文件中数据的组织形式把文件分为文本文件和二进制文件两类。<br>文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。<strong>常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串</strong>，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。<br>二进制文件：<strong>二进制文件把对象内容以字节串(bytes)进行存储</strong>，无法用记事本或其他普通字处理软件直接进行编辑，通常也无法被人类直接阅读和理解，<strong>需要使用专门的软件</strong>进行解码后读取、显示、修改或执行。常见的如图形图像文件、音视频文件、可执行文件、资源文件、各种数据库文件、各类office文档等都属于二进制文件。</p>
+        <p>按文件中数据的组织形式把文件分为文本文件和二进制文件两类。<br>文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。<strong>常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串</strong>，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。</p>
+<span id="more"></span>
+<p>二进制文件：<strong>二进制文件把对象内容以字节串(bytes)进行存储</strong>，无法用记事本或其他普通字处理软件直接进行编辑，通常也无法被人类直接阅读和理解，<strong>需要使用专门的软件</strong>进行解码后读取、显示、修改或执行。常见的如图形图像文件、音视频文件、可执行文件、资源文件、各种数据库文件、各类office文档等都属于二进制文件。</p>
 <h1 id="文件操作基本知识"><a href="#文件操作基本知识" class="headerlink" title="文件操作基本知识"></a>文件操作基本知识</h1><h2 id="内置函数open"><a href="#内置函数open" class="headerlink" title="内置函数open()"></a>内置函数open()</h2><p>open(file, mode=’r’, buffering=-1, encoding=None, errors=None,<br>     newline=None, closefd=True, opener=None)<br>file参数指定了被打开的文件名称。<br>mode参数指定了打开文件后的处理方式。<br>buffering参数指定了读写文件的缓存模式。0表示不缓存，1表示缓存，如大于1则表示缓冲区的大小。默认值是缓存模式。<br>encoding参数指定对文本进行编码和解码的方式，只适用于文本模式，可以使用Python支持的任何格式，如GBK、utf8、CP936等等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210621214804.png" alt="20210621214804"></p>
 <p>如果执行正常，open()函数返回1个文件对象，通过该文件对象可以对文件进行读写操作。如果指定<strong>文件不存在、访问权限不够、磁盘空间不足</strong>或其他原因导致创建文件对象失败则抛出异常。</p>
 <p>f1 = open( ‘file1.txt’, ‘r’ )     # 以读模式打开文件<br>f2 = open( ‘file2.txt’, ‘w’)      # 以写模式打开文件</p>

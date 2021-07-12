@@ -23,12 +23,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="在Python中，字符串属于不可变有序序列，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的定界符之间可以互相嵌套。 除了支持序列通用方法（包括双向索引、比较大小、计算长度、元素访问、切片、成员测试等操作）以外，字符串类型还支持一些特有的操作方法，例如字符串格式化、查找、替换、排版等等。字符串属于不可变序列，不能直接对字符串对象进行元素增加、修改与删除等操作，切片操作也只能访问其中的元">
+<meta name="description" content="在Python中，字符串属于不可变有序序列，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的定界符之间可以互相嵌套。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python字符串">
 <meta property="og:url" content="http://example.com/2021/05/12/Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Alexander">
-<meta property="og:description" content="在Python中，字符串属于不可变有序序列，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的定界符之间可以互相嵌套。 除了支持序列通用方法（包括双向索引、比较大小、计算长度、元素访问、切片、成员测试等操作）以外，字符串类型还支持一些特有的操作方法，例如字符串格式化、查找、替换、排版等等。字符串属于不可变序列，不能直接对字符串对象进行元素增加、修改与删除等操作，切片操作也只能访问其中的元">
+<meta property="og:description" content="在Python中，字符串属于不可变有序序列，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的定界符之间可以互相嵌套。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210622202756.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210623163853.png">
@@ -333,6 +333,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>在Python中，字符串属于<strong>不可变有序序列</strong>，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的<strong>定界符之间可以互相嵌套</strong>。</p>
+<span id="more"></span>
 <p>除了支持序列通用方法（包括双向索引、比较大小、计算长度、元素访问、切片、成员测试等操作）以外，字符串类型还支持一些特有的操作方法，例如字符串格式化、查找、替换、排版等等。<br>字符串属于<strong>不可变</strong>序列，不能直接对字符串对象进行元素增加、修改与删除等操作，切片操作也只能访问其中的元素而无法使用切片来修改字符串中的字符。<br>除了支持Unicode编码的str类型之外，Python还支持字节串类型bytes，str类型字符串可以通过**encode()<strong>方法使用指定的字符串编码格式编码成为bytes对象，而bytes对象则可以通过</strong>decode()**方法使用指定编码格式解码成为str字符串。</p>
 <h1 id="字符串编码格式简介"><a href="#字符串编码格式简介" class="headerlink" title="字符串编码格式简介"></a>字符串编码格式简介</h1><p>最早的字符串编码是美国标准信息交换码ASCII，仅对10个数字、26个大写英文字母、26个小写英文字母及一些其他符号进行了编码。ASCII码采用<strong>1个字节</strong>来对字符进行编码，最多只能表示256个符号。<br><strong>GB2312</strong>是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编码方式。<strong>GB2312、GBK和CP936都是使用2个字节表示中文</strong>。<br><strong>UTF-8</strong>对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以<strong>3个字节表示中文</strong>，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。<br>不同编码格式之间相差很大，采用<strong>不同的编码格式意味着不同的表示和存储形式</strong>，把同一字符存入文件时，写入的内容可能会不同，在试图理解其内容时<strong>必须了解编码规则</strong>并进行正确的解码。如果解码方法不正确就无法还原信息，从这个角度来讲，<strong>字符串编码也具有加密的效果。</strong><br>Python 3.x完全支持中文字符，<strong>默认使用UTF8编码格式</strong>，无论是一个数字、英文字母，还是一个汉字，在<strong>统计字符串长度时都按一个字符对待和处理</strong>。</p>
 <h1 id="转义字符与原始字符串"><a href="#转义字符与原始字符串" class="headerlink" title="转义字符与原始字符串"></a>转义字符与原始字符串</h1><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210622202756.png" alt="20210622202756"></p>

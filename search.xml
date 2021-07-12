@@ -274,7 +274,9 @@
   <entry>
     <title>Python文件使用</title>
     <url>/2021/05/13/Python/%E7%AC%AC5%E7%AB%A0/</url>
-    <content><![CDATA[<p>按文件中数据的组织形式把文件分为文本文件和二进制文件两类。<br>文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。<strong>常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串</strong>，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。<br>二进制文件：<strong>二进制文件把对象内容以字节串(bytes)进行存储</strong>，无法用记事本或其他普通字处理软件直接进行编辑，通常也无法被人类直接阅读和理解，<strong>需要使用专门的软件</strong>进行解码后读取、显示、修改或执行。常见的如图形图像文件、音视频文件、可执行文件、资源文件、各种数据库文件、各类office文档等都属于二进制文件。</p>
+    <content><![CDATA[<p>按文件中数据的组织形式把文件分为文本文件和二进制文件两类。<br>文本文件：文本文件存储的是常规字符串，由若干文本行组成，通常每行以换行符’\n’结尾。<strong>常规字符串是指记事本或其他文本编辑器能正常显示、编辑并且人类能够直接阅读和理解的字符串</strong>，如英文字母、汉字、数字字符串。文本文件可以使用字处理软件如gedit、记事本进行编辑。</p>
+<span id="more"></span>
+<p>二进制文件：<strong>二进制文件把对象内容以字节串(bytes)进行存储</strong>，无法用记事本或其他普通字处理软件直接进行编辑，通常也无法被人类直接阅读和理解，<strong>需要使用专门的软件</strong>进行解码后读取、显示、修改或执行。常见的如图形图像文件、音视频文件、可执行文件、资源文件、各种数据库文件、各类office文档等都属于二进制文件。</p>
 <h1 id="文件操作基本知识"><a href="#文件操作基本知识" class="headerlink" title="文件操作基本知识"></a>文件操作基本知识</h1><h2 id="内置函数open"><a href="#内置函数open" class="headerlink" title="内置函数open()"></a>内置函数open()</h2><p>open(file, mode=’r’, buffering=-1, encoding=None, errors=None,<br>     newline=None, closefd=True, opener=None)<br>file参数指定了被打开的文件名称。<br>mode参数指定了打开文件后的处理方式。<br>buffering参数指定了读写文件的缓存模式。0表示不缓存，1表示缓存，如大于1则表示缓冲区的大小。默认值是缓存模式。<br>encoding参数指定对文本进行编码和解码的方式，只适用于文本模式，可以使用Python支持的任何格式，如GBK、utf8、CP936等等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210621214804.png" alt="20210621214804"></p>
 <p>如果执行正常，open()函数返回1个文件对象，通过该文件对象可以对文件进行读写操作。如果指定<strong>文件不存在、访问权限不够、磁盘空间不足</strong>或其他原因导致创建文件对象失败则抛出异常。</p>
 <p>f1 = open( ‘file1.txt’, ‘r’ )     # 以读模式打开文件<br>f2 = open( ‘file2.txt’, ‘w’)      # 以写模式打开文件</p>
@@ -314,6 +316,7 @@
     <title>软件测试策略</title>
     <url>/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC2%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="软件开发过程"><a href="#软件开发过程" class="headerlink" title="软件开发过程"></a>软件开发过程</h1><p>用以开发和维护软件及其相关产品（项目计划、设计文档、代码、测试用例、用户手册等）的一组活动、方法、实践和变换。<br><strong>软件开发过程</strong>是软件开发与维护的工作流程和工艺流程，是软件工程的重要组成部分。</p>
+<span id="more"></span>
 <p><strong>软件开发过程</strong>是指软件设计思路和方法的一般过程，包括设计软件的功能和实现的算法和方法、软件的总体结构设计和模块设计、编程和调试、程序联调和测试以及编写、提交程序。</p>
 <h2 id="软件开发过程所涉及的阶段"><a href="#软件开发过程所涉及的阶段" class="headerlink" title="软件开发过程所涉及的阶段"></a>软件开发过程所涉及的阶段</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530112509.png" alt="20210530112509"></p>
 <h1 id="软件开发过程模型"><a href="#软件开发过程模型" class="headerlink" title="软件开发过程模型"></a>软件开发过程模型</h1><p>软件开发模型则描述阶段如何组合到一起，是软件开发活动以及它们之间关系的<strong>结构框架</strong>。</p>
@@ -636,6 +639,7 @@
     <title>Python字符串</title>
     <url>/2021/05/12/Python/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
     <content><![CDATA[<p>在Python中，字符串属于<strong>不可变有序序列</strong>，使用单引号、双引号、三单引号或三双引号作为定界符，并且不同的<strong>定界符之间可以互相嵌套</strong>。</p>
+<span id="more"></span>
 <p>除了支持序列通用方法（包括双向索引、比较大小、计算长度、元素访问、切片、成员测试等操作）以外，字符串类型还支持一些特有的操作方法，例如字符串格式化、查找、替换、排版等等。<br>字符串属于<strong>不可变</strong>序列，不能直接对字符串对象进行元素增加、修改与删除等操作，切片操作也只能访问其中的元素而无法使用切片来修改字符串中的字符。<br>除了支持Unicode编码的str类型之外，Python还支持字节串类型bytes，str类型字符串可以通过**encode()<strong>方法使用指定的字符串编码格式编码成为bytes对象，而bytes对象则可以通过</strong>decode()**方法使用指定编码格式解码成为str字符串。</p>
 <h1 id="字符串编码格式简介"><a href="#字符串编码格式简介" class="headerlink" title="字符串编码格式简介"></a>字符串编码格式简介</h1><p>最早的字符串编码是美国标准信息交换码ASCII，仅对10个数字、26个大写英文字母、26个小写英文字母及一些其他符号进行了编码。ASCII码采用<strong>1个字节</strong>来对字符进行编码，最多只能表示256个符号。<br><strong>GB2312</strong>是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编码方式。<strong>GB2312、GBK和CP936都是使用2个字节表示中文</strong>。<br><strong>UTF-8</strong>对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以<strong>3个字节表示中文</strong>，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。<br>不同编码格式之间相差很大，采用<strong>不同的编码格式意味着不同的表示和存储形式</strong>，把同一字符存入文件时，写入的内容可能会不同，在试图理解其内容时<strong>必须了解编码规则</strong>并进行正确的解码。如果解码方法不正确就无法还原信息，从这个角度来讲，<strong>字符串编码也具有加密的效果。</strong><br>Python 3.x完全支持中文字符，<strong>默认使用UTF8编码格式</strong>，无论是一个数字、英文字母，还是一个汉字，在<strong>统计字符串长度时都按一个字符对待和处理</strong>。</p>
 <h1 id="转义字符与原始字符串"><a href="#转义字符与原始字符串" class="headerlink" title="转义字符与原始字符串"></a>转义字符与原始字符串</h1><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210622202756.png" alt="20210622202756"></p>
@@ -662,6 +666,7 @@
     <title>Python函数与模块</title>
     <url>/2021/05/12/Python/%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="函数的定义和使用"><a href="#函数的定义和使用" class="headerlink" title="函数的定义和使用"></a>函数的定义和使用</h1><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span>  函数名(<span class="params">函数参数</span>):</span></span><br><span class="line">    函数体</span><br><span class="line">    <span class="keyword">return</span> 表达式或者值</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h2 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h2><p>lambda表达式可以用来声明匿名函数，即没有函数名字的临时使用的小函数，只可以包含一个表达式，且该表达式的计算结果为函数的返回值，不允许包含其他复杂的语句，但在表达式中可以调用其他函数。<br>例如：</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">f=<span class="keyword">lambda</span> x,y,z:x+y+z</span><br><span class="line"><span class="built_in">print</span> (f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">等价于定义：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x,y,z</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y+z</span><br><span class="line"><span class="built_in">print</span> (f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 <h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><ul>
@@ -704,6 +709,7 @@
     <url>/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC1%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="什么是软件测试？"><a href="#什么是软件测试？" class="headerlink" title="什么是软件测试？"></a>什么是软件测试？</h1><p>测试不单纯是一个发现错误的过程，而且是软件质量保证的主要职能。</p>
 <p>测试是程序的执行过程，目的在于发现问题。<br>测试是为了证明程序有错，而不是证明程序无错误。<br>一个好的测试用例在于能发现至今未发现的错误。<br>一个成功的测试是发现了至今未发现的错误的测试。</p>
+<span id="more"></span>
 <h1 id="软件测试的目的"><a href="#软件测试的目的" class="headerlink" title="软件测试的目的"></a>软件测试的目的</h1><ul>
 <li><strong>最少的人力、物力、时间</strong>找出软件中潜在的各种错误和缺陷，全面评估的提高软件质量，以及揭示质量风险，控制项目风险；</li>
 <li>通过分析测试过程中发现的问题可以帮助发现当前开发工作所采用的软件过程的缺陷，以便进行软件过程改进；同时通过对测试结果的分析整理，可修正软件开发规则，并为<strong>软件可靠性分析提供相关的依据</strong>。</li>
@@ -852,7 +858,8 @@
     <content><![CDATA[<h1 id="Python常用内置对象"><a href="#Python常用内置对象" class="headerlink" title="Python常用内置对象"></a>Python常用内置对象</h1><ul>
 <li>对象是python语言中最基本的概念，<strong>在python中处理的一切都是对象。</strong></li>
 <li>python中有许多内置对象可供编程者使用，<strong>内置对象可直接使用</strong>，如数字、字符串、列表、del等。</li>
-<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png" alt="20210530214231"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png" alt="20210530214304"></li>
+<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。<span id="more"></span>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png" alt="20210530214231"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png" alt="20210530214304"></li>
 </ul>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>Python使用单引号和双引号来表示字符串是一样的。<br>1．创建和访问字符串<br>创建字符串很简单，只要为变量分配一个值即可。例如：<br>var1 = ‘Hello World!’<br>var2 = “Python Programming “<br>2．Python转义字符<br>需要在字符中使用特殊字符时，Python用反斜杠( \ )转义字符<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133248.png" alt="20210531133248"><br>3．Python字符串运算符<br>Python字符串运算符如表2-2所示<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133804.png" alt="20210531133804"><br>4．字符串格式化<br>Python 支持格式化字符串的输出。<br>在 Python 中，字符串格式化使用与 C语言中printf函数一样的语法。</p>
 <pre><code> print (&quot;我的名字是 %s 年龄是 %d &quot; % (&#39;xmj&#39;, 41))
@@ -904,6 +911,7 @@
     <title>Python概述</title>
     <url>/2021/05/10/Python/%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
     <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529212620.png" alt="20210529212620"></p>
+<span id="more"></span>
 <h1 id="Python的简介"><a href="#Python的简介" class="headerlink" title="Python的简介"></a>Python的简介</h1><p>面向对象、解释型的编程语言<br>使用缩进作为逻辑层次<br>Python的缺点:运行效率低<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529213253.png" alt="20210529213253"></p>
 <p>缩进<br>     Python程序是依靠代码块的缩进来体现代码之间的逻辑关系的</p>
 <p>注释</p>

@@ -23,12 +23,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Python常用内置对象 对象是python语言中最基本的概念，在python中处理的一切都是对象。 python中有许多内置对象可供编程者使用，内置对象可直接使用，如数字、字符串、列表、del等。 非内置对象需要导入模块才能使用，如正弦函数sin(x)，随机数产生函数random( )等。  字符串Python使用单引号和双引号来表示字符串是一样的。1．创建和访问字符串创建字符串很简单，只要为变">
+<meta name="description" content="Python常用内置对象 对象是python语言中最基本的概念，在python中处理的一切都是对象。 python中有许多内置对象可供编程者使用，内置对象可直接使用，如数字、字符串、列表、del等。 非内置对象需要导入模块才能使用，如正弦函数sin(x)，随机数产生函数random( )等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础">
 <meta property="og:url" content="http://example.com/2021/05/11/Python/%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Alexander">
-<meta property="og:description" content="Python常用内置对象 对象是python语言中最基本的概念，在python中处理的一切都是对象。 python中有许多内置对象可供编程者使用，内置对象可直接使用，如数字、字符串、列表、del等。 非内置对象需要导入模块才能使用，如正弦函数sin(x)，随机数产生函数random( )等。  字符串Python使用单引号和双引号来表示字符串是一样的。1．创建和访问字符串创建字符串很简单，只要为变">
+<meta property="og:description" content="Python常用内置对象 对象是python语言中最基本的概念，在python中处理的一切都是对象。 python中有许多内置对象可供编程者使用，内置对象可直接使用，如数字、字符串、列表、del等。 非内置对象需要导入模块才能使用，如正弦函数sin(x)，随机数产生函数random( )等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png">
@@ -349,7 +349,8 @@
         <h1 id="Python常用内置对象"><a href="#Python常用内置对象" class="headerlink" title="Python常用内置对象"></a>Python常用内置对象</h1><ul>
 <li>对象是python语言中最基本的概念，<strong>在python中处理的一切都是对象。</strong></li>
 <li>python中有许多内置对象可供编程者使用，<strong>内置对象可直接使用</strong>，如数字、字符串、列表、del等。</li>
-<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png" alt="20210530214231"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png" alt="20210530214304"></li>
+<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。<span id="more"></span>
+<img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png" alt="20210530214231"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png" alt="20210530214304"></li>
 </ul>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>Python使用单引号和双引号来表示字符串是一样的。<br>1．创建和访问字符串<br>创建字符串很简单，只要为变量分配一个值即可。例如：<br>var1 = ‘Hello World!’<br>var2 = “Python Programming “<br>2．Python转义字符<br>需要在字符中使用特殊字符时，Python用反斜杠( \ )转义字符<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133248.png" alt="20210531133248"><br>3．Python字符串运算符<br>Python字符串运算符如表2-2所示<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133804.png" alt="20210531133804"><br>4．字符串格式化<br>Python 支持格式化字符串的输出。<br>在 Python 中，字符串格式化使用与 C语言中printf函数一样的语法。</p>
 <pre><code> print (&quot;我的名字是 %s 年龄是 %d &quot; % (&#39;xmj&#39;, 41))

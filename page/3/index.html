@@ -317,36 +317,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="函数的定义和使用"><a href="#函数的定义和使用" class="headerlink" title="函数的定义和使用"></a>函数的定义和使用</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span>  函数名(<span class="params">函数参数</span>):</span></span><br><span class="line">    函数体</span><br><span class="line">    <span class="keyword">return</span> 表达式或者值</span><br></pre></td></tr></table></figure>
-<h2 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h2><p>lambda表达式可以用来声明匿名函数，即没有函数名字的临时使用的小函数，只可以包含一个表达式，且该表达式的计算结果为函数的返回值，不允许包含其他复杂的语句，但在表达式中可以调用其他函数。<br>例如：</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f=<span class="keyword">lambda</span> x,y,z:x+y+z</span><br><span class="line"><span class="built_in">print</span> (f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">等价于定义：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x,y,z</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y+z</span><br><span class="line"><span class="built_in">print</span> (f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><ul>
-<li>Lambda 表达式作为函数的返回值。</li>
-<li>Python中函数是可以返回多个值的，多个值以元组的形式返回。</li>
-</ul>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x,y,z:x+y+z;</span><br><span class="line"></span><br><span class="line">ans=cal()</span><br><span class="line">print(ans(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
-
-<h1 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h1><h2 id="函数形参和实参的区别"><a href="#函数形参和实参的区别" class="headerlink" title="函数形参和实参的区别"></a>函数形参和实参的区别</h2><p>形参全称是形式参数，在用def关键字定义函数时函数名后面括号里的变量称作为形式参数。实参全称为实际参数，在调用函数时提供的值或者变量称作为实际参数。</p>
-<h2 id="参数的传递"><a href="#参数的传递" class="headerlink" title="参数的传递"></a>参数的传递</h2><p>可更改(mutable)与不可更改(immutable)对象<br>     strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。<br><strong>不可变类型</strong>：变量赋值 a=5 后再赋值 a=10，这里实际是新生成一个 int 值对象 10，再让 a 指向它，而 5 被丢弃，不是改变a的值，相当于新生成了a。<br><strong>可变类型</strong>：变量赋值 la=[1,2,3,4] 后再赋值 la[2]=5 则是将 list la 的第三个元素值更改，本身la没有动，只是其内部的一部分值被修改了</p>
-<p><strong>不可变类型</strong>：类似 c++ 的值传递，如 整数、字符串、元组。如fun（a），传递的只是a的值，没有影响a对象本身。比如在 fun（a）内部修改 a 的值，只是修改另一个复制的对象，不会影响 a 本身。<br><strong>可变类型</strong>：类似 c++ 的引用传递，如 列表，字典。如 fun（la），则是将 la 真正的传过去，修改后fun外部的la也会受影响</p>
-<h2 id="函数参数的类型"><a href="#函数参数的类型" class="headerlink" title="函数参数的类型"></a>函数参数的类型</h2><p>在Python中函数参数定义和传递的方式相比而言就灵活多。<br>1．默认值参数<br>在于它能够给函数参数提供默认值。<br>2．关键字参数<br>避免了用户需要牢记位置参数顺序的麻烦<br>3．任意个数参数<br>函数参数前面单星号（*）和双星号（**）的区别<br>      def foo(param1, *param2):<br>      def bar(param1, <strong>param2):<br>单星号（ * ）：*agrs<br>      将所以参数以元组(tuple)的形式导入<br>双星号（ ** ）：</strong>kwargs<br>      将参数以字典的形式导入</p>
-<h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>1．局部变量<br>在函数内定义的变量只在该函数内起作用，称为局部变量。<br>2．全局变量<br>还有一种变量叫做全局变量，它是在函数外部定义的，作用域是整个程序。全局变量可以直接在函数里面使用，但是如果要在函数内部改变全局变量值，必须使用global关键字进行声明。</p>
-<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p>在Python中，闭包指函数的嵌套。可以在函数内部定义一个嵌套函数。</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_lib</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">        <span class="keyword">return</span> x+y</span><br><span class="line">    <span class="keyword">return</span> add       <span class="comment"># 返回函数对象</span></span><br><span class="line"> </span><br><span class="line">fadd = func_lib()</span><br><span class="line">print(fadd(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><p>内置函数(built-in functions)又称系统函数，或内建函数，是指Python本身所提供的函数，任何时候都可以使用。</p>
-<p>Python常用的内置函数有数学运算函数、类型转换函数和反射函数等。想要查所有内置函数名可以在python命令行方式中如下输入：</p>
-<p><code>&gt;&gt;&gt;dir(__builtins__)</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151105.png" alt="20210609151105"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151109.png" alt="20210609151109"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151121.png" alt="20210609151121"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151151.png" alt="20210609151151"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151203.png" alt="20210609151203"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609151215.png" alt="20210609151215"></p>
-<h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><p>模块（module）能够有逻辑地组织你的Python代码段。把相关的代码分配到一个模块里能让代码更好用，更易懂。简单地说，模块就是一个保存了Python代码的文件。模块里能定义函数，类和变量。</p>
-<h2 id="import-导入模块"><a href="#import-导入模块" class="headerlink" title="import 导入模块"></a>import 导入模块</h2><p>导入模块方式<br>在Python中用关键字import来导入某个模块。方式如下：<br>import 模块名            # 导入模块<br>有时候我们只需要用到模块中的某个函数，只需要引入该函数即可，此时可以通过语句：<br>from 模块名 import 函数名1,函数名2….<br>通过这种方式引入的时候，调用函数时只能给出函数名，不能给出模块名</p>
-<h2 id="定义自己的模块"><a href="#定义自己的模块" class="headerlink" title="定义自己的模块"></a>定义自己的模块</h2><p>在Python中，每个Python文件都可以作为一个模块，<strong>模块的名字就是文件的名字</strong>。<br>比如有这样一个文件fibo.py，在fibo.py中定义了3个函数add()，fib()，fib2()：<br>那么在其他文件（如test.py）中就可以如下使用： </p>
-<h2 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609152109.png" alt="20210609152109"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609152157.png" alt="20210609152157"></p>
-<h2 id="math模块"><a href="#math模块" class="headerlink" title="math模块"></a>math模块</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210609152234.png" alt="20210609152234"></p>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><h2 id="排序与逆序"><a href="#排序与逆序" class="headerlink" title="排序与逆序"></a>排序与逆序</h2><p>sorted()对列表、元组、字典、集合或其他可迭代对象进行排序并返回新列表，reversed()对可迭代对象（生成器对象和具有惰性求值特性的zip、map、filter、enumerate等类似对象除外）进行翻转（首尾交换）并返回可迭代的reversed对象。</p>
-<h2 id="枚举与迭代"><a href="#枚举与迭代" class="headerlink" title="枚举与迭代"></a>枚举与迭代</h2><p>enumerate()函数用来枚举可迭代对象中的元素，返回可迭代的enumerate对象，其中每个元素都是包含索引和值的元组。</p>
-<h2 id="map-、reduce-、filter"><a href="#map-、reduce-、filter" class="headerlink" title="map()、reduce()、filter()"></a>map()、reduce()、filter()</h2><p>内置函数map()把一个函数func依次映射到序列或迭代器对象的每个元素上，并返回一个可迭代的map对象作为结果，map对象中每个元素是原序列中元素经过函数func处理后的结果。<br>标准库functools中的函数reduce()可以将一个接收2个参数的函数以迭代累积的方式从左到右依次作用到一个序列或迭代器对象的所有元素上，并且允许指定一个初始值。<br>内置函数filter()将一个单参数函数作用到一个序列上，返回该序列中使得该函数返回值为True的那些元素组成的<strong>filter对象</strong>，如果指定函数为None，则返回序列中等价于True的元素。</p>
-<h2 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h2><p>range()是Python开发中非常常用的一个内置函数，语法格式为range([start,] end [, step] )，有range(stop)、range(start, stop)和range(start, stop, step)三种用法。该函数返回具有惰性求值特点的range对象，其中包含<strong>左闭右开</strong>区间[start,end)内以step为步长的整数。参数start默认为0，step默认为1。</p>
-<h2 id="zip"><a href="#zip" class="headerlink" title="zip()"></a>zip()</h2><p>zip()函数用来把多个可迭代对象中的元素压缩到一起，返回一个可迭代的zip对象，其中每个元素都是包含原来的多个可迭代对象对应位置上元素的元组，如同拉拉链一样。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/Python/%E7%AC%AC%E5%9B%9B%E7%AB%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -421,141 +399,14 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="什么是软件测试？"><a href="#什么是软件测试？" class="headerlink" title="什么是软件测试？"></a>什么是软件测试？</h1><p>测试不单纯是一个发现错误的过程，而且是软件质量保证的主要职能。</p>
 <p>测试是程序的执行过程，目的在于发现问题。<br>测试是为了证明程序有错，而不是证明程序无错误。<br>一个好的测试用例在于能发现至今未发现的错误。<br>一个成功的测试是发现了至今未发现的错误的测试。</p>
-<h1 id="软件测试的目的"><a href="#软件测试的目的" class="headerlink" title="软件测试的目的"></a>软件测试的目的</h1><ul>
-<li><strong>最少的人力、物力、时间</strong>找出软件中潜在的各种错误和缺陷，全面评估的提高软件质量，以及揭示质量风险，控制项目风险；</li>
-<li>通过分析测试过程中发现的问题可以帮助发现当前开发工作所采用的软件过程的缺陷，以便进行软件过程改进；同时通过对测试结果的分析整理，可修正软件开发规则，并为<strong>软件可靠性分析提供相关的依据</strong>。</li>
-<li>评价程序或系统的属性，<strong>对软件质量进行度量和评估</strong>，以验证软件的质量满足用户的需求，为用户选择、接受软件提供有力的依据。</li>
-</ul>
-<h2 id="软件测试的原则："><a href="#软件测试的原则：" class="headerlink" title="软件测试的原则："></a>软件测试的原则：</h2><p>( 1 )测试应该尽早进行，最好在需求阶段就开始介入，因为最严重的错误不外乎是系统不能满足用户的需求。<br>( 2 )程序员应该避免检查自己的程序，软件测试应该由第三方来负责。<br>( 3 )设计测试用例时应考虑到合法的输入和不合法的输入以及各种边界条件， 特殊情况下还要制造极端状态和意外状态，如网络异常中断、电源断电等。<br>( 4 )应该充分注意测试中的<strong>群集现象</strong>。（在所测程序段中，若发现错误数目多，则残存错误数目也比较多。这种错误群集性现象，已为许多程序的测试实践所证实。）<br>( 5) 对错误结果要进行一个确认过程。一般由 A 测试出来的错误， —定要由B 来确认。严重的错误可以召开评审会议进行讨论和分析，对测试结果要进行严格地确认，是否真的存在这个问题以及严重程度等。<br>( 6 ) 制定严格的测试计划。—定要制定测试计划，并且要有指导性。测试时间安排尽量宽松， 不要希望在极短的时间内完成一个高水平的测试。<br>( 7 ) 妥善保存测试计划、 测试用例、出错统计和最终分析报告，为维护提供方便。</p>
-<h1 id="软件测试和软件质量保证"><a href="#软件测试和软件质量保证" class="headerlink" title="软件测试和软件质量保证"></a>软件测试和软件质量保证</h1><p>软件质量保证和软件测试二者之间既存在包含有存交叉的关系。</p>
-<p>软件测试能够找出软件缺陷，确保软件产品满足需求。但测试不是质量保证，二者并不等同。测试可以查找错误并进行修改，从而提高软件产品的质量。软件质量保证测试<strong>避免错误</strong>以求高质量并且还有其他方面的措施以保证质量问题。</p>
-<p>从共同点角度看：<br>目的都是尽力确保软件产品满足需求。<br>都是贯穿软件开发生命周期。</p>
-<p>测试 VS SQA：（SQA：软件质量保证）</p>
-<ul>
-<li>SQA指导、监督软件测试的计划和执行，督促测试工作的结果客观、准确和有效，并协助测试流程的改进。</li>
-<li>软件测试是SQA重要手段之一，为SQA提供所需的数据，作为质量评价的客观依据。</li>
-<li>SQA是一项管理工作， 侧重于对流程的评审和监控。</li>
-<li>测试是一项技术性的工作，侧重对产品进行评估和验证。</li>
-</ul>
-<p>软件测试系统主要包括：</p>
-<ul>
-<li>制定测试计划</li>
-<li>测试设计</li>
-<li>实施测试</li>
-<li>建立和跟新测试文档</li>
-</ul>
-<p>软件质量保证主要工作：</p>
-<ul>
-<li>制定软件质量要求</li>
-<li>组织正式度量</li>
-<li>软件测试管理</li>
-<li>对软件的变更进行控制</li>
-<li>对软件质量进行度量</li>
-<li>对软件质量情况及时记录和报告</li>
-</ul>
-<h1 id="软件测试的分类"><a href="#软件测试的分类" class="headerlink" title="软件测试的分类"></a>软件测试的分类</h1><h2 id="按测试阶段或测试步骤划分："><a href="#按测试阶段或测试步骤划分：" class="headerlink" title="按测试阶段或测试步骤划分："></a>按测试阶段或测试步骤划分：</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614163029.png" alt="20210614163029"><br>这种划分来自于软件的开发过程，目的是验证软件开发过程各阶段的工作是否符合需求和设计要求。</p>
-<h3 id="单元测试："><a href="#单元测试：" class="headerlink" title="单元测试："></a>单元测试：</h3><p>在软件单元完成编码后，首先进行单元测试，验证软件单元是否正确实现了规定的功能和接口等要求；</p>
-<h3 id="集成测试："><a href="#集成测试：" class="headerlink" title="集成测试："></a>集成测试：</h3><p>在确认没有问题后，将软件单元组装在一起进行集成测试，验证软件是否满足设计要求；</p>
-<h3 id="确认测试-有效性、合格性-："><a href="#确认测试-有效性、合格性-：" class="headerlink" title="确认测试(有效性、合格性)："></a>确认测试(有效性、合格性)：</h3><p>在确认没有问题后，将软件单元组装在一起进行集成测试，验证软件是否满足设计要求；<br>在确认测试中，按照测试的方式又有Alpha测试和Beta则试。<br>Alpha测试：在开发方的场所，用户在开发人员的指导下对软件进行测试，<br>   测试是受控的，开发人员负责记录错误和使用中出现的问题。<br>Beta测试：测试是由软件的最终用户在一个或多个用户场所来进行，开<br>   发人员通常不在现场，整个测试不被控制，用户记录下所有的问题，<br>   并报告给开发人员。</p>
-<h3 id="系统测试："><a href="#系统测试：" class="headerlink" title="系统测试："></a>系统测试：</h3><p>最后使通过确认测试的软件与其他系统成分组合在一起，并使其在实际运行环境中运行，进行系统测试。</p>
-<h2 id="按测试对象划分"><a href="#按测试对象划分" class="headerlink" title="按测试对象划分"></a>按测试对象划分</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614163347.png" alt="20210614163347"></p>
-<p><strong>软件配置项</strong>是为配置管理而设计的并且能够满足最终用户功能的软件，在配置管理过程中作为单个实体对待。</p>
-<p><strong>软件部件</strong>是构成软件配置项或系统的部分之一，在功能上或逻辑上具有一定的<strong>独立性</strong>，且可以进一步划分为其他部件。</p>
-<h2 id="按测试技术划分"><a href="#按测试技术划分" class="headerlink" title="按测试技术划分"></a>按测试技术划分</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614171439.png" alt="20210614171439"><br>按使用的测试技术来分，有静态测试和动态测试，他们代表了程序不同的运行状态。动态测试又分为白盒测试和黑盒测试，白盒测试包括逻辑覆盖测试、域测试、程序变异测试、路径测试、符号测试等，黑盒测试包括功能测试、强度测试、边界值测试、随机测试等。</p>
-<h2 id="按软件质量特性划分"><a href="#按软件质量特性划分" class="headerlink" title="按软件质量特性划分"></a>按软件质量特性划分</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614171503.png" alt="20210614171503"></p>
-<h2 id="按测试项目划分"><a href="#按测试项目划分" class="headerlink" title="按测试项目划分"></a>按测试项目划分</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614171517.png" alt="20210614171517"></p>
-<ul>
-<li>功能测试： 主要针对软件/产品需求规格说明的测试，验证功能是否符合需求，包括原定功能的检验、是否有冗余的功能。</li>
-<li>健壮性测试： 侧重于软件容错能力的测试，主要是验证软件对各种异常情况（如数据边界、非法数据、异常中断等）是否进行正确处理。</li>
-<li>恢复测试： 对每一类导致恢复或重构的情况进行测试，验证软件自身运行的恢复或重构，软件控制的系统的恢复或重构以及系统控制的软件的恢复或重构。</li>
-<li>人机界面测试： 对人机界面提供的操作进行测试，测试人机界面的的有效性、便捷性、直观性等，如用户界面是否友好、是否方便易用、设计是否合理、位置是否准确等。</li>
-<li>接口测试： 测试被测对象与其他软件(包括软件单元、部件、配置项)或硬件的接口。</li>
-<li>强度测试： 使软件在其设计能力的极限状态下、进而超过此极限下运行，检验软件对异常情况的抵抗能力。</li>
-<li>可用性测试： 对“用户友好性”的测试。受主观因素影响，且取决于最终用户。用户面谈、调查和其他技术都可使用。</li>
-<li>压力测试： 对系统不断施加压力的测试，通过确定一个系统的瓶颈或者不能接收的性能点，获得系统能提供的最大服务级别的测试。例如测试一个Web站点在大量的负荷下，何时系统的响应会退化或失败。压力测试注重的是外界不断施压。</li>
-<li>性能测试： 测试软件是否达到需求规格说明中规定的各类性能指标，并满足相关的约束和限制条件。</li>
-<li>兼容测试： 测试软件在一个特定的硬件/软件/操作系统/网络等环境下的性能如何。</li>
-<li>用户界面测试： 对系统的界面进行测试，测试用户界面是否友好、是否方便易用、设计是否合理、位置是否正确等一系列界面问题。</li>
-<li>安全性测试： 测试软件在没有授权的内部或者外部的用户的攻击或者恶意破坏时如何进行处理，是否能保证软件和数据的安全。</li>
-<li>可靠性测试： 这里是比较狭义的可靠性测试，它主要是对系统能否稳定运行进行一个估计。</li>
-<li>安装测试：安装测试主要检验软件是否可以正确安装，安装文件的各项设置是否有效，安装后是否影响原系统，卸载后是否删除干净，是否影响原系统。</li>
-<li>文档测试： 测试开发过程中生成的文档，以需求规格说明、软件设计、用户手册、安装手册等为主，检验文档是否和实际存在差别。文档测试不需要编写测试用例。</li>
-</ul>
-<h1 id="软件测试这些种类之间密切的关系："><a href="#软件测试这些种类之间密切的关系：" class="headerlink" title="软件测试这些种类之间密切的关系："></a>软件测试这些种类之间密切的关系：</h1><p>在软件开发过程中，<strong>不同阶段的测试对应了对不同软件对象的测试</strong>，下图所示为这种对应关系。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614171729.png" alt="20210614171729"><br>在不同的测试阶段，由于<strong>测试目标、对象、要求的不同而采用不同的测试技术</strong>。下表所列为一般情况下不同测试对象中采用的测试技术。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614171811.png" alt="20210614171811"></p>
-<p>在不同的阶段对<strong>不同对象的测试包含不同的测试项目</strong>。例如，确认测试可包含功能测试、性能测试、人机界面测试；组合测试可包括接口测试；系统测试可包括可靠性测试、强度测试等。同时，对各阶段和对象的测试完整性要求也不同。</p>
-<h1 id="软件缺陷的概念"><a href="#软件缺陷的概念" class="headerlink" title="软件缺陷的概念"></a>软件缺陷的概念</h1><ul>
-<li>软件未达到产品说明书中标明的功能。</li>
-<li>软件出现了产品说明书中指明的不会出现的功能。  </li>
-<li>软件功能超出了产品说明书中指明的范围。  </li>
-<li>软件未达到产品说明书中指明应达到的目。  </li>
-<li>软件难以理解和使用、运行速度慢，或最终用户认为不好。<h2 id="软件缺陷的等级分类："><a href="#软件缺陷的等级分类：" class="headerlink" title="软件缺陷的等级分类："></a>软件缺陷的等级分类：</h2><h3 id="致命错误"><a href="#致命错误" class="headerlink" title="致命错误"></a>致命错误</h3>不能执行正常工作或重要功能、导致系统崩溃或资源严重不足、造成数据丢失。<br>包括： </li>
-</ul>
-<p>1) 系统或程序引起死机 ；<br>2) 系统崩溃、意外退出 ；<br>3) 程序死循环、数据库发生死锁；<br>4) 因错误操作导致的程序中断</p>
-<h3 id="严重错误"><a href="#严重错误" class="headerlink" title="严重错误"></a>严重错误</h3><p>严重影响系统要求或基本功能实现、且不存在可替代的解决方法或方式。<br>包括： <br>1) 功能未实现或实现错误；<br>2) 数据计算错误、产生错误结果 ；<br>3) 数据通讯错误、程序接口错误；<br>4) 需求功能流程错误或需求缺失 ；<br>5) 数据约束错误、数据输入输出错误 ；<br>6) 交易报错(交易报错导致交易无法继续等) </p>
-<h3 id="一般错误"><a href="#一般错误" class="headerlink" title="一般错误"></a>一般错误</h3><p>影响系统要求或基本功能实现，但存在可替代的解决方法或方式。<br>包括： <br>1) 打印内容、格式错误； <br>2) 简单的输入限制未放在前台进行控制 ；<br>3) 删除操作未给出提示 ；<br>4) 操作界面信息错误（包括数据窗口内列名定义、含义是否一致）；<br>5) 数据库表中有过多的空字段。 </p>
-<h3 id="轻微错误"><a href="#轻微错误" class="headerlink" title="轻微错误"></a>轻微错误</h3><p>操作不便或遇到麻烦，但不影响执行工作或使用重要功能。属于该级别的缺陷<br>包括： <br>1) 界面不规范,域控制不规范； <br>2) 辅助说明描述不清楚、提示窗口文字未采用行业术语；<br>3) 输入输出不规范 ；<br>4) 长时间操作未给用户提示 ；<br>5) 可输入区域和只读区域没有明显的区分标志；<br>6) 控件没有对齐、标点符号丢失或不正确 7) 需求瑕疵包括需求错别字等。</p>
-<h1 id="软件缺陷的属性"><a href="#软件缺陷的属性" class="headerlink" title="软件缺陷的属性"></a>软件缺陷的属性</h1><p>一般地发现缺陷后，需要提交缺陷单，通常情况下，缺陷单需要包含以下的内容：<br>缺陷标识(Identifier)<br>缺项类型(Type)<br>缺陷严重程度(Severity)<br>缺陷优先级(Priority)<br>缺陷状态(Status)<br>缺陷起源(Origin)<br>缺陷来源(Source)<br>附件(Attachment)<br>测试人员(Created by)<br>处理人员（Assign to）<br>…<br>缺陷标识(Identifier)： 缺陷标识是标记某个缺陷的一组符号。每个缺陷必须有一个唯一的标识。<br>缺陷类型(Type)：缺陷类型是根据缺陷的自然属性划分的缺陷种类。类别通常可以分为以下几种情况，如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614194510.png" alt="20210614194510"><br>缺陷严重程度 (Severity) ： 缺陷严重程度是指因缺陷引起的故障对软件产品的影响程度。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614194726.png" alt="20210614194726"><br>缺陷优先级(Priority)： 缺陷的优先级指缺陷必须被修复的紧急程度。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614194744.png" alt="20210614194744"><br>缺陷状态(Status) ： 缺陷状态指缺陷通过一个跟踪修复过程的进展情况。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614200137.png" alt="20210614200137"><br>缺陷起源(Origin) ：缺陷起源指缺陷引起的故障或事件第一次被检测到的阶段。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614200850.png" alt="20210614200850"><br>缺陷来源(Source)： 缺陷来源指引起缺陷的起因。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614201623.png" alt="20210614201623"><br>缺陷根源： 缺陷根源指发生错误的根本因素。如下表所示。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614201730.png" alt="20210614201730"></p>
-<h1 id="缺陷生命周期"><a href="#缺陷生命周期" class="headerlink" title="缺陷生命周期"></a>缺陷生命周期</h1><p>在软件开发过程中，缺陷拥有自身的生命周期。缺陷在走完其生命周期最终会关闭。确定的生命周期保证了过程的标准化。缺陷在其生命周期中会处于许多不同的状态。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614203324.png" alt="20210614203324"><br>新建：当缺陷被第一次递交的时候，它的状态即为“新建”。这也就是说缺陷未被确认其是否真正是一个缺陷。<br>打开：在测试者提交一个缺陷后，测试组长确认其确实为一个缺陷的时候他会把状态置为“打开”。<br>分配：一旦缺陷被测试经理置为“打开”，他会把缺陷交给相应的开发人员或者开发组。这时缺陷状态变更为“分配”。<br>测试：当开发人员修复缺陷后，他会把缺陷提交给测试组进行新一轮的测试。在开发人员公布已修复缺陷的程序之前，他会把缺陷状态置为“测试”。这时表明缺陷已经修复并且已经交给了测试组。<br>延期：缺陷状态被置为“延迟的”意味着缺陷将会在下一个版本中被修复。将缺陷置为“延迟的”原因有许多种。有些由于缺陷优先级不高，有些由于时间紧，有些是因为缺陷对软件不会造成太大影响。<br>拒绝：如果开发人员不认为其是一个缺陷，他会不接受。他会把缺陷状态置为“拒绝”。<br>确认：一旦缺陷被修复，它就会被置为“测试”，测试人员会执行测试。如果缺陷不再出现，这就证明缺陷被修复了，同时其状态被置为“确认”。<br>再次打开：如果缺陷被开发人员修复后仍然存在，测试人员会把缺陷状态置为“再次打开”。缺陷即将再次穿越其生命周期。<br>关闭：一旦缺陷被修复，测试人员会对其进行测试。如果测试人员认为缺陷不存在了，他会把缺陷状态置为“关闭”。这个状态意味着缺陷被修复，通过了测试并且核实确实如此。</p>
-<h1 id="软件测试充分性问题"><a href="#软件测试充分性问题" class="headerlink" title="软件测试充分性问题"></a>软件测试充分性问题</h1><p>成功测试：</p>
-<ul>
-<li>软件在所有的（或是足够多的）测试数据上是正确。</li>
-<li>数据是充分的。即软件在测试数据上的表现能够充分地反映软件的总体表现。</li>
-</ul>
-<p>检查软件在测试数据上行为的正确性称为测试的“先知者问题”。判断一个测试数据集合是否充分称为充分性问题。</p>
-<p>软件测试是使用经过设计获得的<strong>有限测试数据</strong>来测试软件，以发现软件的缺陷。<br>软件的实际运行空间是非常巨大的，有时甚至是无限的。<br>在有限的测试输入数据空间上的软件行为是否能够充分反映在无限的软件运行空间的行为，这就是<strong>软件测试的充分性问题。</strong><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614204747.png" alt="20210614204747"></p>
-<h2 id="软件测试充分性准则"><a href="#软件测试充分性准则" class="headerlink" title="软件测试充分性准则"></a>软件测试充分性准则</h2><p>定义1： 谓词形式的充分性准则<br>     设𝑷为测试程序，𝑫是一个可数集合，为程序𝑷的输入域，对∀𝒅∈𝑫,𝑷(𝒅)为程序的输出；<br>𝑺是𝑫→𝑷（𝑫）二元映射关系的一个子集，表示软件规格说明的集合；𝑻是测试数据的集合，则谓词形式的软件测试准则𝑪是一个定义在𝑷×𝑺×𝑻的谓词，即：<br>                      𝑪:𝑷×𝑺×𝑻→{𝒕𝒓𝒖𝒆，𝒇𝒂𝒍𝒔𝒆}<br>𝑪:(𝒕,𝒑,𝒔)=𝒕𝒓𝒖𝒆，表示根据充分性准则𝑪和规格说明𝒔，用测试数据集𝒕测试程序𝒑是充分的，否则不充分。</p>
-<p>定义2 ：度量函数形式的充分性准则<br>一个测试数据的充分性准则M是P×S×T到区间[0,1]上的映射，用数学形式可表示为：<br>M（s,p,t）→[0,1]<br>M（s,p,t）=r表示根据规格说明s和充分性准则M，用测试数据集t来测试程序p的充分度r，显然0≪r≪1，r越大说明测试的充分性。</p>
-<p>定义3：充分性准则的可靠性<br>软件测试充分性准则C是可靠的，若对任意的程序p和规格说明S，具有：<br>[∀t∈T,C(p,s,t)=&gt;Ok(p,s,t)]∪[∀t∈T,C(p,s,t)=&gt;¬Ok(p,s,t)]<br>其中，Ok（p,s,t）表示程序p在t中的所有测试数据上相对于规格说明s是正确的。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614204918.png" alt="20210614204918"></p>
-<p>定义4：充分性准则的有效性<br>软件测试充分性准则C是有效的，若对任意的程序p和规格说明S，均有：<br>                           [¬Cr(p,s)]=&gt;[(∃t∈T)C(p,s,t)=true]∩[¬Ok(p,s,t)]<br>其中，Cr（p,s）是指程序p对于规格说明s是正确的。表示程序p在t中的所有测试数据上相对于规格说明s是正确的。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210614204933.png" alt="20210614204933"></p>
-<p>测试充分性准则是在<strong>测试之前</strong>，由相关各方根据质量、成本和进度等因素规定的，表现为对测试的要求与软件需求和软件现实有关，具有以下的一些基本性质：</p>
-<ol>
-<li>空测试对于任何软件测试都是<strong>不充分的。</strong></li>
-<li>对任何软件都存在有限的充分测试数据集，这一性质称为<strong>有限性。</strong><br>3）如果一个测试数据集对一个软件系统的测试是充分的，那么在增加一些测试用例也是充分的，这一性质称为<strong>单调性。</strong><br>4）软件越复杂，需要的测试用例就越多，这一性质称为<strong>复杂性。</strong><br>5）测试得越多，进一步测试所能得到的充分性增长就越少，这一性质称为<strong>回报递减律。</strong><h2 id="软件测试充分性公理"><a href="#软件测试充分性公理" class="headerlink" title="软件测试充分性公理"></a>软件测试充分性公理</h2>基于程序的测试数据集充分性公理<br>1、非外延性公理：如果有两个功能相同而实现不同的程序，对其中一个是充分的测试数据集对另一个不一定是充分的。<br>2、多重修改公理：如果两个程序具有相同的语法结构，对一个是充分的测试数据集对另一个不一定是充分的。<br>3、不可分解公理：对一个程序进行了充分的测试，并不表示对其中的成分都进行了充分的测试。<br>4、非复合性公理：对程序各单元是充分的测试数据集并不一定对整个程序（集成后）是充分的。<h2 id="软件测试覆盖测试"><a href="#软件测试覆盖测试" class="headerlink" title="软件测试覆盖测试"></a>软件测试覆盖测试</h2>语句覆盖（Statement Coverage ）应用<br>概念：<pre><code>  在被测试后，程序中被执行到的可执行语句的比率。 
-</code></pre>
-公式：<pre><code>  语句覆盖率=（至少被执行一次的可执行语句的数量）/（可执行语句的总数）
-</code></pre>
-</li>
-</ol>
-<h1 id="软件测试原则"><a href="#软件测试原则" class="headerlink" title="软件测试原则"></a>软件测试原则</h1><p>一、Testing shows presence of defects<br>测试显示软件存在缺陷<br>二、Exhaustive testing is impossible<br>穷尽测试是不可能的<br>三、Testing early<br>测试尽早介入<br>四、Defect clustering<br>缺陷集群性（2/8原则）<br>五、Pesticide Paradox<br>杀虫剂悖论<br>六、Testing is context dependent<br>测试活动依赖于测试内容<br>七、Absence of error - fallacy<br>没有错误是好是谬论</p>
-<p>从不同的角度（<strong>用户、开发者</strong>）出发，软件测试会派生出两种不同的测试原则：</p>
-<ul>
-<li>用户希望通过软件测试能充分暴露软件中存在的问题和故障；</li>
-<li>开发者希望测试能表明软件产品已经正确地实现了用户的需求，没有软件故障存在。</li>
-</ul>
-<p>1、完全测试程序是不可能的<br>不可行的原因主要有以下几个方面：</p>
-<ul>
-<li>程序输入量太大；</li>
-<li>程序输出量太多；</li>
-<li>软件实现途径太多。</li>
-</ul>
-<p>2、软件测试是有风险的<br>不能做到完全测试，不测试又会漏掉一些软件故障。我们的目标应该是使有限的测试投资获得最大的收益，即以有限的测试用例检查出尽可能多的软件故障。</p>
-<p>3、测试无法显示隐藏的软件故障<br>通过测试可以查找并报告发现软件故障，但是不能保证软件故障全部被找到，也无法报告隐藏的软件故障。继续测试，可能还会发现一些。</p>
-<p>4、存在的故障数量与发现的故障数成正比<br>在典型程序中，某些程序段看来比其他程序段更容易出错，例如，在IBM/370操作系统中，人们注意到一个现象：47%的软件故障（由用户发现的）只与系统中4%的程序模块有关。<br>原因可能有以下几种：</p>
-<ul>
-<li>程序员怠倦。程序员编写一天代码或许情绪还不错，第二天、第三天可能就会烦躁不安了。一个软件故障很可能是暴露附近更多软件故障的信号。</li>
-<li>程序员往往犯同样的错误。每个人都有自己的偏好，一个程序员总是反复犯自己容易犯的错误。</li>
-<li>某些软件故障可能是冰山之巅。某些看似无关的软件故障可能是由一个极其严重的原因造成。</li>
-</ul>
-<p>5、杀虫剂现象<br>1990年 Boris Beizer在其《软件测试技术》（第二版）一书中引用了“杀虫剂现象”一词，用于描述软件测试进行的越多，其程序免疫力越强的现象。<br>为了避免杀虫剂现象的发生，应该根据不同的测试方法开发测试用例，对程序的不同部分进行测试，以找出更多的软件故障。</p>
-<p>6、并非所有软件故障都能修复<br>不修复软件故障的原因可能有以下几种</p>
-<ul>
-<li>没有足够的时间。</li>
-<li>不值得修复。</li>
-<li>修复风险太大。</li>
-<li>不算真正的软件故障。</li>
-</ul>
-<p>7、不要丢弃测试用例<br>除非确实没有用，一般不要丢弃测试用例。</p>
-<p>8、应避免测试自己编写的程序<br>并不是说程序员不可能测试自己的程序。只是相比之下，如果由他人来进行测试，可能会更有效，更成功。</p>
-<p>9、软件测试是一项复杂的，具有创造性的和需要高度智慧的挑战性任务<br>随着软件规模和复杂性的增加，测试一个大型软件所要求的创造力，可能超过设计那个软件所要求的创造力。现在，生产低质软件的代价太高了，软件行业也发展到强制使用软件测试人员的时代。</p>
-<h1 id="测试停止准则"><a href="#测试停止准则" class="headerlink" title="测试停止准则"></a>测试停止准则</h1><p>在实际工作中，常用的<strong>停止测试的标准有五类。</strong></p>
-<ul>
-<li>第一类标准:测试超过了预定的时间，停止测试。</li>
-<li>第二类标准:执行了所有测试用例但没有发现故障，停止测试。</li>
-<li>第三类标准:使用特定的测试用例方法作为判断测试停止的基础。</li>
-<li>第四类标准:正面指出测试完成的要求，如发现并修改70个软件故障。</li>
-<li>第五类标准:根据单位时间内查出故障的数量决定是否停止测试。</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95/%E7%AC%AC1%E7%AB%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -631,47 +482,15 @@
           <h1 id="Python常用内置对象"><a href="#Python常用内置对象" class="headerlink" title="Python常用内置对象"></a>Python常用内置对象</h1><ul>
 <li>对象是python语言中最基本的概念，<strong>在python中处理的一切都是对象。</strong></li>
 <li>python中有许多内置对象可供编程者使用，<strong>内置对象可直接使用</strong>，如数字、字符串、列表、del等。</li>
-<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214231.png" alt="20210530214231"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210530214304.png" alt="20210530214304"></li>
-</ul>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>Python使用单引号和双引号来表示字符串是一样的。<br>1．创建和访问字符串<br>创建字符串很简单，只要为变量分配一个值即可。例如：<br>var1 = ‘Hello World!’<br>var2 = “Python Programming “<br>2．Python转义字符<br>需要在字符中使用特殊字符时，Python用反斜杠( \ )转义字符<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133248.png" alt="20210531133248"><br>3．Python字符串运算符<br>Python字符串运算符如表2-2所示<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531133804.png" alt="20210531133804"><br>4．字符串格式化<br>Python 支持格式化字符串的输出。<br>在 Python 中，字符串格式化使用与 C语言中printf函数一样的语法。</p>
-<pre><code> print (&quot;我的名字是 %s 年龄是 %d &quot; % (&#39;xmj&#39;, 41))
-</code></pre>
-<p>Python用一个元祖将多个值传递给模板，每个值对应一个字符串格式符。上例将’xmj’插入到%s处，41插入到%d处。<br>所以输出结果：<br>         我的名字是 xmj 年龄是 41<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531134532.png" alt="20210531134532"></p>
-<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><p>Python支持布尔类型的数据，布尔类型只有True和False两种值。<br>and 与运算<br>or   或运算<br>not  非运算<br>会被认为是FALSE：为0的数字，包括0,0.0；空字符串’ ‘，””；表示空值的None；空集合，包括空元祖(),空序列[],空字典{}；其他的值都为TRUE。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210531143051.png" alt="20210531143051"><br>在Python中，逻辑值True和False作为数值，则分别是整型值1和0参与运算。</p>
-<h2 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h2><p>空值是Python里一个特殊的值，用None表示。它不支持任何运算也没有任何内置函数方法。None和任何其他的数据类型比较永远返回False。在<strong>Python 中未指定返回值的函数会自动返回None。</strong></p>
-<h2 id="Python数字类型转换"><a href="#Python数字类型转换" class="headerlink" title="Python数字类型转换"></a>Python数字类型转换</h2><p>x=20                    #八进制为24<br>y=345.6<br>print(oct(x))                 #打印结果是0o24<br>print(int(y))                 #打印结果是345<br>print(float(x))                 #打印结果是20.0<br>print(chr(65))                 # A的ASCII为65，打印结果是A<br>print(ord(‘B’))                 # B的ASCII为66，打印结果是66</p>
-<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量在程序中就是用一个变量名表示，变量名必须是大小写英文、数字和_的组合，且<strong>不能用数字开头</strong>，比如：<br>在Python中，等号=是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量，例如：<br>a = 123        # a是整数<br>a = ‘ABC’        # a变为字符串<br>这种变量本身类型不固定的语言称之为<strong>动态语言</strong>，与之对应的是静态语言。</p>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>所谓常量就是不能变的变量，比如常用的数学常数π就是一个常量。在Python中，通常用<strong>全部大写的变量名表示常量</strong>：<br>PI = 3.14159265359<br>但事实上PI仍然是一个变量，Python根本没有任何机制保证PI不会被改变，所以，用全部大写的变量名表示常量只是一个习惯上的用法，实际上是可以改变变量PI的值。</p>
-<h1 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h1><p>Python语言支持运算符有以下几种类型<br>• 算术运算符<br>• 比较(即关系)运算符<br>• 赋值运算符<br>• 逻辑运算符<br>• 位运算符<br>• 成员操作符<br>• 标识操作符</p>
-<h2 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2><p>算术运算符实现数学运算<br>假设变量a=10和变量b=20。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210602165934.png" alt="20210602165934"></p>
-<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>关系运算符用于两个值进行比较，运算结果为True（真）或False（假）<br>假设其中变量a=10和变量b=20。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210602171919.png" alt="20210602171919"></p>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>Python中提供了三种逻辑运算符，它们是：<br>and（逻辑与，二元运算符）<br>or  （逻辑或，二元运算符）<br>not （逻辑非，一元运算符）<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210602172913.png" alt="20210602172913"></p>
-<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>赋值运算符“=”的一般格式为：<br>变量=表达式<br>它表示将其右侧的表达式求出结果，赋给其左侧的变量。例如：<br>  i=3*(4+5)            #i的值变为27</p>
-<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>位（bit）是计算机中表示信息的最小单位，位运算符作用于位和位操作。<br>Python中位运算符如下：<br>按位与（&amp;）、按位或（|）、按位异或（＾）、按位求反（~）、左移（&lt;&lt;）、右移（&gt;&gt;）。<br>位运算符是对其操作数按其二进制形式逐位进行运算。</p>
-<h2 id="Python成员运算"><a href="#Python成员运算" class="headerlink" title="Python成员运算"></a>Python成员运算</h2><p>Python成员运算符判断序列中是否有某个成员<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210602173607.png" alt="20210602173607"></p>
-<h2 id="Python标识运算符"><a href="#Python标识运算符" class="headerlink" title="Python标识运算符"></a>Python标识运算符</h2><p>标识符比较两个对象的内存位置<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210602173651.png" alt="20210602173651"></p>
-<p>在Python中，整数和短小的字符，Python都会缓存这些对象，以便重复使用。当我们创建多个等于1的引用时，实际上是让所有这些引用指向同一个对象。<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603095000.png" alt="20210603095000"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603095027.png" alt="20210603095027"></p>
-<h2 id="Python运算符优先级"><a href="#Python运算符优先级" class="headerlink" title="Python运算符优先级"></a>Python运算符优先级</h2><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603095407.png" alt="20210603095407"></p>
-<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><p>表达式是一个或多个运算的组合。Python语言的表达式与其他语言的表达式没有显著的区别。每个符合Python语言规则的表达式的计算都是一个确定的值。对于常量、变量的运算和对于函数的调用都可以构成表达式。<br>序列、函数、对象都可以成为表达式一部分</p>
-<h1 id="序列数据结构"><a href="#序列数据结构" class="headerlink" title="序列数据结构"></a>序列数据结构</h1><p>数据结构是计算机存储、组织数据的方式。<strong>序列</strong>是Python中最基本的数据结构。<br>序列中的每个元素都分配一个数字即它的位置或索引，第一个索引是0，第二个索引是1，依此类推。序列都可以进行的操作包括索引，截取（切片），加，乘，成员检查。此外，Python已经内置确定序列的长度以及确定最大和最小的元素的方法。<br>Python内置序列类型最常见的是<strong>列表、元组、字符串</strong>。<br>另外，Python提供了<strong>字典和集合</strong>这样的数据结构，它们属于无顺序的数据集合体，不能通过位置索引号来访问数据元素。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表（list）是最常用的Python数据类型，列表的数据项不需要具有相同的类型。列表类似其他语言的数组，但功能比数组强大的多。<br>创建一个列表，只要把逗号分隔的不同的数据项使用方括号括起来即可。实例如下：<br>list1 = [‘中国’, ‘美国’, 1997, 2000];<br>list2 = [1, 2, 3, 4, 5 ];<br>列表索引从0开始。列表可以进行截取（切片）、组合等。</p>
-<h3 id="删除列表元素"><a href="#删除列表元素" class="headerlink" title="删除列表元素"></a><strong>删除列表元素</strong></h3><p>方法一：使用 del 语句来删除列表的的元素<br>del a[1]<br>方法二：使用 remove()方法来删除列表的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [1, 2, 3, 4, 5, 6, 7 ];</span><br><span class="line">a.remove(2)</span><br></pre></td></tr></table></figure>
-<p>方法三：使用pop()方法方法来删除列表的指定位置的元素，无参数时删除最后一个元素<br>a.pop(1)</p>
-<h3 id="添加列表元素"><a href="#添加列表元素" class="headerlink" title="添加列表元素"></a><strong>添加列表元素</strong></h3><p>可以使用 append()方法在列表末尾添加元素</p>
-<h3 id="定义多维列表"><a href="#定义多维列表" class="headerlink" title="定义多维列表"></a><strong>定义多维列表</strong></h3><p>可以将多维列表视为列表的嵌套，即多维列表的元素值也是一个列表，只是维度比父列表小一。</p>
-<h3 id="Python列表脚本操作符"><a href="#Python列表脚本操作符" class="headerlink" title="Python列表脚本操作符"></a><strong>Python列表脚本操作符</strong></h3><p>列表对 + 和 * 的操作符与字符串相似。+ 号用于组合列表，* 号用于重复列表<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603103614.png" alt="20210603103614"></p>
-<h3 id="Python列表截取"><a href="#Python列表截取" class="headerlink" title="Python列表截取"></a><strong>Python列表截取</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603103629.png" alt="20210603103629"></p>
-<h3 id="Python列表内置函数和方法"><a href="#Python列表内置函数和方法" class="headerlink" title="Python列表内置函数和方法"></a><strong>Python列表内置函数和方法</strong></h3><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210603103725.png" alt="20210603103725"></p>
-<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>Python的元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组使用小括号()，列表使用方括号[]。元组中的元素类型也可以不相同。</p>
-<h3 id="元组连接"><a href="#元组连接" class="headerlink" title="元组连接"></a>元组连接</h3><p>元组中的元素值是不允许修改的，但可以对元组进行连接组合<br>连接元组，创建一个新的元组</p>
-<h3 id="删除元组"><a href="#删除元组" class="headerlink" title="删除元组"></a>删除元组</h3><p>元组中的元素值是不允许删除的，但可以使用del语句来删除整个元组。</p>
-<h3 id="元组与列表转换"><a href="#元组与列表转换" class="headerlink" title="元组与列表转换"></a>元组与列表转换</h3><p>可以使用下面方法将元祖转换为列表：<br>列表对象=list(元组对象)</p>
-<p>可以使用下面方法将列表转换为元祖：<br>元组对象= tuple (列表对象)</p>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>Python字典（dict）是一种可变容器模型，且可存储任意类型对象，如字符串、数字、元组等。字典也被称作关联数组或哈希表。<br>键值对key-value</p>
-<p>dict1 = { ‘abc’: 456 };<br>dict2 = { ‘abc’: 123, 98.6: 37 };</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合（set）是一个无序不重复元素的序列。集合基本功能是进行成员关系测试和删除重复元素。</p>
-
+<li><strong>非内置对象需要导入模块才能使用</strong>，如正弦函数sin(x)，随机数产生函数random( )等。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/Python/%E7%AC%AC%E4%BA%8C%E7%AB%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -745,26 +564,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529212620.png" alt="20210529212620"></p>
-<h1 id="Python的简介"><a href="#Python的简介" class="headerlink" title="Python的简介"></a>Python的简介</h1><p>面向对象、解释型的编程语言<br>使用缩进作为逻辑层次<br>Python的缺点:运行效率低<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529213253.png" alt="20210529213253"></p>
-<p>缩进<br>     Python程序是依靠代码块的缩进来体现代码之间的逻辑关系的</p>
-<p>注释</p>
-<ul>
-<li>方法一：以#开始，表示本行#之后的内容为注释。</li>
-<li>方法二：三个引号‘’‘…’‘’或三个双引号”””…”””。</li>
-</ul>
-<p>常量名所有字母大写，由下划线连接各个单词。类名首字母大写。<br>必要的空格与空行<br>     运算符两侧、函数参数之间、逗号两侧建议使用空格分开。不同功能的代码块之间、不同的函数定义之间建议增加一个空行以增加可读性。</p>
-<h1 id="Python基本输入输出"><a href="#Python基本输入输出" class="headerlink" title="Python基本输入输出"></a>Python基本输入输出</h1><p>Python基本输入<br>   输入是通过input( )函数来实现的，input( )的一般格式为：<br>   a=input(‘提示：’)。<br>Python基本输出<br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529214323.png" alt="20210529214323"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529214330.png" alt="20210529214330"><br><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529214343.png" alt="20210529214343"></p>
-<h1 id="安装扩展库的几种方法"><a href="#安装扩展库的几种方法" class="headerlink" title="安装扩展库的几种方法"></a>安装扩展库的几种方法</h1><p><img src="https://cdn.jsdelivr.net/gh/zzl-Alexander/CDN/img/20210529214604.png" alt="20210529214604"></p>
-<h1 id="标准库与扩展库对象的导入与使用"><a href="#标准库与扩展库对象的导入与使用" class="headerlink" title="标准库与扩展库对象的导入与使用"></a>标准库与扩展库对象的导入与使用</h1><ul>
-<li>Python默认安装仅包含基本或核心模块，启动时也仅加载了基本模块，在需要时再显式地导入和加载标准库和第三方扩展库（需正确安装），这样可以减小程序运行的压力，并且具有很强的可扩展性。</li>
-<li>从“木桶原理”的角度来看，这样的设计与安全配置时遵循的“最小权限”原则的思想是一致的，也有助于提高系统安全性。</li>
-</ul>
-<p><strong>import 模块名 [as 别名]</strong></p>
-<p>import numpy as np             #导入扩展库numpy，并设置别名为np<br>a = np.array((1,2,3,4))        #通过模块的别名来访问其中的对象</p>
-<p><strong>from 模块名 import 对象名[ as 别名]</strong></p>
-<p>from math import sin as f    #给导入的对象起个别名</p>
-<p>from 模块名 import *<br>from math import *         #导入标准库math中所有对象</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/10/Python/%E7%AC%AC%E4%B8%80%E7%AB%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
